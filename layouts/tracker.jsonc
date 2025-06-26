@@ -1,0 +1,146 @@
+{
+  //sets the trackers layout
+  //more info: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#layouts
+
+  "tracker_horizontal": {
+    "type": "container",
+    "background": "#000000",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        
+        {
+          "type": "dock",
+          "dock": "left",
+          "v_alignment": "stretch",
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "dock": "center",
+              "content": {
+                "type": "layout",
+                "v_alignment": "stretch",
+                "key": "items"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Main Deck",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "deck"
+                ]
+              }
+            },
+            {
+              "title": "Sector 1",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "s1"
+                ]
+              }
+            },
+            {
+              "title": "Sector 2",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "s2"
+                ]
+              }
+            },
+            {
+              "title": "Sector 3",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "s3"
+                ]
+              }
+            },
+            {
+              "title": "Sector 4",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "s4"
+                ]
+              }
+            },
+            {
+              "title": "Sector 5",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "s5"
+                ]
+              }
+            },
+            {
+              "title": "Sector 6",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "s6"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "dock",
+          "dock": "right",
+          "v_alignment": "stretch",
+          "content": [
+            {
+              "type": "group",
+              "dock": "bottom",
+              "content": {
+                "type": "layout",
+                "v_alignment": "stretch",
+                "key": "keys"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },"settings_popup": {
+    "type": "container",
+    "background": "#000000",
+    "margin": "6, 6",
+    "content": {
+      "type": "tabbed",
+      "tabs": [
+        {
+          "title": "Tank Sizes and Goal",
+          "content": [
+            {
+              "type": "itemgrid",
+              "item_h_alignment": "left",
+              "item_size": "400, 33",
+              "rows": [
+
+                [ "Missile_Data_Size" ],      
+                [ "Missile_Tank_Size" ],
+                [ "PB_Data_Size" ],
+                [ "PB_Tank_Size" ]
+                      
+                
+              ]
+            }
+          ]
+        }
+        
+        ]
+        }
+    }
+}

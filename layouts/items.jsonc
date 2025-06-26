@@ -1,0 +1,103 @@
+{
+  // sets layouts for shadred items grids
+  // bigger example: https://github.com/Cyb3RGER/sm_ap_tracker/blob/main/layouts/items.json
+  "keys": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+          {
+            "type": "itemgrid",     
+            "item_margin": "2,-48",      
+            "item_size": 120,     
+            "rows": [
+            [],
+            [
+                "k0"],[
+                "k1"],[
+                "k2"],[
+                "k3"],[
+                "k4"
+              ],
+              [
+                ""
+              ],
+              [""
+                //"tab_switch"
+              ],
+              [
+                ""
+              ],
+              [
+                ""
+              ],
+              [
+                ""
+              ],
+              [
+                "needed_metroids"
+              ]
+              
+            ]
+          }
+        ]
+      }
+    ]
+  },
+   "items": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "4,4",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+          {
+            "type": "itemgrid",         
+            "item_size": 50,   
+            "item_margin": "8,6",     
+            "rows": [
+              [
+                "bc",
+                "bww",
+                "bw",
+                "bp",
+                "bi"
+              ],
+              [
+                "dm",
+                "ms",
+                "mi",
+                "md"
+              ],
+              [
+                "mb",
+                "bomb",
+                "pb",
+                "varia",
+                "gravity"
+              ],
+              [
+                "high",
+                "speed",
+                "space",
+                "screw"
+              ],
+              [
+                "etank",
+                "missile",
+                "pbomb",
+                "metroid"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

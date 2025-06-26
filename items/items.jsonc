@@ -1,0 +1,269 @@
+[
+  //more info: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#items
+ 
+ //////      Beams       ///////
+ 
+ {
+  "name": "Charge Beam",
+  "type": "toggle",
+  "img": "images/items/beam_c.png",
+  "codes": "bc"
+ },  
+ {
+  "name": "Wide Beam",
+  "type": "toggle",
+  "img": "images/items/beam_www.png",
+  "codes": "bww"
+ },  
+ {
+  "name": "Wave Beam",
+  "type": "toggle",
+  "img": "images/items/beam_w.png",
+  "codes": "bw"
+ }, 
+ {
+  "name": "Plasma Beam",
+  "type": "toggle",
+  "img": "images/items/beam_p.png",
+  "codes": "bp"
+ },  
+ {
+  "name": "Ice Beam",
+  "type": "toggle",
+  "img": "images/items/beam_i.png",
+  "codes": "bi"
+ },
+ {
+  "name": "Missile Data",
+  "type": "toggle",
+  "img": "images/items/data_missile.png",
+  "codes": "dm"
+ },  
+ {
+  "name": "Super Missile",
+  "type": "toggle",
+  "img": "images/items/supermissle.png",
+  "codes": "ms"
+ },  
+ {
+  "name": "Ice Missile",
+  "type": "toggle",
+  "img": "images/items/icemissile.png",
+  "codes": "mi"
+ }, 
+ {
+  "name": "Diffusion Missle",
+  "type": "toggle",
+  "img": "images/items/defusion.png",
+  "codes": "md"
+ },  
+ {
+  "name": "Morph Ball",
+  "type": "toggle",
+  "img": "images/items/morph.png",
+  "codes": "mb"
+ },  
+ {
+  "name": "Bombs",
+  "type": "toggle",
+  "img": "images/items/bomb.png",
+  "codes": "bomb"
+ },  
+ {
+  "name": "Power Bomb Data",
+  "type": "toggle",
+  "img": "images/items/data_pbomb.png",
+  "codes": "pb"
+ },
+ {
+  "name": "Varia Suit",
+  "type": "toggle",
+  "img": "images/items/varia.png",
+  "codes": "varia"
+ },
+ {
+  "name": "Gravity Suit",
+  "type": "toggle",
+  "img": "images/items/gravity.png",
+  "codes": "gravity"
+ },
+ {
+  "name": "Screw Attack",
+  "type": "toggle",
+  "img": "images/items/screwattack.png",
+  "codes": "screw"
+ },
+ {
+  "name": "Space Jump",
+  "type": "toggle",
+  "img": "images/items/space.png",
+  "codes": "space"
+ },
+ {
+  "name": "High Jump",
+  "type": "toggle",
+  "img": "images/items/highjump.png",
+  "codes": "high"
+ },
+ {
+  "name": "Speed Booster",
+  "type": "toggle",
+  "img": "images/items/speed.png",
+  "codes": "speed"
+ },
+
+
+ /////////       Keys      /////////
+
+
+
+  {
+    "name": "Level 0 Keycard",
+    "type": "toggle",
+    "img": "images/items/k0o.png",
+    "disabled_img": "images/items/k0o.png",
+    "disabled_img_mods": "none",
+    "codes": "k0"
+  },
+  {
+    "name": "Level 1 Keycard",
+    "type": "toggle",
+    "img": "images/items/k1o.png",
+    "disabled_img": "images/items/k1l.png",
+    "disabled_img_mods": "none",
+    "codes": "k1"
+  },
+  {
+    "name": "Level 2 Keycard",
+    "type": "toggle",
+    "img": "images/items/k2o.png",
+    "disabled_img": "images/items/k2l.png",
+    "disabled_img_mods": "none",
+    "codes": "k2"
+  },
+  {
+    "name": "Level 3 Keycard",
+    "type": "toggle",
+    "img": "images/items/k3o.png",
+    "disabled_img": "images/items/k3l.png",
+    "disabled_img_mods": "none",
+    "codes": "k3"
+  },
+  {
+    "name": "Level 4 Keycard",
+    "type": "toggle",
+    "img": "images/items/k4o.png",
+    "disabled_img": "images/items/k4l.png",
+    "disabled_img_mods": "none",
+    "codes": "k4"
+  },
+
+
+
+ ////////     Tanks      ////////
+
+
+ {
+  "name": "E-Tank",
+  "type": "consumable",
+  "img": "images/items/etank.png",
+  "overlay_align": "center",
+  "allow_disabled": false,
+  "max_quantity": 20,
+  "increment": 1,
+  "decrement": 1,
+  "overlay_font_size": 26,
+  "codes": "etank"
+},
+{
+  "name": "Missile Tank",
+  "type": "consumable",
+  "img": "images/items/missile.png",
+  "overlay_align": "center",
+  "allow_disabled": false,
+  "max_quantity": 9999,
+  "increment": 5,
+  "decrement": 5,
+  "overlay_font_size": 26,
+  "codes": "missile"
+},
+{
+  "name": "Power Bomb Tank",
+  "type": "consumable",
+  "img": "images/items/pbomb.png",
+  "overlay_align": "center",
+  "allow_disabled": false,
+  "max_quantity": 99,
+  "increment": 2,
+  "decrement": 2,
+  "overlay_font_size": 26,
+  "codes": "pbomb"
+},
+{
+  "name": "Infant Metroids",
+  "type": "consumable",
+  "img": "images/items/metroid.png",
+  "overlay_align": "center",
+  "allow_disabled": false,
+  "max_quantity": 20,
+  "overlay_font_size": 26,
+  "codes": "metroid"
+},
+{
+  "name": "Infant Metroids Required",
+  "type": "consumable",
+  "img": "images/bosses/Omega.png",
+  "overlay_align": "center",
+  "allow_disabled": false,
+  "max_quantity": 20,
+  "overlay_font_size": 50,
+  "codes": "needed_metroids"
+},
+
+
+
+////////     Settings      ////////
+
+
+  {
+    "name": "Missile Data Size",
+    "type": "consumable",
+    "img": "images/items/data_missile.png",
+    "codes": "Missile_Data_Size",
+    "overlay_background": "#000000",
+    "max_quantity": 100
+  },
+  {
+    "name": "Missile Tank Size",
+    "type": "consumable",
+    "img": "images/items/missile.png",
+    "codes": "Missile_Tank_Size",
+    "overlay_background": "#000000",
+    "max_quantity": 100
+  },
+  {
+    "name": "Power Bomb Data Size",
+    "type": "consumable",
+    "img": "images/items/data_pbomb.png",
+    "codes": "PB_Data_Size",
+    "overlay_background": "#000000",
+    "max_quantity": 100
+  },
+  {
+    "name": "Power Bomb Tank Size",
+    "type": "consumable",
+    "img": "images/items/pbomb.png",
+    "codes": "PB_Tank_Size",
+    "overlay_background": "#000000",
+    "max_quantity": 100
+  },
+  {
+    "name": "Enable/Disable Map Auto-Switcher",
+    "type": "toggle",
+    "disabled_img_mods": "none",
+                "disabled_img": "images/items/switch off.png",
+                "img": "images/items/switch on.png",
+                "codes": "tab_switch"
+  }
+
+]
