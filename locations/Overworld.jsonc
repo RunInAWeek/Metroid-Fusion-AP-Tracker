@@ -1,0 +1,721 @@
+[
+ {
+	"name": "Overworld",
+	"children": [
+        {
+		"name": "Sector 1 Entrance Area",    
+		"sections": [
+          {
+            "ref": "Sector 1 To Sector 2/Antechamber/",
+            "name": "Antechamber"
+          },
+          {
+            "ref": "Sector 1 Second Stabilizer Zone/Lava Lake - Lower Item/",
+            "name": "Lava Lake - Lower Item"
+          },
+          {
+            "ref": "Sector 1 Second Stabilizer Zone/Lava Lake - Upper Left Item/",
+            "name": "Lava Lake - Upper Left Item"
+          },
+          {
+            "ref": "Sector 1 Second Stabilizer Zone/Lava Lake - Upper Right Item/",
+            "name": "Lava Lake - Upper Right Item"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 598,
+            "y": 2130,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 1 Stabilizers Area",    
+		"sections":[
+          {
+            "ref": "Sector 1 First Stabilizer Zone/Atmospheric Stabilizer Northeast/",
+            "name": "Atmospheric Stabilizer Northeast"
+          },
+          {
+            "ref": "Sector 1 First Stabilizer Zone/Hornoad Hole/",
+            "name": "Hornoad Hole"
+          },
+          {
+            "ref": "Sector 1 First Stabilizer Zone/Wall Jump Tutorial/",
+            "name": "Wall Jump Tutorial"
+          },
+          {
+            "ref": "Sector 1 Second Stabilizer Zone/Stabilizer Storage/",
+            "name": "Stabilizer Storage"
+          },
+          {
+            "ref": "Sector 1 Charge Core Zone/Charge Core Arena - Core X/",
+            "name": "Charge Core Arena - Core X"
+          },
+          {
+            "ref": "Sector 1 Charge Core Zone/Charge Core Arena - Upper Item/",
+            "name": "Charge Core Arena - Upper Item"
+          },
+          {
+            "ref": "Sector 1 Charge Core Zone/Watering Hole/",
+            "name": "Watering Hole"
+          },
+          {
+            "ref": "Sector 1 After Charge Core Zone/Crab Rave/",
+            "name": "Crab Rave"
+          }
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 598,
+            "y": 2220,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 1 Tourian Area",    
+		"sections":[
+          {
+            "ref": "Sector 1 Tourian Hub/Animorphs Cache/",
+            "name": "Animorphs Cache"
+          },
+          {
+            "ref": "Sector 1 Tourian Hub/Ridley Arena/",
+            "name": "Ridley Arena"
+          },
+          {
+            "ref": "Sector 1 Tourian Hub/Ripper Maze/",
+            "name": "Ripper Maze"
+          }
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 598,
+            "y": 2315,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 2 Entrance Area",    
+		"sections":[
+          {
+            "ref": "Sector 2 Hub/Crumble City - Upper Item/",
+            "name": "Crumble City - Upper Item"
+          },
+          {
+            "ref": "Sector 2 Hub/Crumble City - Lower Item/",
+            "name": "Crumble City - Lower Item"
+          },
+          {
+            "ref": "Sector 2 Hub/Data Courtyard/",
+            "name": "Data Courtyard"
+          },
+          {
+            "ref": "Sector 2 Hub/Data Room/",
+            "name": "Data Room"
+          },
+          {
+            "ref": "Sector 2 Hub/Kago Room/",
+            "name": "Kago Room"
+          },
+          {
+            "ref": "Sector 2 Hub/Level 1 Security Room/",
+            "name": "Level 1 Security Room"
+          },
+          {
+            "ref": "Sector 2 Hub/Lobby Cache/",
+            "name": "Lobby Cache"
+          },
+          {
+            "ref": "Sector 2 Left Side/Zoro Zig-Zag/",
+            "name": "Zoro Zig-Zag"
+          }
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 1558,
+            "y": 2130,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 2 Deeper Parts",    
+		"sections":[
+          {
+            "ref": "Sector 2 Zazabi Zone/Cultivation Station/",
+            "name": "Cultivation Station"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone/Oasis/",
+            "name": "Oasis"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone/Oasis Storage/",
+            "name": "Oasis Storage"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone/Ripper Tower - Lower Item/",
+            "name": "Ripper Tower - Lower Item"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone Upper/Dessgeega Dorm/",
+            "name": "Dessgeega Dorm"
+          },
+          {
+            "ref": "Sector 2 Nettori Zone/Nettori Arena/",
+            "name": "Nettori Arena"
+          },
+          {
+            "ref": "Sector 2 Nettori Zone/Overgrown Cache/",
+            "name": "Overgrown Cache"
+          },
+          {
+            "ref": "Sector 2 Nettori Zone/Puyo Palace/",
+            "name": "Puyo Palace"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 1558,
+            "y": 2220,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 2 Zazabi Area",    
+		"sections":[
+          {
+            "ref": "Sector 2 Zazabi Zone/Zazabi Arena/",
+            "name": "Zazabi Arena"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone/Zazabi Arena Access/",
+            "name": "Zazabi Arena Access"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone/Zazabi Speedway - Upper Item/",
+            "name": "Zazabi Speedway - Upper Item"
+          },
+          {
+            "ref": "Sector 2 Zazabi Zone/Zazabi Speedway - Lower Item/",
+            "name": "Zazabi Speedway - Lower Item"
+          }         
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 1558,
+            "y": 2315,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 3 Entrance Area",    
+		"sections":[
+          {
+            "ref": "Sector 3 Hub/Fiery Storage - Lower Item/",
+            "name": "Fiery Storage - Lower Item"
+          },
+          {
+            "ref": "Sector 3 Hub/Fiery Storage - Upper Item/",
+            "name": "Fiery Storage - Upper Item"
+          },
+          {
+            "ref": "Sector 3 to Sector 5/Glass Tube to Sector 5 (ARC)/",
+            "name": "Glass Tube to Sector 5 (ARC)"
+          },
+          {
+            "ref": "Sector 3 Security Zone/Level 2 Security Room/",
+            "name": "Level 2 Security Room"
+          },
+          {
+            "ref": "Sector 3 Security Zone/Security Access/",
+            "name": "Security Access"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 357,
+            "y": 2130,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 3 Top Right Area",    
+		"sections":[
+          {
+            "ref": "Sector 3 Main Shaft/Namihe's Lair/",
+            "name": "Namihe's Lair"
+          },
+          {
+            "ref": "Sector 3 Main Shaft/Processing Access/",
+            "name": "Processing Access"
+          },
+          {
+            "ref": "Sector 3 BOX Zone/Bob's Abode/",
+            "name": "Bob's Abode"
+          },
+          {
+            "ref": "Sector 3 BOX Zone/Data Room/",
+            "name": "Data Room"
+          },
+          {
+            "ref": "Sector 3 BOX Zone/Geron's Treasure/",
+            "name": "Geron's Treasure"
+          },
+          {
+            "ref": "Sector 3 Attic/Alcove - Lower Item/",
+            "name": "Alcove - Lower Item"
+          },
+          {
+            "ref": "Sector 3 Attic/Alcove - Upper Item/",
+            "name": "Alcove - Upper Item"
+          },
+          {
+            "ref": "Sector 3 Attic/Deserted Runway/",
+            "name": "Deserted Runway"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 357,
+            "y": 2220,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 3 Hot Area",    
+		"sections":[
+          {
+            "ref": "Sector 3 Boiler Zone/Lava Maze/",
+            "name": "Lava Maze"
+          },
+          {
+            "ref": "Sector 3 Boiler Zone/Boiler Room Control - Boiler/",
+            "name": "Boiler Room Control - Boiler"
+          },
+          {
+            "ref": "Sector 3 Boiler Zone/Boiler Room Control - Core X/",
+            "name": "Boiler Room Control - Core X"
+          },
+          {
+            "ref": "Sector 3 Sova Processing/Sova Processing - Left Item/",
+            "name": "Sova Processing - Left Item"
+          },
+          {
+            "ref": "Sector 3 Sova Processing/Sova Processing - Right Item/",
+            "name": "Sova Processing - Right Item"
+          },
+          {
+            "ref": "Sector 3 Sova Processing/Garbage Chute - Lower Item/",
+            "name": "Garbage Chute - Lower Item"
+          },
+          {
+            "ref": "Sector 3 Sova Processing/Garbage Chute - Upper Item/",
+            "name": "Garbage Chute - Upper Item"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 357,
+            "y": 2315,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 4 Middle Area",    
+		"sections":[
+          {
+            "ref": "Sector 4 Hub/Drain Pipe/",
+            "name": "Drain Pipe"
+          },
+          {
+            "ref": "Sector 4 Hub/Reservoir East/",
+            "name": "Reservoir East"
+          },
+          {
+            "ref": "Sector 4 Pump Control/Pump Control Unit/",
+            "name": "Pump Control Unit"
+          },
+          {
+            "ref": "Sector 4 Upper Water Zone/Waterway/",
+            "name": "Waterway"
+          },
+          {
+            "ref": "Sector 4 Data Zone/Data Room/",
+            "name": "Data Room"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 1799,
+            "y": 2130,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 4 Top Area",    
+		"sections":[
+          {
+            "ref": "Sector 4 Upper Zone/Broken Bridge/",
+            "name": "Broken Bridge"
+          },
+          {
+            "ref": "Sector 4 Upper Zone/C-Cache/",
+            "name": "C-Cache"
+          },
+          {
+            "ref": "Sector 4 Upper Zone/Reservoir Valt - Lower Item/",
+            "name": "Reservoir Valt - Lower Item"
+          },
+          {
+            "ref": "Sector 4 Upper Zone/Reservoir Valt - Upper Item/",
+            "name": "Reservoir Valt - Upper Item"
+          },
+          {
+            "ref": "Sector 4 Serris Zone/Serris Arena/",
+            "name": "Serris Arena"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 1799,
+            "y": 2220,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 4 Underwater Area",    
+		"sections":[
+          {
+            "ref": "Sector 4 Upper Water Zone/Cargo Hold to Sector 5 (ARC)/",
+            "name": "Cargo Hold to Sector 5 (ARC)"
+          },
+          {
+            "ref": "Sector 4 Upper Water Zone/Aquarium Pirate Tank/",
+            "name": "Aquarium Pirate Tank"
+          },
+          {
+            "ref": "Sector 4 Security Zone/Yard Firing Range/",
+            "name": "Yard Firing Range"
+          },
+          {
+            "ref": "Sector 4 Security Zone/Cheddar Bay/",
+            "name": "Cheddar Bay"
+          },
+          {
+            "ref": "Sector 4 Lower Security Zone/Sanctuary Cache/",
+            "name": "Sanctuary Cache"
+          },
+          {
+            "ref": "Sector 4 Security Room/Level 4 Security Room/",
+            "name": "Level 4 Security Room"
+          },
+          {
+            "ref": "Sector 4 Right Water Zone/Aquarium Kago Storage - Right Item/",
+            "name": "Aquarium Kago Storage - Right Item"
+          },
+          {
+            "ref": "Sector 4 Right Water Zone/Aquarium Kago Storage - Left Item/",
+            "name": "Aquarium Kago Storage - Left Item"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 1799,
+            "y": 2315,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 5 Top Area",    
+		"sections":[
+          {
+            "ref": "Sector 5 Hub/Gerubus Gully/",
+            "name": "Gerubus Gully"
+          },
+          {
+            "ref": "Sector 5 Hub/Magic Box/",
+            "name": "Magic Box"
+          },
+          {
+            "ref": "Sector 5 Big Room/Training - Left Item/",
+            "name": "Training - Left Item"
+          },
+          {
+            "ref": "Sector 5 Big Room/Training - Right Item/",
+            "name": "Training - Right Item"
+          },
+          {
+            "ref": "Sector 5 Before Nightmare Hub/Crow's Nest/",
+            "name": "Crow's Nest"
+          },
+          {
+            "ref": "Sector 5 Data Room/Data Room/",
+            "name": "Data Room"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 117,
+            "y": 2130,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 5 Bottom Area",    
+		"sections":[
+          {
+            "ref": "Sector 5 Frozen Hub/Ripper Road/",
+            "name": "Ripper Road"
+          },
+          {
+            "ref": "Sector 5 Security Zone/E-Tank Mimic Den/",
+            "name": "E-Tank Mimic Den"
+          },
+          {
+            "ref": "Sector 5 Security Zone/Level 3 Security Room/",
+            "name": "Level 3 Security Room"
+          },
+          {
+            "ref": "Sector 5 Security Zone/Ripper's Treasure/",
+            "name": "Ripper's Treasure"
+          },
+          {
+            "ref": "Sector 5 Security Zone/Security Shaft East/",
+            "name": "Security Shaft East"
+          },
+          {
+            "ref": "Sector 5 Security Zone/Transmutation Trial/",
+            "name": "Transmutation Trial"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 117,
+            "y": 2220,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 5 Nightmare Area",    
+		"sections":[
+          {
+            "ref": "Sector 5 Nightmare Hub/Flooded Airlock to Sector 4 (AQU)/",
+            "name": "Flooded Airlock to Sector 4 (AQU)"
+          },
+          {
+            "ref": "Sector 5 Nightmare Hub/Mini-Fridge/",
+            "name": "Mini-Fridge"
+          },
+          {
+            "ref": "Sector 5 Nightmare Hub/Nightmare Hub/",
+            "name": "Nightmare Hub"
+          },
+          {
+            "ref": "Sector 5 Nightmare Hub/Ruined Break Room/",
+            "name": "Ruined Break Room"
+          },
+          {
+            "ref": "Sector 5 Nightmare Zone/Nightmare Arena/",
+            "name": "Nightmare Arena"
+          },
+          {
+            "ref": "Sector 5 Nightmare Zone/Nightmare Nook/",
+            "name": "Nightmare Nook"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 117,
+            "y": 2315,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 6 Top Area",    
+		"sections":[
+          {
+            "ref": "Sector 6 Hub/Entrance Lobby/",
+            "name": "Entrance Lobby"
+          },
+          {
+            "ref": "Sector 6 Crossroads/Missile Mimic Lodge/",
+            "name": "Missile Mimic Lodge"
+          }, 
+          {
+            "ref": "Sector 6 Crossroads/Pillar Highway/",
+            "name": "Pillar Highway"
+          },
+          {
+            "ref": "Sector 6 Crossroads/Vault/",
+            "name": "Vault"
+          }       
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 2039,
+            "y": 2130,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 6 Middle Area",    
+		"sections":[
+          {
+            "ref": "Sector 6 Before BOX Zone/Speedbooster Alley - Lower Item/",
+            "name": "Speedbooster Alley - Lower Item"
+          },
+          {
+            "ref": "Sector 6 Before BOX Zone/Speedbooster Alley - Upper Item/",
+            "name": "Speedbooster Alley - Upper Item"
+          },
+          {
+            "ref": "Sector 6 XBOX Zone/X-B.O.X. Arena/",
+            "name": "X-B.O.X. Arena"
+          },
+          {
+            "ref": "Sector 6 After XBOX Zone/X-B.O.X. Garage - Lower Item/",
+            "name": "X-B.O.X. Garage - Lower Item"
+          },
+          {
+            "ref": "Sector 6 After XBOX Zone/X-B.O.X. Garage - Upper Item/",
+            "name": "X-B.O.X. Garage - Upper Item"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 2039,
+            "y": 2220,
+            "size": 80
+        }
+        ]
+        },
+
+        {
+        "name": "Sector 6 Bottom Area",    
+		"sections":[
+          {
+            "ref": "Sector 6 Varia Core X Zone/Varia Core-X Arena/",
+            "name": "Varia Core-X Arena"
+          },
+          {
+            "ref": "Sector 6 After Varia Core X Zone/Twin Caverns West - Lower Item/",
+            "name": "Twin Caverns West - Lower Item"
+          },
+          {
+            "ref": "Sector 6 After Varia Core X Zone/Twin Caverns West - Upper Item/",
+            "name": "Twin Caverns West - Upper Item"
+          },
+          {
+            "ref": "Sector 6 Before Varia Core X Zone/Zororo Wine Cellar/",
+            "name": "Zororo Wine Cellar"
+          },
+          {
+            "ref": "Sector 6 Crossroads/Catacombs/",
+            "name": "Catacombs"
+          }
+
+        ],
+        "map_locations": [
+        {
+            "map": "deck",
+            "x": 2039,
+            "y": 2315,
+            "size": 80
+        }
+        ]
+        }
+
+
+
+    ]
+ },
+
+ {
+  "name": "Goal",
+  "access_rules": [""],
+  "children":[
+    {
+      "name": "Fight SA-X and blow everything up",
+      "sections":[
+        {
+          "chest_unopened_img": "images/bosses/SAX_face.png",
+          "chest_opened_img": "images/bosses/SAX_face.png",
+          "access_rules": ["$canFinish"]
+        }
+      ],
+      "map_locations": [
+        {
+          "map": "deck",
+          "x": 3837,
+          "y": 236,
+          "size": 100
+        }
+      ]
+    }
+  ]
+}
+]

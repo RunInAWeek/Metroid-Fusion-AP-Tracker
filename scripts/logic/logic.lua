@@ -175,7 +175,13 @@ function canActivatePillar()
     return has("bw") or canBombOrPowerBomb()
 end
 
-
+function canFinish()
+    local goal_babies=Tracker:ProviderCountForCode("needed_metroids")
+    local babies=Tracker:ProviderCountForCode("metroid")
+    goal_babies=tonumber(goal_babies)
+    babies=tonumber(babies)
+    return (babies>=goal_babies) and has("bc") and has("dm")
+end
 
 
 -----------------------------------------------------------------------------------
