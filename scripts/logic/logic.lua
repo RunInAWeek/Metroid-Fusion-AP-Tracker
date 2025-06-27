@@ -132,7 +132,7 @@ function canDefeatSmallGeron()
 end
 
 function canDefeatMediumGeron()
-    return (has("md") and has("ms")) or canPowerBomb() or has("screw")
+    return (has("dm") and has("ms")) or canPowerBomb() or has("screw")
 end
 
 function canDefeatLargeGeron()

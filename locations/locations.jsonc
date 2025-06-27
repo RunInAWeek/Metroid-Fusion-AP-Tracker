@@ -1082,7 +1082,7 @@
   
   {
     "name": "Sector 3 to Sector 5",
-    "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item, screw, varia", 
+    "access_rules": ["@Sector 3 Hub, screw, varia", 
                      "@Sector 5 Before Nightmare Hub, canJumpHigh"],
     "children":[
       {
@@ -1255,7 +1255,7 @@
   
   {
     "name": "Sector 3 BOX Zone",
-    "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item, screw, varia, bomb, $has|etank|5, k2",
+    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, $has|etank|5",
                      "@Sector 3 Main Shaft, k2, $canBallJumpAndBomb, $has|etank|5",
                      "@Sector 3 Attic, $canFightBoss"],
     "children":[
@@ -1652,7 +1652,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["screw, speed"]
+            "access_rules": ["screw", "speed"]
           }
         ],
         "map_locations": [
@@ -1704,7 +1704,9 @@
   
   {
     "name": "Sector 4 Security Zone",
-    "access_rules": ["@Sector 4 Upper Water Zone, speed, screw"],
+    "access_rules": ["@Sector 4 Upper Water Zone, speed, screw",
+                     "@Sector 4 Right Water Zone, k4",
+                     "@Sector 4 Lower Security Zone, k4"],
     "children":[
       {
         "name": "Yard Firing Range",
@@ -1826,7 +1828,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["speed, screw"]
+            "access_rules": ["speed", "screw"]
           }
         ],
         "map_locations": [
@@ -1844,7 +1846,7 @@
   
   {
     "name": "Sector 4 Data Zone",
-    "access_rules": ["@Sector 4 Hub, mb, md",
+    "access_rules": ["@Sector 4 Hub, mb, md, dm",
                      "@Sector 4 Right Water Zone, canFreezeEnemies, space"],
     "children":[
       {
