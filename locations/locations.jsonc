@@ -1988,7 +1988,8 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": []
+            "access_rules": ["mb, high, screw, $canFreezeEnemies",
+                             "$canPowerBomb, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -2158,7 +2159,7 @@
   {
     "name": "Sector 5 Nightmare Hub",
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
-                     "@Sector 5 Before Nightmare Hub, high",
+                     "@Sector 5 Before Nightmare Hub, high, $canBeatToughEnemy",
                      "@Sector 5 Nightmare Zone, gravity, suit, $canFightLategameBoss"],
     "children":[
       {
@@ -2235,7 +2236,7 @@
   
   {
     "name": "Sector 5 Nightmare Zone",
-    "access_rules": ["@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater, mb"],
+    "access_rules": ["@Sector 5 Nightmare Hub, $canFightBoss"],
     "children":[
       {
         "name": "Nightmare Arena",
@@ -2297,12 +2298,11 @@
     "children":[
       {
         "name": "Entrance Lobby",
-        "access_rules": ["mb"],
         "sections":[
           {
             "chest_unopened_img": "images/items/missile.png",
-            "chest_opened_img": "images/items/missile_gray.png"
-            
+            "chest_opened_img": "images/items/missile_gray.png",
+            "access_rules": ["mb, bomb"],
           }
         ],
         "map_locations": [
@@ -2330,7 +2330,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": []
+            "access_rules": ["speed"]
           }
         ],
         "map_locations": [
@@ -2381,7 +2381,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBombOrPowerBomb"]
+            "access_rules": ["$canBallJumpAndBomb"]
           }
         ],
         "map_locations": [
