@@ -182,40 +182,13 @@ function canFinish()
     babies=tonumber(babies)
     local result=(babies>=goal_babies) and has("bc") and has("dm")
     if result then
-        if has(go) then
-            return result
-        else Tracker:FindObjectForCode("go").Active = true
-        end
-    end
+       -- if has(go) then
+        --    return result
+        Tracker:FindObjectForCode("go").Active = true
+       -- end
+     end
     return result
 end
-
-
------------------------------------------------------------------------------------
-----  Bomberman 64 tacker stuff, delet or use as a reference if needed ------------
------------------------------------------------------------------------------------
-
-function can_fight_mainboss()
-    return (RemoteBombs()) and (PowerGlove())
-end
-
-function can_lower_bridge()
-    return (PowerGlove()) or (PowerBombs())
-end
-
-function can_move_bombs()
-    return (PowerGlove()) or (BombKick())
-end
-
-function can_hit_floating()
-    return (PowerGlove() and (RemoteBombs() or (PowerBombs() and Fireup())))
-
-end
-
-function can_build_bridge()
- return (PowerGlove() and RemoteBombs() and Bombup())
-end 
-
 
 
 
