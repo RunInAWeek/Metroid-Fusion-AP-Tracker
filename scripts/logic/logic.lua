@@ -182,11 +182,11 @@ function canFinish()
     babies=tonumber(babies)
     local result=(babies>=goal_babies) and has("bc") and has("dm")
     if result then
-       -- if has(go) then
-        --    return result
-        Tracker:FindObjectForCode("go").Active = true
-       -- end
-     end
+        if has("go") then
+            return result
+        else Tracker:FindObjectForCode("go").Active = true
+        end
+    end
     return result
 end
 
