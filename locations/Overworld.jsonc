@@ -712,7 +712,8 @@
           "map": "deck",
           "x": 3837,
           "y": 236,
-          "size": 100
+          "size": 100,
+          "border_thickness": 25
         }
       ]
     }
