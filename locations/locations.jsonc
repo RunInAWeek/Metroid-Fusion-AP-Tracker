@@ -336,7 +336,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": "speed"}],
+          "access_rules": ["$canBallJumpAndBomb"]}],
         "map_locations": [
             {
               "map": "deck",
@@ -1479,10 +1479,10 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb, bw", 
-                             "$canPowerBomb", 
-                             "mb, dm, ms", 
-                             "mb screw, gravity"]
+            "access_rules": ["mb, speed, bw", 
+                             "$canPowerBomb, speed", 
+                             "mb, speed, dm, ms", 
+                             "mb, speed, screw, gravity"]
           }
         ],
         "map_locations": [
@@ -1499,7 +1499,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb"]            
+            "access_rules": ["speed, $canPowerBomb"]            
           }
         ],
         "map_locations": [
@@ -2302,7 +2302,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb, bomb"],
+            "access_rules": ["$canBallJumpAndBomb",
+                             "mb, high, screw"],
           }
         ],
         "map_locations": [

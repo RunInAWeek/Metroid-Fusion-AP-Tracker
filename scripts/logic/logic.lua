@@ -140,7 +140,7 @@ function canDefeatLargeGeron()
 end
 
 function canFightBoss()
-    return (has("dm") or has("bc")) and has("etank", 2)
+    return (has("dm") and has("bc")) and has("etank", 2)
 end
 
 function canFightMidgameBoss()
@@ -180,7 +180,14 @@ function canFinish()
     local babies=Tracker:ProviderCountForCode("metroid")
     goal_babies=tonumber(goal_babies)
     babies=tonumber(babies)
-    return (babies>=goal_babies) and has("bc") and has("dm")
+    local result=(babies>=goal_babies) and has("bc") and has("dm")
+    if result then
+        if has(go) then
+            return result
+        else Tracker:FindObjectForCode("go").Active = true
+        end
+    end
+    return result
 end
 
 
