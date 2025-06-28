@@ -264,6 +264,13 @@
                 "disabled_img": "images/items/switch off.png",
                 "img": "images/items/switch on.png",
                 "codes": "tab_switch"
+  },
+  {
+    "name": "Go Mode!",
+    "type": "toggle",
+                "disabled_img": "images/items/go_gray.png",
+                "img": "images/items/go.png",
+                "codes": "go"
   }
 
 ]
