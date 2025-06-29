@@ -209,7 +209,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canReachAnimals, bw"]}],
+          "access_rules": ["$canReachAnimals", "bw"]}],
         "map_locations": [
           {
             "map": "deck",
@@ -1177,7 +1177,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": []
+            "access_rules": ["k2, has|etank|5"]
           }
         ],
         "map_locations": [
@@ -1380,7 +1380,8 @@
   
   {
     "name": "Sector 3 Sova Processing",
-    "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, $has|etank|5"],
+    "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, $has|etank|5",
+                     "@Sector 3 Main Shaft, k2, varia, space, $has|etank|5"],
     "children":[
       {
         "name": "Sova Processing - Left Item",
@@ -1583,11 +1584,11 @@
         ]
       },
       {
-        "name": "Reservoir Valt - Lower Item",
+        "name": "Reservoir Vault - Lower Item",
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["high, $canBombOrPowerBomb, dm"]}],
+          "access_rules":["$canJumpHigh, $canBombOrPowerBomb, dm"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -1597,11 +1598,11 @@
         ]
       },
       {
-        "name": "Reservoir Valt - Upper Item",
+        "name": "Reservoir Vault - Upper Item",
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["high, $canBombOrPowerBomb"]}],
+          "access_rules":["$canJumpHigh, $canBombOrPowerBomb"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -2140,7 +2141,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k3, high, space, $canFreezeEnemies"]
+            "access_rules": ["k3, high, space", "k3, high, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -2293,7 +2294,7 @@
     "name": "Sector 6 Hub",
     "access_rules": ["@Sector Hub, k1, k2",
                      "@Sector 4 Right Water Zone, dm, $canFreezeEnemies, space, screw",
-                     "@Sector 4 Data Zone, dm, md, screw",
+                     "@Sector 4 Data Zone, dm, md, screw, k4, bm, bomb",
                      "Sector 6 Crossroads, $canDefeatMediumGeron"],
     "children":[
       {
@@ -2303,7 +2304,7 @@
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
             "access_rules": ["$canBallJumpAndBomb",
-                             "mb, high, screw"],
+                             "mb, high, screw"]
           }
         ],
         "map_locations": [
@@ -2365,7 +2366,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["screw, speed, varia, $canBomb, bw"]
+            "access_rules": ["screw, speed, varia, $canBomb",
+                             "screw, speed, varia, bw"]
           }
         ],
         "map_locations": [
