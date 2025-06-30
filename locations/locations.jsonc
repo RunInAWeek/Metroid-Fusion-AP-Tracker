@@ -263,14 +263,16 @@
 
   {
     "name": "Yakuza Zone",
-    "access_rules":["@Reactor Zone, $canFightBoss"],
+    "access_rules":["@Reactor Zone, $canBeatToughEnemy, $canBombOrPowerBomb",
+                    "@Reactor Zone, $canBeatToughEnemy, mb, bw",
+                    "@Reactor Zone, $canBeatToughEnemy, mb, dm, md"],
     "children":[
       {
         "name":"Yakuza Arena",
         "sections": [{
           "chest_unopened_img": "images/bosses/yakuza.png",
           "chest_opened_img": "images/bosses/yakuza_gray.png",
-          "access_rules":["$canFightBoss"]}],
+          "access_rules":["$canFightMidgameBoss"]}],
         "map_locations": [
           {
             "map": "deck",
@@ -823,7 +825,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canBombOrPowerBomb"]}],
+          "access_rules": ["high, $canBombOrPowerBomb", "space, $canBombOrPowerBomb"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1047,7 +1049,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["varia, $canBeatToughEnemy"]
+            "access_rules": ["varia, $canBeatToughEnemy", "varia, $canLavaDive"]
           }
         ],
         "map_locations": [
@@ -1064,7 +1066,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["varia, speed, bc", "varia, speed dm"]
+            "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item, speed, canActivatePillar",
+                             "@Sector 3 Hub/Fiery Storage - Lower Item, speed, space"]
           }
         ],
         "map_locations": [
@@ -1082,7 +1085,7 @@
   
   {
     "name": "Sector 3 to Sector 5",
-    "access_rules": ["@Sector 3 Hub, screw, varia", 
+    "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item, screw, varia", 
                      "@Sector 5 Before Nightmare Hub, canJumpHigh"],
     "children":[
       {
@@ -1177,7 +1180,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k2, has|etank|5"]
+            "access_rules": ["k2, $has|etank|5"]
           }
         ],
         "map_locations": [
@@ -1220,7 +1223,7 @@
           {
             "chest_unopened_img": "images/events/power.png",
             "chest_opened_img": "images/events/power_gray.png",
-            "access_rules": ["$canFightBoss"]
+            "access_rules": ["dm"]
           }
         ],
         "map_locations": [
@@ -1237,7 +1240,7 @@
           {
             "chest_unopened_img": "images/bosses/human scientist.png",
             "chest_opened_img": "images/bosses/human scientist_gray.png",
-            "access_rules": ["$canFightBoss"]
+            "access_rules": ["dm"]
           }
         ],
         "map_locations": [
@@ -1847,7 +1850,7 @@
   
   {
     "name": "Sector 4 Data Zone",
-    "access_rules": ["@Sector 4 Hub, mb, md, dm",
+    "access_rules": ["@Sector 4 Hub, mb, md, dm, $canBombOrPowerBomb",
                      "@Sector 4 Right Water Zone, canFreezeEnemies, space"],
     "children":[
       {
@@ -1888,7 +1891,8 @@
   {
     "name": "Sector 5 Hub",
     "access_rules": ["@Sector Hub, k1, k2",
-                     "@Sector 5 Big Room, k3, mb, dm",
+                     "@Sector 5 Big Room, k3",
+                     "@Sector 5 Big Room, mb, dm, $canJumpHigh",
                      "@Sector 6 Crossroads, screw, k3"],
     "children":[
       {
@@ -1943,7 +1947,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["speed, space, $canFreezeEnemies"]
+            "access_rules": ["speed, space", "speed, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -1960,7 +1964,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["space, $canFreezeEnemies"]
+            "access_rules": ["space", "$canFreezeEnemies"]
           }
         ],
         "map_locations": [
