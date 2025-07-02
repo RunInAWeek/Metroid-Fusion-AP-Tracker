@@ -1,6 +1,7 @@
 [ 
   {
     "name": "Main Deck Hub",
+    "access_rules":["$hasnot|SHO", "$has|SHO, mb", "$has|SHO, speed"],
     "children": [
       {
         "name": "Quarantine Bay",
@@ -71,6 +72,7 @@
   
   {
     "name": "Operation Deck",
+    "access_rules":["@Main Deck Hub"],
     "children": [
       {
         "name": "Data Room",
@@ -90,7 +92,7 @@
   },
   {
     "name": "Arachnus Zone Upper",
-    "access_rules":["$canAccessArachnusZone"],
+    "access_rules":["@Main Deck Hub, $canAccessArachnusZone"],
     "children":[
       {
         "name": "Arachnus Arena - Upper Item",
@@ -127,7 +129,7 @@
   },
   {
   "name": "Arachnus Zone Lower",
-  "access_rules":["mb","dm"],
+  "access_rules":["@Main Deck Hub, mb","@Main Deck Hub, dm"],
   "children":[
       {
         "name": "Arachnus Arena - Core X",
@@ -150,7 +152,7 @@
   },
   {
   "name": "Ventilation Zone",
-  "access_rules":["$canDefeatSmallGeron"],
+  "access_rules":["@Main Deck Hub, $canDefeatSmallGeron"],
   "children":[
       {
         "name": "Operations Ventilation",
@@ -188,7 +190,7 @@
   
   {
     "name": "Habitation Deck",
-    "access_rules":["k2"],
+    "access_rules":["@Main Deck Hub, k2"],
     "children":[
       {
         "name": "Animals",
@@ -225,7 +227,7 @@
 
   {
     "name": "Reactor Zone",
-    "access_rules":["$canAccessReactorZone"],
+    "access_rules":["@Main Deck Hub, $canAccessReactorZone"],
     "children":[
       {
         "name": "Silo Catwalk",
@@ -308,7 +310,7 @@
 
   {
     "name": "Sector Hub",
-    "access_rules": ["mb"],
+    "access_rules": ["SHO", "mb", "speed, TrickyShinespark"],
     "children":[
       {
         "name": "Main Elevator Cache",
@@ -393,7 +395,10 @@
 
 {
   "name": "Sector 1 First Stabilizer Zone",
-  "access_rules": ["@Sector Hub, $canDefeatSmallGeron", "@Sector Hub, k1, k2, $canLavaDive", "@Sector 1 After Charge Core Zone"],
+  "access_rules": ["@Sector Hub, $canDefeatSmallGeron", 
+                   "@Sector Hub, k1, k2, $canLavaDive", 
+                   "@Sector 1 After Charge Core Zone",
+                   "@Sector Hub, speed, TrickyShinespark"],
   "children":[
     {
       "name": "Atmospheric Stabilizer Northeast",
@@ -1529,7 +1534,7 @@
           {
             "chest_unopened_img": "images/events/power.png",
             "chest_opened_img": "images/events/power_gray.png",
-            "access_rules": ["mb"]
+            "access_rules": ["mb, k1"]
           }
         ],
         "map_locations": [
@@ -2501,7 +2506,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["screw, space"]
+            "access_rules": ["screw, space, mb, bomb"]
           }
         ],
         "map_locations": [

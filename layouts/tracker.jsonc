@@ -113,7 +113,8 @@
         }
       ]
     }
-  },"settings_popup": {
+  },
+    "settings_popup": {
     "type": "container",
     "background": "#000000",
     "margin": "6, 6",
@@ -132,7 +133,10 @@
                 [ "Missile_Data_Size" ],      
                 [ "Missile_Tank_Size" ],
                 [ "PB_Data_Size" ],
-                [ "PB_Tank_Size" ]
+                [ "PB_Tank_Size" ],
+                [ "TrickyShinespark" ],
+                [ "GameMode" ],
+                [ "SHO" ]
                       
                 
               ]

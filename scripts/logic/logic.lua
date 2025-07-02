@@ -12,6 +12,14 @@ function has(item, amount)
         return count >= amount
     end
 end
+
+function hasnot(item)
+	local count2 = Tracker:ProviderCountForCode(item)
+    if count2 > 0 then
+		return false
+	else return true
+	end
+end
     
 function morph()
        
@@ -156,7 +164,7 @@ function canFreezeEnemies()
 end
 
 function canReachAnimals()
-    return has("speed") and (canFreezeEnemies() or has"space")
+    return has("speed") and ((canFreezeEnemies() and has("high")) or has"space")
 end
 
 function canAccessArachnusZone()

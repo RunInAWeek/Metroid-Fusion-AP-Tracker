@@ -258,6 +258,29 @@
     "max_quantity": 100
   },
   {
+    "name": "Tricky Shinespark",
+    "type": "toggle",
+    "img": "images/options/TrickyShinespark.png",
+    "codes": "TrickyShinespark"
+  },
+  {
+    "name": "Game Mode",
+    "type": "static",
+    "img": "images/options/GameMode.png",
+    "codes": "GameMode"
+  },
+  {
+    "name": "Sector Hub Open",
+    "type": "toggle",
+    "img": "images/options/SectorHubOpen.png",
+    "codes": "SHO"
+  },
+
+
+
+
+
+  {
     "name": "Enable/Disable Map Auto-Switcher",
     "type": "toggle",
     "disabled_img_mods": "none",
