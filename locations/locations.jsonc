@@ -1044,7 +1044,7 @@
     "name": "Sector 3 Hub",
     "access_rules": ["@Sector Hub, k1", 
                      "@Sector 3 to Sector 5, screw, $canJumpHigh", 
-                     "Secteur 3 Bob Zone, $canBomb", 
+                     "Sector 3 Bob Zone, $canBomb", 
                      "@Sector 3 Attic, canBombOrPowerBomb"],
     "children":[
       {
@@ -1305,7 +1305,7 @@
     
   /////////////////////////////////////////////////////////////////////////////////////
 {
-    "name": "Secteur 3 Bob Zone",
+    "name": "Sector 3 Bob Zone",
     "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, $has|etank|5",
                      "@Sector 3 Main Shaft, $canBallJumpAndBomb",
                      "@Sector 3 BOX Zone, k2"],
@@ -1322,8 +1322,8 @@
         "map_locations": [
           {
             "map": "s3",
-            "x": 4465,
-            "y": 590
+            "x": 2694,
+            "y": 729
           }
         ]
       }
