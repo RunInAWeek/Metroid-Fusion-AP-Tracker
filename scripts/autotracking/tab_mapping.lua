@@ -1,11 +1,11 @@
 TAB_MAPPING = {  
 
-    [''] = 'Main Deck',    
-    [''] = 'Sector 1',
-    [''] = 'Sector 2',
-    [''] = 'Sector 3',
-    [''] = 'Sector 4',
-    [''] = 'Sector 5',
-    [''] = 'Sector 6',
+    [0] = 'Main Deck',    
+    [1] = 'Sector 1',
+    [2] ='Sector 2',
+    [3] = 'Sector 3',
+    [4] = 'Sector 4',
+    [5] = 'Sector 5',
+    [6] = 'Sector 6'
 
 } 

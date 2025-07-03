@@ -163,11 +163,37 @@ function onClear(slot_data)
 	end
 	
 	
+	PLAYER_ID = Archipelago.PlayerNumber or -1
+	TEAM_NUMBER = Archipelago.TeamNumber or 0
+	
+
+	if Archipelago.PlayerNumber>-1 then
+		print (string.format("Current slot data is", PLAYER_ID, TEAM_NUMBER))
+		EVENT_ID="current_sector"
+		print(string.format("SET NOTIFY %s",EVENT_ID))
+		Archipelago:SetNotify({EVENT_ID})
+		Archipelago:Get({EVENT_ID})
+	end
+
+	Tracker:FindObjectForCode("tab_switch").Active = 1
+
     if slot_data["InfantMetroidsRequired"] then
         Tracker:FindObjectForCode("needed_metroids").AcquiredCount = slot_data["InfantMetroidsRequired"]
     end
+	    
+    if slot_data['GameMode'] then
+        local obj = Tracker:FindObjectForCode('SHO')
+        if obj then
+            obj.Active = slot_data['GameMode']
+        end
+    end
 
-
+    if slot_data['TrickyShinesparks'] then
+        local obj = Tracker:FindObjectForCode('TrickyShinespark')
+        if obj then
+            obj.Active = slot_data['TrickyShinesparks']
+        end
+    end
 
     if slot_data["MissileTankAmmo"] then
         Tracker:FindObjectForCode("Missile_Data_Size").AcquiredCount = slot_data["MissileDataAmmo"]
@@ -206,18 +232,6 @@ function onClear(slot_data)
 	Archipelago:Get(data_strorage_keys)
 	Tracker.BulkUpdate = false
 end
-
---if Archipelago.PlayerNumber>-1 then
---	print (string.format("Current slot data is", PLAYER_ID, TEAM_NUMBER))
---	EVENT_ID="bomberman64_area_"..TEAM_NUMBER.."_"..PLAYER_ID
---	print(string.format("SET NOTIFY %s",EVENT_ID))
---	Archipelago:SetNotify({EVENT_ID})
---	Archipelago:Get({EVENT_ID})
---end
-
---Tracker:FindObjectForCode("tab_switch").Active = 1
---end
-
 
 
 -- called when an item gets collected
@@ -359,9 +373,9 @@ function updateTab(value)
 					print(string.format("Updating  Tab to %s",CURRENT_ROOM))
                 end
 			else
-				--CURRENT_ROOM = TAB_MAPPING[0x00]
+				CURRENT_ROOM = TAB_MAPPING[0x00]
 				print(string.format("Failed to find ID %s",value))
-                --Tracker:UiHint("ActivateTab", CURRENT_ROOM)
+                Tracker:UiHint("ActivateTab", CURRENT_ROOM)
 			end
 		end
 	end
