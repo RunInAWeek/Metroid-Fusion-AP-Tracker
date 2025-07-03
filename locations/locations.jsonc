@@ -100,7 +100,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules":["dm", "bc, $canDefeatSmallGeron", "bm, space, screw"]
+            "access_rules":["dm", "bc, $canDefeatSmallGeron", "mb, space, screw"]
           }
         ],
         "map_locations": [
