@@ -372,12 +372,11 @@
   "children":[
     {
       "name": "Antechamber",
-      "access_rules": [],
       "sections":[
         {
           "chest_unopened_img": "images/items/pbomb.png",
-          "chest_opened_img": "images/items/pbomb_gray.png"
-          
+          "chest_opened_img": "images/items/pbomb_gray.png",
+          "access_rules": ["mb, $canBallJump"]
         }
       ],
       "map_locations": [
@@ -1045,7 +1044,7 @@
     "name": "Sector 3 Hub",
     "access_rules": ["@Sector Hub, k1", 
                      "@Sector 3 to Sector 5, screw, $canJumpHigh", 
-                     "@Sector 3 Main Shaft, $canBomb", 
+                     "Secteur 3 Bob Zone, $canBomb", 
                      "@Sector 3 Attic, canBombOrPowerBomb"],
     "children":[
       {
@@ -1268,23 +1267,6 @@
                      "@Sector 3 Attic, $canFightBoss"],
     "children":[
       {
-        "name": "Bob's Abode",
-        "sections":[
-          {
-            "chest_unopened_img": "images/items/missile.png",
-            "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "s3",
-            "x": 2690,
-            "y": 720
-          }
-        ]
-      },
-      {
         "name": "Data Room",
         "sections":[
           {
@@ -1321,6 +1303,35 @@
     ]
   },
     
+  /////////////////////////////////////////////////////////////////////////////////////
+{
+    "name": "Secteur 3 Bob Zone",
+    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, $has|etank|5",
+                     "@Sector 3 Main Shaft, $canBallJumpAndBomb",
+                     "@Sector 3 BOX Zone, k2"],
+    "children":[
+      {
+        "name": "Bob's Abode",
+        "sections":[
+          {
+            "chest_unopened_img": "images/items/missile.png",
+            "chest_opened_img": "images/items/missile_gray.png",
+            "access_rules": ["$canBallJump"]
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "s3",
+            "x": 4465,
+            "y": 590
+          }
+        ]
+      }
+    ]
+  },
+
+
+
   /////////////////////////////////////////////////////////////////////////////////////
   
   {
@@ -2420,7 +2431,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["high, space, speed"]
+            "access_rules": ["high, space, speed, screw"]
           }
         ],
         "map_locations": [
@@ -2437,7 +2448,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["speed"]
+            "access_rules": ["speed, screw"]
           }
         ],
         "map_locations": [
@@ -2576,7 +2587,7 @@
   
   {
     "name": "Sector 6 After Varia Core X Zone",
-    "access_rules": ["@Sector 6 Crossroads, varia, screw",
+    "access_rules": ["@Sector 6 Crossroads, varia, screw, mb",
                      "@Sector 6 Varia Core X Zone, varia, $canFightBoss"],
     "children":[
       {
