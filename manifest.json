@@ -4,11 +4,11 @@
   // for more info on the manifest check: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#manifest
   "name": "Metroid Fusion AP",
   "game_name": "Metroid Fusion",
-  "package_version": "0.1",
+  "package_version": "0.2",
   "package_uid": "Metroid Fusion AP",
   // enables SNES memory autotracking interface - remove/change if not needed
   "platform": "GBA",
-  "author": "Run_In_A_Week",
+  "author": "Run_In_A_Week & Crit Magnet",
   "min_poptracker_version": "0.25.9",
   // put the version you tested against here!
   "target_poptracker_version": "0.32.0",
