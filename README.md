@@ -4,4 +4,4 @@ big thanks to Crit Magnet for their contributions of writing the logic for every
 
 
 
-![metroid fusion tracker](https://github.com/user-attachments/assets/46ce9b8d-abe2-48b1-b8a7-a9219e8038ef)
+![Screenshot (119)](https://github.com/user-attachments/assets/1e8861c1-b505-4d1e-94cc-84a976e9006f)
