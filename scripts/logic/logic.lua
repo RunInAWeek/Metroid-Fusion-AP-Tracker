@@ -164,7 +164,7 @@ function canFreezeEnemies()
 end
 
 function canReachAnimals()
-    return has("speed") and ((canFreezeEnemies() and has("high")) or has"space")
+    return (has("speed") or has("bw")) and ((canFreezeEnemies() and has("high")) or has"space")
 end
 
 function canAccessArachnusZone()
@@ -173,6 +173,10 @@ end
 
 function canAccessReactorZone()
     return has"mb" and (has("k4") or canPowerBomb()) and has("etank", 5)
+end
+
+function canAccessFieryStorage()
+    return has("varia") and (canLavaDive() or canBeatToughEnemy())
 end
 
 function canAccessSanctuaryCache()
