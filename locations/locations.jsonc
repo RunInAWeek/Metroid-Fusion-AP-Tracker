@@ -1668,7 +1668,9 @@
   {
     "name": "Sector 4 Upper Water Zone",
     "access_rules": ["@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater",
-                     "@Sector 4 Upper Zone, speed, gravity, k4"],
+                     "@Sector 4 Upper Zone, speed, gravity, k4",
+                     "@Sector 4 Security Zone, speed",
+                     "@Sector 4 Security Zone, screw"],
     "children":[
       {
         "name": "Cargo Hold to Sector 5 (ARC)",
