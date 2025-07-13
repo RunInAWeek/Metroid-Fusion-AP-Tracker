@@ -75,8 +75,8 @@
         "content": [
           {
             "type": "itemgrid",         
-            "item_size": 50,   
-            "item_margin": "8,6",     
+            "item_size": 40,   
+            "item_margin": "4,3",     
             "rows": [
               [
                 "bc",

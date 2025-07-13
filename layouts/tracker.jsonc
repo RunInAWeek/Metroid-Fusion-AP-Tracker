@@ -18,11 +18,20 @@
             {
               "type": "group",
               "header": "Items",
-              "dock": "center",
+              "dock": "top",
               "content": {
                 "type": "layout",
                 "v_alignment": "stretch",
                 "key": "items"
+              }
+            },
+            {
+              "type": "group",
+              "dock": "top",
+              "content": {
+                "type": "layout",
+                "v_alignment": "stretch",
+                "key": "keys"
               }
             }
           ]
@@ -94,23 +103,8 @@
               }
             }
           ]
-        },
-        {
-          "type": "dock",
-          "dock": "right",
-          "v_alignment": "stretch",
-          "content": [
-            {
-              "type": "group",
-              "dock": "bottom",
-              "content": {
-                "type": "layout",
-                "v_alignment": "stretch",
-                "key": "keys"
-              }
-            }
-          ]
         }
+        
       ]
     }
   },

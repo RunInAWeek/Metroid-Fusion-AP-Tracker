@@ -377,7 +377,7 @@
         {
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": ["mb, $canBallJump"]
+          "access_rules": []
         }
       ],
       "map_locations": [
@@ -1126,7 +1126,7 @@
           {
             "chest_unopened_img": "images/items/security2.png",
             "chest_opened_img": "images/items/security2_gray.png",
-            "access_rules": ["k2, $canBallJumpAndBomb"]
+            "access_rules": ["k2", "$canBallJumpAndBomb, speed"]
           }
         ],
         "map_locations": [
@@ -1801,7 +1801,8 @@
   
   {
     "name": "Sector 4 Security Room",
-    "access_rules": ["@Sector 4 Security Zone, dm, $canBombOrPowerBomb"],
+    "access_rules": ["@Sector 4 Security Zone, dm, $canBombOrPowerBomb",
+                     "@Sector 4 Security Zone, k4"],
     "children":[
       {
         "name": "Level 4 Security Room",
@@ -1809,7 +1810,7 @@
           {
             "chest_unopened_img": "images/items/security4.png",
             "chest_opened_img": "images/items/security4_gray.png",
-            "access_rules": ["space, k4, dm, $canBombOrPowerBomb"]
+            "access_rules": ["space, dm, $canBombOrPowerBomb", "space, k4"]
           }
         ],
         "map_locations": [
@@ -2168,7 +2169,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k3, high, space", "k3, high, $canFreezeEnemies"]
+            "access_rules": ["k3, high, space, $canBallJump", "k3, high, $canFreezeEnemies, $canBallJump"]
           }
         ],
         "map_locations": [
