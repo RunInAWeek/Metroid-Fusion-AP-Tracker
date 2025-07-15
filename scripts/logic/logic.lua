@@ -148,15 +148,31 @@ function canDefeatLargeGeron()
 end
 
 function canFightBoss()
-    return (has("dm") and has("bc")) and has("etank", 2)
+    if has("dm") then
+        if has("etank", 2) and has("bc") then
+            return true
+        else return AccessibilityLevel.SequenceBreak
+        end
+    else return false
+    end
 end
 
 function canFightMidgameBoss()
-    return has("ms") and canFightBoss()
+    if has("ms") and canFightBoss() then
+        return true
+    else if canFightBoss() then
+        return AccessibilityLevel.SequenceBreak
+    end
+    end
 end
 
 function canFightLategameBoss()
-    return has("bp") and has("space") and canFightMidgameBoss()
+    if has("bp") and has("space") and canFightMidgameBoss() then
+        return true
+    else if canFightMidgameBoss() then
+        return AccessibilityLevel.SequenceBreak
+        end
+    end
 end
 
 function canFreezeEnemies()
@@ -172,8 +188,15 @@ function canAccessArachnusZone()
 end
 
 function canAccessReactorZone()
-    return has"mb" and (has("k4") or canPowerBomb()) and has("etank", 5)
+    if has"mb" and (has("k4") or canPowerBomb()) then
+        if has("etank", 5) then
+            return true
+        else return AccessibilityLevel.SequenceBreak
+        end
+    else return false
+    end
 end
+
 
 function canAccessFieryStorage()
     return has("varia") and (canLavaDive() or canBeatToughEnemy())
@@ -201,6 +224,54 @@ function canFinish()
     end
     return result
 end
+
+
+
+function canWallJumpTutorial()
+    if has("mb") then
+        return AccessibilityLevel.SequenceBreak
+    else return false
+    end
+end
+
+function canAccessLevel4SecurityRoom()
+    if (has("dm") and canBombOrPowerBomb) or has("k4") then
+        if has("space") then
+            return true
+        else return AccessibilityLevel.SequenceBreak
+        end
+    else return false
+    end
+end
+
+function canAccessReservoirVaultLowerItem()
+    if canJumpHigh() then
+        if has("dm") and canBombOrPowerBomb() then
+            return true
+        else return AccessibilityLevel.Inspect
+        end
+    else return false
+    end
+end
+
+
+function canSee()
+    return AccessibilityLevel.Inspect
+end
+
+function canSB()
+    return AccessibilityLevel.SequenceBreak
+end
+
+function needEtanks(amount)
+    amount=tonumber(amount)
+    local count=Tracker:ProviderCountForCode("etank")
+    if amount > count then
+        return AccessibilityLevel.SequenceBreak
+    else return true
+    end
+end
+
 
 
 

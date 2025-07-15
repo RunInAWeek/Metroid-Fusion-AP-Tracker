@@ -1,7 +1,7 @@
 [ 
   {
     "name": "Main Deck Hub",
-    "access_rules":["$hasnot|SHO", "$has|SHO, mb", "$has|SHO, speed"],
+    "access_rules":["$hasnot|SHO", "SHO, mb", "SHO, speed"],
     "children": [
       {
         "name": "Quarantine Bay",
@@ -211,7 +211,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canReachAnimals", "bw"]}],
+          "access_rules": ["$canReachAnimals", "bw", "^$canSee"]}],
         "map_locations": [
           {
             "map": "deck",
@@ -227,7 +227,7 @@
 
   {
     "name": "Reactor Zone",
-    "access_rules":["@Main Deck Hub, $canAccessReactorZone"],
+    "access_rules":["@Main Deck Hub, ^$canAccessReactorZone"],
     "children":[
       {
         "name": "Silo Catwalk",
@@ -274,7 +274,7 @@
         "sections": [{
           "chest_unopened_img": "images/bosses/yakuza.png",
           "chest_opened_img": "images/bosses/yakuza_gray.png",
-          "access_rules":["$canFightMidgameBoss"]}],
+          "access_rules":["^$canFightMidgameBoss"]}],
         "map_locations": [
           {
             "map": "deck",
@@ -317,7 +317,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": "speed"}],
+          "access_rules": ["^$canSee", "speed"]}],
         "map_locations": [
           {
             "map": "deck",
@@ -333,14 +333,14 @@
 
   {
     "name": "Nexus Storage",
-    "access_rules": ["@Sector Hub, k2, $canDefeatLargeGeron"],
+    "access_rules": ["@Main Deck Hub, k2, $canDefeatLargeGeron"],
     "children":[
       {
         "name": "Nexus Storage",
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": ["$canBallJumpAndBomb"]}],
+          "access_rules": ["$canBallJumpAndBomb", "^$canSee"]}],
         "map_locations": [
             {
               "map": "deck",
@@ -420,12 +420,11 @@
     },
     {
       "name": "Hornoad Hole",
-      "access_rules": ["mb"],
+      "access_rules": ["mb", "^$canSee"],
       "sections":[
         {
           "chest_unopened_img": "images/items/etank.png",
-          "chest_opened_img": "images/items/etank_gray.png"
-          
+          "chest_opened_img": "images/items/etank_gray.png",
         }
       ],
       "map_locations": [
@@ -441,7 +440,7 @@
       "sections":[{
         "chest_unopened_img": "images/items/missile.png",
         "chest_opened_img": "images/items/missile_gray.png",
-        "access_rules":["space, $canBallJump"]}],
+        "access_rules":["space, $canBallJump", "^$canWallJumpTutorial"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -465,7 +464,7 @@
         {
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canLavaDive"]          
+          "access_rules": ["$canLavaDive, mb"]          
         }
       ],
       "map_locations": [
@@ -569,7 +568,7 @@
       "sections":[{
         "chest_unopened_img": "images/items/pbomb.png",
         "chest_opened_img": "images/items/pbomb_gray.png",
-        "access_rules":["bc, gravity, speed, $canBallJump", "bp, gravity, speed, $canBallJump", "dm, gravity, speed, $canBallJump"]}],
+        "access_rules":["bc, gravity, speed, $canBallJump", "bp, gravity, speed, $canBallJump", "dm, gravity, speed, $canBallJump", "^$canSee, speed"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -636,7 +635,7 @@
         {
           "chest_unopened_img": "images/bosses/ridley.png",
           "chest_opened_img": "images/bosses/ridley_gray.png",
-          "access_rules": ["$canFightLategameBoss"]
+          "access_rules": ["^$canFightLategameBoss"]
         }
       ],
       "map_locations": [
@@ -754,7 +753,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh", "screw"]}],
+          "access_rules":["$canJumpHigh", "screw", "^$canSee"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -844,7 +843,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh"]}],
+          "access_rules":["$canJumpHigh", "^$canSee"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -899,7 +898,7 @@
       },
       {
         "name": "Zazabi Arena",
-        "sections":[{"access_rules":["$canFightBoss"],
+        "sections":[{"access_rules":["^$canFightBoss"],
         "chest_unopened_img": "images/bosses/zazabi.png",
         "chest_opened_img": "images/bosses/zazabi_gray.png"}],
         "map_locations": [
@@ -987,7 +986,7 @@
         "sections":[{
           "chest_unopened_img": "images/bosses/nettori.png",
           "chest_opened_img": "images/bosses/nettori_gray.png",
-          "access_rules":["$canFightMidgameBoss"]}],
+          "access_rules":["^$canFightMidgameBoss"]}],
           "map_locations": [
             {
               "map": "s2",
@@ -1143,7 +1142,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["$canBeatToughEnemy, $canJumpHigh"]
+            "access_rules": ["$canBeatToughEnemy, $canJumpHigh", "^$canSee"]
           }
         ],
         "map_locations": [
@@ -1169,7 +1168,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, $canJumpHigh"]
+            "access_rules": ["$canPowerBomb, $canJumpHigh", "$canPowerBomb, ^$canSee"]
           }
         ],
         "map_locations": [
@@ -1186,7 +1185,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k2, $has|etank|5"]
+            "access_rules": ["k2, ^$needEtanks|5"]
           }
         ],
         "map_locations": [
@@ -1204,7 +1203,7 @@
   
   {
     "name": "Sector 3 Boiler Zone",
-    "access_rules": ["@Sector 3 Main Shaft, k2, varia, $has|etank|5"],
+    "access_rules": ["@Sector 3 Main Shaft, k2, varia, ^$needEtanks|5"],
     "children":[
       {
         "name": "Lava Maze",
@@ -1264,9 +1263,9 @@
   
   {
     "name": "Sector 3 BOX Zone",
-    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, $has|etank|5",
-                     "@Sector 3 Main Shaft, k2, $canBallJumpAndBomb, $has|etank|5",
-                     "@Sector 3 Attic, $canFightBoss"],
+    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, ^$needEtanks|5",
+                     "@Sector 3 Main Shaft, k2, $canBallJumpAndBomb, ^$needEtanks|5",
+                     "@Sector 3 Attic, ^$canFightBoss"],
     "children":[
       {
         "name": "Data Room",
@@ -1274,7 +1273,7 @@
           {
             "chest_unopened_img": "images/items/datastation.png",
             "chest_opened_img": "images/items/datastation_gray.png",
-            "access_rules": ["$canFightBoss, $has|etank|5, k2"]
+            "access_rules": ["^$canFightBoss, ^$needEtanks|5, k2"]
           }
         ],
         "map_locations": [
@@ -1308,7 +1307,7 @@
   /////////////////////////////////////////////////////////////////////////////////////
 {
     "name": "Sector 3 Bob Zone",
-    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, $has|etank|5",
+    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, ^$needEtanks|5",
                      "@Sector 3 Main Shaft, $canBallJumpAndBomb",
                      "@Sector 3 BOX Zone, k2"],
     "children":[
@@ -1402,8 +1401,8 @@
   
   {
     "name": "Sector 3 Sova Processing",
-    "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, $has|etank|5",
-                     "@Sector 3 Main Shaft, k2, varia, space, $has|etank|5"],
+    "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, ^$needEtanks|5",
+                     "@Sector 3 Main Shaft, k2, varia, space, ^$needEtanks|5"],
     "children":[
       {
         "name": "Sova Processing - Left Item",
@@ -1411,7 +1410,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb, space","mb $canFreezeEnemies"]
+            "access_rules": ["$canBallJump, space","$canBallJump, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -1428,7 +1427,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["mb, space","mb $canFreezeEnemies"]
+            "access_rules": ["mb, space","mb, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -1611,7 +1610,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh, $canBombOrPowerBomb, dm"]}],
+          "access_rules":["^$canAccessReservoirVaultLowerItem"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -1649,7 +1648,7 @@
           {
             "chest_unopened_img": "images/bosses/serris.png",
             "chest_opened_img": "images/bosses/serris_gray.png",
-            "access_rules": ["high, $canFightBoss"]
+            "access_rules": ["high, ^$canFightBoss"]
           }
         ],
         "map_locations": [
@@ -1678,7 +1677,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["screw", "speed"]
+            "access_rules": ["screw", "speed, mb"]
           }
         ],
         "map_locations": [
@@ -1730,7 +1729,8 @@
   
   {
     "name": "Sector 4 Security Zone",
-    "access_rules": ["@Sector 4 Upper Water Zone, speed, screw",
+    "access_rules": ["@Sector 4 Upper Water Zone, speed, gravity",
+                     "@Sector 4 Upper Water Zone, screw, $canBallJump, gravity",
                      "@Sector 4 Right Water Zone, k4",
                      "@Sector 4 Lower Security Zone, k4"],
     "children":[
@@ -1810,7 +1810,7 @@
           {
             "chest_unopened_img": "images/items/security4.png",
             "chest_opened_img": "images/items/security4_gray.png",
-            "access_rules": ["space, dm, $canBombOrPowerBomb", "space, k4"]
+            "access_rules": ["^$canAccessLevel4SecurityRoom"]
           }
         ],
         "map_locations": [
@@ -1829,7 +1829,7 @@
   {
     "name": "Sector 4 Right Water Zone",
     "access_rules": ["@Sector 2 Hub, screw, gravity, space",
-                     "@Sector 4 Hub, gravity, md",
+                     "@Sector 4 Hub, gravity, dm, md",
                      "@Sector 4 Security Zone, k4"],
     "children":[
       {
@@ -1926,7 +1926,8 @@
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
             "access_rules": ["k3, $canPowerBomb",
-                             "k3, mb, bomb, screw"]
+                             "k3, mb, bomb, screw",
+                             "k3, screw, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2017,8 +2018,8 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["mb, high, screw, $canFreezeEnemies",
-                             "$canPowerBomb, $canFreezeEnemies"]
+            "access_rules": ["$canBallJump, screw, $canFreezeEnemies",
+                             "$canBallJump, $canPowerBomb, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -2189,7 +2190,7 @@
     "name": "Sector 5 Nightmare Hub",
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
                      "@Sector 5 Before Nightmare Hub, high, $canBeatToughEnemy",
-                     "@Sector 5 Nightmare Zone, gravity, suit, $canFightLategameBoss"],
+                     "@Sector 5 Nightmare Zone, gravity, suit, ^$canFightLategameBoss"],
     "children":[
       {
         "name": "Flooded Airlock to Sector 4 (AQU)",
@@ -2265,7 +2266,7 @@
   
   {
     "name": "Sector 5 Nightmare Zone",
-    "access_rules": ["@Sector 5 Nightmare Hub, $canFightBoss"],
+    "access_rules": ["@Sector 5 Nightmare Hub, ^$canFightBoss"],
     "children":[
       {
         "name": "Nightmare Arena",
@@ -2273,7 +2274,7 @@
           {
             "chest_unopened_img": "images/bosses/nightmare.png",
             "chest_opened_img": "images/bosses/nightmare_gray.png",
-            "access_rules": ["$canFightLategameBoss"]
+            "access_rules": ["^$canFightLategameBoss"]
           }
         ],
         "map_locations": [
@@ -2333,7 +2334,8 @@
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
             "access_rules": ["$canBallJumpAndBomb",
-                             "mb, high, screw"]
+                             "mb, high, screw",
+                             "mb, screw, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2413,7 +2415,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJumpAndBomb"]
+            "access_rules": ["$canBallJumpAndBomb", "$canBombOrPowerBomb, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2440,7 +2442,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["high, space, speed, screw"]
+            "access_rules": ["high, space, speed, screw", "speed, screw, ^$canSee"]
           }
         ],
         "map_locations": [
@@ -2483,7 +2485,7 @@
           {
             "chest_unopened_img": "images/bosses/box.png",
             "chest_opened_img": "images/bosses/box_gray.png",
-            "access_rules": ["$canFightLategameBoss"]
+            "access_rules": ["^$canFightLategameBoss"]
           }
         ],
         "map_locations": [
@@ -2501,7 +2503,7 @@
   
   {
     "name": "Sector 6 After XBOX Zone",
-    "access_rules": ["@Sector 6 XBOX Zone, $canFightLategameBoss"],
+    "access_rules": ["@Sector 6 XBOX Zone, ^$canFightLategameBoss"],
     "children":[
       {
         "name": "X-B.O.X. Garage - Lower Item",
@@ -2570,7 +2572,7 @@
   
   {
     "name": "Sector 6 Varia Core X Zone",
-    "access_rules": ["@Sector 6 Before Varia Core X Zone, $canFightBoss"],
+    "access_rules": ["@Sector 6 Before Varia Core X Zone, ^$canFightBoss"],
     "children":[
       {
         "name": "Varia Core-X Arena",
@@ -2578,7 +2580,7 @@
           {
             "chest_unopened_img": "images/bosses/mega core.png",
             "chest_opened_img": "images/bosses/mega core_gray.png",
-            "access_rules": ["$canFightBoss"]
+            "access_rules": ["^$canFightBoss, bc"]
           }
         ],
         "map_locations": [
@@ -2597,7 +2599,7 @@
   {
     "name": "Sector 6 After Varia Core X Zone",
     "access_rules": ["@Sector 6 Crossroads, varia, screw, mb",
-                     "@Sector 6 Varia Core X Zone, varia, $canFightBoss"],
+                     "@Sector 6 Varia Core X Zone, varia, ^$canFightBoss"],
     "children":[
       {
         "name": "Twin Caverns West - Lower Item",
