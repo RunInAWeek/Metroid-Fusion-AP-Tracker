@@ -198,7 +198,7 @@ function canAccessReactorZone()
 end
 
 
-function canAccessFieryStorage()
+function canAccessFieryStorageFromSector3()
     return has("varia") and (canLavaDive() or canBeatToughEnemy())
 end
 

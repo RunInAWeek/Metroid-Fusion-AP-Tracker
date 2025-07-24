@@ -1054,7 +1054,9 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["$canAccessFieryStorage"]
+            "access_rules": ["@Sector 3 to Sector 5, screw, $canJumpHigh, ^$canSB",
+                             "$canAccessFieryStorageFromSector3",
+                             "$has|etank|2, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1071,8 +1073,10 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canAccessFieryStorage, speed, canActivatePillar",
-                             "$canAccessFieryStorage, speed, space"]
+            "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item/, speed, space",
+                             "@Sector 3 Hub/Fiery Storage - Lower Item/, speed, $canActivatePillar",
+                             "@Sector 3 to Sector 5, screw, $canJumpHigh, speed, space, ^$canSB",
+                             "@Sector 3 to Sector 5, screw, $canJumpHigh, speed, $canActivatePillar, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1090,8 +1094,8 @@
   
   {
     "name": "Sector 3 to Sector 5",
-    "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item, screw, varia", 
-                     "@Sector 5 Before Nightmare Hub, canJumpHigh"],
+    "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item/, screw", 
+                     "@Sector 5 Before Nightmare Hub, $canJumpHigh"],
     "children":[
       {
         "name": "Glass Tube to Sector 5 (ARC)",
@@ -1203,7 +1207,8 @@
   
   {
     "name": "Sector 3 Boiler Zone",
-    "access_rules": ["@Sector 3 Main Shaft, k2, varia, ^$needEtanks|5"],
+    "access_rules": ["@Sector 3 Main Shaft, k2, varia, ^$needEtanks|5",
+                     "@Sector 3 Main Shaft, k2, ^$canSB"],
     "children":[
       {
         "name": "Lava Maze",
@@ -1211,7 +1216,8 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["mb, pb, $canLavaDive"]
+            "access_rules": ["mb, pb, $canLavaDive",
+                             "mb, pb, gravity, $has|etank|10, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1228,7 +1234,8 @@
           {
             "chest_unopened_img": "images/events/power.png",
             "chest_opened_img": "images/events/power_gray.png",
-            "access_rules": ["dm"]
+            "access_rules": ["dm, varia",
+                             "dm, $has|etank|4, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1245,7 +1252,8 @@
           {
             "chest_unopened_img": "images/bosses/human scientist.png",
             "chest_opened_img": "images/bosses/human scientist_gray.png",
-            "access_rules": ["dm"]
+            "access_rules": ["dm, varia",
+                             "dm, $has|etank|4, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1339,6 +1347,8 @@
     "name": "Sector 3 Attic",
     "access_rules": ["@Sector 3 Hub, screw, space, mb, dm", 
                      "@Sector Hub, k1, mb, screw",
+                     "@Sector 1 Second Stabilizer Zone, k2, $canLavaDive, mb, screw",
+                     "@Sector 1 Second Stabilizer Zone, k2, gravity, $has|etank|2, mb, screw, ^$canSB",
                      "OSH, mb, screw",
                      "@Sector 3 BOX Zone, bc, dm, $canJumpHigh",
                      "@Sector 3 Sova Processing, screw, speed, $canLavaDive"],
@@ -1402,7 +1412,9 @@
   {
     "name": "Sector 3 Sova Processing",
     "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, ^$needEtanks|5",
-                     "@Sector 3 Main Shaft, k2, varia, space, ^$needEtanks|5"],
+                     "@Sector 3 Main Shaft, k2, varia, space, ^$needEtanks|5",
+                     "@Sector 3 Main Shaft, k2, $has|etank|3, bw, ^$canSB",
+                     "@Sector 3 Main Shaft, k2, $has|etank|3, space, ^$canSB"],
     "children":[
       {
         "name": "Sova Processing - Left Item",
@@ -1444,7 +1456,8 @@
           {
             "chest_unopened_img": "images/items/Pbomb.png",
             "chest_opened_img": "images/items/Pbomb_gray.png",
-            "access_rules": ["screw, speed, $canLavaDive"]
+            "access_rules": ["screw, speed, $canLavaDive",
+                             "screw, speed, gravity, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1461,7 +1474,8 @@
           {
             "chest_unopened_img": "images/items/Pbomb.png",
             "chest_opened_img": "images/items/Pbomb_gray.png",
-            "access_rules": ["screw, speed, $canLavaDive"]
+            "access_rules": ["screw, speed, $canLavaDive",
+                             "screw, speed, gravity, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1494,7 +1508,9 @@
     "name": "Sector 4 Hub",
     "access_rules": ["@Sector Hub, k1",
                      "SHO",
-                     "@Sector 4 Upper Zone, speed"],
+                     "@Sector 4 Upper Zone, speed",
+                     "@Sector 4 Upper Zone, space, $canBomb, ^$canSB",
+                     "@Sector 6 Hub, k2"],
     "children":[
       {
         "name": "Drain Pipe",
@@ -1505,7 +1521,11 @@
             "access_rules": ["mb, speed, bw", 
                              "$canPowerBomb, speed", 
                              "mb, speed, dm, ms", 
-                             "mb, speed, screw, gravity"]
+                             "mb, speed, screw, gravity",
+                             "mb, $has|etank|2, ^$canSB, bw", 
+                             "$canPowerBomb, $has|etank|2, ^$canSB", 
+                             "mb, $has|etank|2, ^$canSB, dm, ms", 
+                             "mb, $has|etank|2, ^$canSB, screw, gravity"]
           }
         ],
         "map_locations": [
@@ -1522,7 +1542,8 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["speed, $canPowerBomb"]            
+            "access_rules": ["speed, $canPowerBomb",
+                             "$canPowerBomb, $has|etank, ^$canSB"]            
           }
         ],
         "map_locations": [
@@ -1568,7 +1589,9 @@
     "name": "Sector 4 Upper Zone",
     "access_rules": ["@Sector 4 Hub, $canBombOrPowerBomb",
                      "@Sector 4 Serris Zone, speed",
-                     "@Sector 4 Pump Control, $canBallJump"
+                     "@Sector 4 Pump Control, $canBallJump",
+                     "@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater, k4, mb",
+                     "@Sector 4 Upper Water Zone, mb, screw"
                     ],
     "children":[
       {
@@ -1874,7 +1897,8 @@
   {
     "name": "Sector 4 Data Zone",
     "access_rules": ["@Sector 4 Hub, mb, md, dm, $canBombOrPowerBomb",
-                     "@Sector 4 Right Water Zone, canFreezeEnemies, space"],
+                     "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb",
+                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb"],
     "children":[
       {
         "name": "Data Room",
@@ -2038,6 +2062,7 @@
   {
     "name": "Sector 5 Before Nightmare Hub",
     "access_rules": ["@Sector 5 Frozen Hub, k3",
+                     "@Sector 5 Big Room",
                      "@Sector 3 to Sector 5",
                      "@Sector 5 Nightmare Hub, gravity, space, screw"],
     "children":[
@@ -2323,6 +2348,7 @@
     "name": "Sector 6 Hub",
     "access_rules": ["@Sector Hub, k1, k2",
                      "SHO",
+                     "@Sector 4 Hub, k2",
                      "@Sector 4 Right Water Zone, dm, $canFreezeEnemies, space, screw",
                      "@Sector 4 Data Zone, dm, md, screw, k4, bm, bomb",
                      "Sector 6 Crossroads, $canDefeatMediumGeron"],
@@ -2380,7 +2406,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["varia, $canBombOrPowerBomb"]
+            "access_rules": ["varia, $canBombOrPowerBomb",
+                             "$canBombOrPowerBomb, $has|etank|5, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2398,7 +2425,9 @@
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
             "access_rules": ["screw, speed, varia, $canBomb",
-                             "screw, speed, varia, bw"]
+                             "screw, speed, varia, bw",
+                             "screw, speed, $canBomb, $has|etank|5, ^$canSB",
+                             "screw, speed, bw, $has|etank|5, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2434,12 +2463,14 @@
   {
     "name": "Sector 6 Before BOX Zone",
     "access_rules": ["@Sector 6 Crossroads, varia, k4, $canPowerBomb",
+                     "@Sector 6 Crossroads, $has|etank|5, k4, $canPowerBomb, ^$canSB",
                      "@Sector 6 After XBOX Zone, space, screw"],
     "children":[
       {
         "name": "Speedbooster Alley - Lower Item",
         "sections":[
           {
+            "inspectable_sequence_break": true,
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
             "access_rules": ["high, space, speed, screw", "speed, screw, ^$canSee"]
@@ -2599,7 +2630,9 @@
   {
     "name": "Sector 6 After Varia Core X Zone",
     "access_rules": ["@Sector 6 Crossroads, varia, screw, mb",
-                     "@Sector 6 Varia Core X Zone, varia, ^$canFightBoss"],
+                     "@Sector 6 Varia Core X Zone, varia, ^$canFightBoss",
+                     "@Sector 6 Crossroads, screw, mb, $has|etank, ^$canSB",
+                     "@Sector 6 Varia Core X Zone, ^$canFightBoss, $has|etank, ^$canSB"],
     "children":[
       {
         "name": "Twin Caverns West - Lower Item",
