@@ -1073,8 +1073,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item/, speed, space",
-                             "@Sector 3 Hub/Fiery Storage - Lower Item/, speed, $canActivatePillar",
+            "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item/, speed, space, $canBreakBombBlocks",
+                             "@Sector 3 Hub/Fiery Storage - Lower Item/, speed, $canActivatePillar, $canBreakBombBlocks",
                              "@Sector 3 to Sector 5, screw, $canJumpHigh, speed, space, ^$canSB",
                              "@Sector 3 to Sector 5, screw, $canJumpHigh, speed, $canActivatePillar, ^$canSB"]
           }
@@ -1103,7 +1103,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": []
+            "access_rules": ["$canPowerBomb", "screw", "mb, bomb, high"]
           }
         ],
         "map_locations": [
@@ -2127,7 +2127,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["k3, $canFreezeEnemies, space"]
+            "access_rules": ["k3, $canFreezeEnemies, mb, $canBreakBombBlock", "k3, mb, space, $canBreakBombBlock"]
           }
         ],
         "map_locations": [

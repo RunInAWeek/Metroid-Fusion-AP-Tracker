@@ -179,6 +179,10 @@ function canFreezeEnemies()
     return has("bi") or (has("dm") and (has("mi") or has("md")))
 end
 
+function canBreakBombBlocks()
+    return has("screw") or canBombOrPowerBomb()
+end
+
 function canReachAnimals()
     return (has("speed") or has("bw")) and ((canFreezeEnemies() and has("high")) or has"space")
 end
