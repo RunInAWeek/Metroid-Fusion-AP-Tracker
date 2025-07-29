@@ -2032,9 +2032,9 @@
   {
     "name": "Sector 5 Frozen Hub",
     "access_rules": ["@Sector 5 Big Room, varia",
-                     "@Sector 5 Before Nightmare Hub, k3",
-                     "@Sector 5 Security Zone, k3, space, $canBombOrPowerBomb",
-                     "@Sector 5 Data Room, bw"],
+                     "@Sector 5 Before Nightmare Hub, k3, varia",
+                     "@Sector 5 Security Zone, k3, space, varia, $canBombOrPowerBomb",
+                     "@Sector 5 Data Room, bw, varia"],
     "children":[
       {
         "name": "Ripper Road",
@@ -2090,8 +2090,8 @@
   
   {
     "name": "Sector 5 Data Room",
-    "access_rules": ["@Sector 5 Frozen Hub, k3",
-                     "@Sector 5 Security Zone, k3, space"],
+    "access_rules": ["@Sector 5 Frozen Hub, k3, varia",
+                     "@Sector 5 Security Zone, k3, space, varia"],
     "children":[
       {
         "name": "Data Room",
@@ -2117,9 +2117,9 @@
   
   {
     "name": "Sector 5 Security Zone",
-    "access_rules": ["@Sector 5 Frozen Hub, k3, bw",
-                     "@Sector 5 Frozen Hub, speed, $canPowerOrPowerBomb",
-                     "@Sector 5 Data Room"],
+    "access_rules": ["@Sector 5 Frozen Hub, k3, bw, varia",
+                     "@Sector 5 Frozen Hub, speed, $canPowerOrPowerBomb, varia",
+                     "@Sector 5 Data Room, varia"],
     "children":[
       {
         "name": "E-Tank Mimic Den",
