@@ -424,7 +424,7 @@
       "sections":[
         {
           "chest_unopened_img": "images/items/etank.png",
-          "chest_opened_img": "images/items/etank_gray.png",
+          "chest_opened_img": "images/items/etank_gray.png"
         }
       ],
       "map_locations": [
@@ -2062,7 +2062,7 @@
   {
     "name": "Sector 5 Before Nightmare Hub",
     "access_rules": ["@Sector 5 Frozen Hub, k3",
-                     "@Sector 5 Big Room",
+                     "@Sector 5 Big Room, k3",
                      "@Sector 3 to Sector 5",
                      "@Sector 5 Nightmare Hub, gravity, space, screw"],
     "children":[
@@ -2127,7 +2127,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["k3, $canFreezeEnemies, mb, $canBreakBombBlock", "k3, mb, space, $canBreakBombBlock"]
+            "access_rules": ["k3, $canFreezeEnemies, mb, $canBreakBombBlocks", "k3, mb, space, $canBreakBombBlocks"]
           }
         ],
         "map_locations": [
@@ -2195,7 +2195,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k3, high, space, $canBallJump", "k3, high, $canFreezeEnemies, $canBallJump"]
+            "access_rules": ["k3, high, space, $canBallJump", "k3, high, $canFreezeEnemies, $canBallJump", "k3, space, $canBallJump, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2214,7 +2214,9 @@
   {
     "name": "Sector 5 Nightmare Hub",
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
+                     "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
                      "@Sector 5 Before Nightmare Hub, high, $canBeatToughEnemy",
+                     "@Sector 5 Before Nightmare Hub, gravity, space, $canBeatToughEnemy, ^$canSB",
                      "@Sector 5 Nightmare Zone, gravity, suit, ^$canFightLategameBoss"],
     "children":[
       {

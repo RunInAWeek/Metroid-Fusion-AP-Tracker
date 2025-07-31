@@ -158,16 +158,16 @@ function canFightBoss()
 end
 
 function canFightMidgameBoss()
-    if has("ms") and canFightBoss() then
+    if has("dm") and has("etank", 2) and has("bc") and has("ms") then
         return true
     else if canFightBoss() then
         return AccessibilityLevel.SequenceBreak
-    end
+        end
     end
 end
 
 function canFightLategameBoss()
-    if has("bp") and has("space") and canFightMidgameBoss() then
+    if has("bp") and has("space") and has("dm") and has("etank", 2) and has("bc") and has("ms") then
         return true
     else if canFightMidgameBoss() then
         return AccessibilityLevel.SequenceBreak
