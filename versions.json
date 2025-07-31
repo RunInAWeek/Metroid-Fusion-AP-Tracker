@@ -1,9 +1,9 @@
 {
 	"versions": [
 		{
-			"package_version": "V0.3",
-			"download_url": "",
-			"sha256": "",
+			"package_version": "0.3",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3/Metroid.Fusion.Pack.zip",
+			"sha256": "2019decfe2af0d974da1e3c8fab7426ed856914a76fafc609442e4cf4af17fb4",
 			"changelog": ["Seed Tree + Rooster Adventure fixes"]
 		}
 	]
