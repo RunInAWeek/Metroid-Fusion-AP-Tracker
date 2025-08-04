@@ -1798,7 +1798,8 @@
   
   {
     "name": "Sector 4 Lower Security Zone",
-    "access_rules": ["@Sector 4 Security Zone, k4"],
+    "access_rules": ["@Sector 4 Security Zone, k4",
+                     "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canSB"],
     "children":[
       {
         "name": "Sanctuary Cache",

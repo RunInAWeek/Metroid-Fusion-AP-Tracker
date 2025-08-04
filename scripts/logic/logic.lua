@@ -201,6 +201,10 @@ function canAccessReactorZone()
     end
 end
 
+function canAccessSec4LowerSecZoneWithoutK4()
+    return has("dm") and canBreakBombBlocks() and has("gravity") and has("mb")
+end
+
 
 function canAccessFieryStorageFromSector3()
     return has("varia") and (canLavaDive() or canBeatToughEnemy())
@@ -219,7 +223,7 @@ function canFinish()
     local babies=Tracker:ProviderCountForCode("metroid")
     goal_babies=tonumber(goal_babies)
     babies=tonumber(babies)
-    local result=(babies>=goal_babies) and has("bc") and has("dm")
+    local result=(babies>=goal_babies) and has("bc") and has("dm") and canJumpHigh()
     if result then
         if has("go") then
             return result

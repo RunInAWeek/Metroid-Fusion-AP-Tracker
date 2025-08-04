@@ -1,10 +1,16 @@
 {
 	"versions": [
 		{
+			"package_version": "0.3.1",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3.1/Metroid.Fusion.Pack.0.3.1.zip",
+			"sha256": "7ae006c813ffab7030c2e36e9ab92d35a330117c78cfd151648b37d996807c0e",
+			"changelog": ["Logic and goal fixes"]
+		},
+		{
 			"package_version": "0.3",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3/Metroid.Fusion.Pack.zip",
 			"sha256": "2019decfe2af0d974da1e3c8fab7426ed856914a76fafc609442e4cf4af17fb4",
-			"changelog": ["Seed Tree + Rooster Adventure fixes"]
+			"changelog": ["Starting auto-update"]
 		}
 	]
 }
