@@ -1,0 +1,45 @@
+[
+  //more info: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#maps
+  {
+    "name": "deck-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/deck.png"
+  },
+  {
+    "name": "s1-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/s1.png"
+  },
+  {
+    "name": "s2-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/s2.png"
+  },
+  {
+    "name": "s3-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/s3.png"
+  },
+  {
+    "name": "s4-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/s4.png"
+  },
+  {
+    "name": "s5-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/s5.png"
+  },
+  {
+    "name": "s6-ingame",
+    "location_size": 4,
+    "location_border_thickness": 1,
+    "img": "images/maps/s6.png"
+  }
+]
