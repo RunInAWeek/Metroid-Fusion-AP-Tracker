@@ -1164,7 +1164,8 @@
   
   {
     "name": "Sector 3 Main Shaft",
-    "access_rules": ["@Sector 3 Hub, mb, speed"],
+    "access_rules": ["@Sector 3 Hub, mb, speed",
+                     "@Sector 3 Bob Zone, $canBallJumpAndBomb"],
     "children":[
       {
         "name": "Namihe's Lair",
@@ -1510,7 +1511,8 @@
                      "SHO",
                      "@Sector 4 Upper Zone, speed",
                      "@Sector 4 Upper Zone, space, $canBomb, ^$canSB",
-                     "@Sector 6 Hub, k2"],
+                     "@Sector 6 Hub, k2",
+                     "@Sector 4 Right Water Zone, gravity, dm, md, $has|etank|2, ^$canSB"],
     "children":[
       {
         "name": "Drain Pipe",
@@ -1854,7 +1856,7 @@
     "name": "Sector 4 Right Water Zone",
     "access_rules": ["@Sector 2 Hub, screw, gravity, space",
                      "@Sector 4 Hub, gravity, dm, md",
-                     "@Sector 4 Security Zone, k4"],
+                     "@Sector 4 Security Zone, k4, gravity"],
     "children":[
       {
         "name": "Aquarium Kago Storage - Right Item",
@@ -1898,8 +1900,8 @@
   {
     "name": "Sector 4 Data Zone",
     "access_rules": ["@Sector 4 Hub, mb, md, dm, $canBombOrPowerBomb",
-                     "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb",
-                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb"],
+                     "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb, dm",
+                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb, dm"],
     "children":[
       {
         "name": "Data Room",
@@ -2243,7 +2245,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["varia, gravity, $canBallJump"]
+            "access_rules": ["varia, gravity, $canBallJump, dm"]
           }
         ],
         "map_locations": [
