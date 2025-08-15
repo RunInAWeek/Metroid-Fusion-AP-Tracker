@@ -713,7 +713,9 @@
       "sections":[{
         "chest_unopened_img": "images/items/pbomb.png",
         "chest_opened_img": "images/items/pbomb_gray.png",
-        "access_rules":["bc, gravity, speed, $canBallJump", "bp, gravity, speed, $canBallJump", "dm, gravity, speed, $canBallJump", "^$canSee, speed"]}],
+        "access_rules":["bc, gravity, speed, $canBallJump",
+                        "bp, gravity, speed, $canBallJump",
+                        "dm, gravity, speed, $canBallJump", "^$canSee, speed"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -1169,7 +1171,8 @@
       },
       {
         "name": "Zazabi Speedway - Upper Item",
-         "sections":[{ "access_rules": ["bc, dm, space, speed, screw"],
+         "sections":[{ "access_rules": ["bc, dm, space, speed, screw",
+                                        "dm, space, speed, screw, ^$canSB"],
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png"}],
         "map_locations": [
@@ -1188,7 +1191,8 @@
       },
       {
         "name": "Zazabi Speedway - Lower Item",
-         "sections":[{ "access_rules": ["bc, dm, space, speed, screw"],
+         "sections":[{ "access_rules": ["bc, dm, space, speed, screw",
+                                        "dm, space, speed, screw, ^$canSB"],
         "chest_unopened_img": "images/items/missile.png",
         "chest_opened_img": "images/items/missile_gray.png"}],
         "map_locations": [
@@ -1464,7 +1468,8 @@
 
   {
     "name": "Sector 3 Main Shaft",
-    "access_rules": ["@Sector 3 Hub, mb, speed"],
+    "access_rules": ["@Sector 3 Hub, mb, speed",
+                     "@Sector 3 Bob Zone, $canBallJumpAndBomb"],
     "children":[
       {
         "name": "Namihe's Lair",
@@ -1641,7 +1646,9 @@
 {
     "name": "Sector 3 Bob Zone",
     "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, ^$needEtanks|5",
+                     "@Sector 3 Hub, $canDefeatMediumGeron, k2,^$canSB",
                      "@Sector 3 Main Shaft, $canBallJumpAndBomb",
+                     "@Sector 3 Main Shaft, ^$canSB",
                      "@Sector 3 BOX Zone, k2"],
     "children":[
       {
@@ -1650,7 +1657,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["$canBallJump"]
+            "access_rules": ["$canBallJump",
+                             "mb, $canBreakBombBlocks, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1875,7 +1883,8 @@
                      "SHO",
                      "@Sector 4 Upper Zone, speed",
                      "@Sector 4 Upper Zone, space, $canBomb, ^$canSB",
-                     "@Sector 6 Hub, k2"],
+                     "@Sector 6 Hub, k2",
+                     "@Sector 4 Right Water Zone, gravity, dm, md, $has|etank|2, ^$canSB"],
     "children":[
       {
         "name": "Drain Pipe",
@@ -1883,14 +1892,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb, speed, bw",
-                             "$canPowerBomb, speed",
-                             "mb, speed, dm, ms",
-                             "mb, speed, screw, gravity",
-                             "mb, $has|etank|2, ^$canSB, bw",
-                             "$canPowerBomb, $has|etank|2, ^$canSB",
-                             "mb, $has|etank|2, ^$canSB, dm, ms",
-                             "mb, $has|etank|2, ^$canSB, screw, gravity"]
+            "access_rules": ["^$canAccessDrainPipe"]
           }
         ],
         "map_locations": [
@@ -2228,7 +2230,8 @@
 
   {
     "name": "Sector 4 Lower Security Zone",
-    "access_rules": ["@Sector 4 Security Zone, k4"],
+    "access_rules": ["@Sector 4 Security Zone, k4",
+                     "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canSB"],
     "children":[
       {
         "name": "Sanctuary Cache",
@@ -2293,7 +2296,7 @@
     "name": "Sector 4 Right Water Zone",
     "access_rules": ["@Sector 2 Hub, screw, gravity, space",
                      "@Sector 4 Hub, gravity, dm, md",
-                     "@Sector 4 Security Zone, k4"],
+                     "@Sector 4 Security Zone, k4, gravity"],
     "children":[
       {
         "name": "Aquarium Kago Storage - Right Item",
@@ -2347,8 +2350,8 @@
   {
     "name": "Sector 4 Data Zone",
     "access_rules": ["@Sector 4 Hub, mb, md, dm, $canBombOrPowerBomb",
-                     "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb",
-                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb"],
+                     "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb, dm",
+                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb, dm"],
     "children":[
       {
         "name": "Data Room",
@@ -2762,7 +2765,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["varia, gravity, $canBallJump"]
+            "access_rules": ["varia, gravity, $canBallJump, dm"]
           }
         ],
         "map_locations": [
@@ -3206,7 +3209,7 @@
 
   {
     "name": "Sector 6 Varia Core X Zone",
-    "access_rules": ["@Sector 6 Before Varia Core X Zone, ^$canFightBoss"],
+    "access_rules": ["@Sector 6 Before Varia Core X Zone, k2, ^$canFightBoss"],
     "children":[
       {
         "name": "Varia Core-X Arena",
