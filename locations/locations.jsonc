@@ -568,7 +568,9 @@
       "sections":[{
         "chest_unopened_img": "images/items/pbomb.png",
         "chest_opened_img": "images/items/pbomb_gray.png",
-        "access_rules":["bc, gravity, speed, $canBallJump", "bp, gravity, speed, $canBallJump", "dm, gravity, speed, $canBallJump", "^$canSee, speed"]}],
+        "access_rules":["bc, gravity, speed, $canBallJump", 
+                        "bp, gravity, speed, $canBallJump", 
+                        "dm, gravity, speed, $canBallJump", "^$canSee, speed"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -924,7 +926,8 @@
       },
       {
         "name": "Zazabi Speedway - Upper Item",
-         "sections":[{ "access_rules": ["bc, dm, space, speed, screw"],
+         "sections":[{ "access_rules": ["bc, dm, space, speed, screw",
+                                        "dm, space, speed, screw, ^$canSB"],
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png"}],
         "map_locations": [
@@ -938,7 +941,8 @@
       },
       {
         "name": "Zazabi Speedway - Lower Item",
-         "sections":[{ "access_rules": ["bc, dm, space, speed, screw"],
+         "sections":[{ "access_rules": ["bc, dm, space, speed, screw",
+                                        "dm, space, speed, screw, ^$canSB"],
         "chest_unopened_img": "images/items/missile.png",
         "chest_opened_img": "images/items/missile_gray.png"}],
         "map_locations": [
@@ -1317,7 +1321,9 @@
 {
     "name": "Sector 3 Bob Zone",
     "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, ^$needEtanks|5",
+                     "@Sector 3 Hub, $canDefeatMediumGeron, k2,^$canSB",
                      "@Sector 3 Main Shaft, $canBallJumpAndBomb",
+                     "@Sector 3 Main Shaft, ^$canSB",
                      "@Sector 3 BOX Zone, k2"],
     "children":[
       {
@@ -1326,7 +1332,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["$canBallJump"]
+            "access_rules": ["$canBallJump",
+                             "mb, $canBreakBombBlocks, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1520,14 +1527,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb, speed, bw", 
-                             "$canPowerBomb, speed", 
-                             "mb, speed, dm, ms", 
-                             "mb, speed, screw, gravity",
-                             "mb, $has|etank|2, ^$canSB, bw", 
-                             "$canPowerBomb, $has|etank|2, ^$canSB", 
-                             "mb, $has|etank|2, ^$canSB, dm, ms", 
-                             "mb, $has|etank|2, ^$canSB, screw, gravity"]
+            "access_rules": ["^$canAccessDrainPipe"]
           }
         ],
         "map_locations": [
@@ -2608,7 +2608,7 @@
   
   {
     "name": "Sector 6 Varia Core X Zone",
-    "access_rules": ["@Sector 6 Before Varia Core X Zone, ^$canFightBoss"],
+    "access_rules": ["@Sector 6 Before Varia Core X Zone, k2, ^$canFightBoss"],
     "children":[
       {
         "name": "Varia Core-X Arena",
