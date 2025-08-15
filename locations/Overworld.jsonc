@@ -807,32 +807,6 @@
  },
 
  {
-  "name": "In-game Map Overlapping Locations",
-  "children": [
-    {
-      "name": "Boiler Room Control",
-      "sections": [
-        {
-          "ref": "Sector 3 Boiler Zone/Boiler Room Control - Core X/",
-          "name": "Core-X"
-        },
-        {
-          "ref": "Sector 3 Boiler Zone/Boiler Room Control - Boiler/",
-          "name": "Boiler"
-        }
-      ],
-      "map_locations": [
-        {
-          "map": "s3-ingame",
-          "x": 45,
-          "y": 75
-        }
-      ]
-    }
-  ]
- },
-
- {
   "name": "Goal",
   "access_rules": [""],
   "children":[
