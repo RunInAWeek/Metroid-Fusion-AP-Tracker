@@ -19,6 +19,12 @@
         // enables AP autotracking interface - remove if not needed
         "ap"
       ]
+    },
+    "var_ingamemaps": {
+      "display_name": "Map Tracker - In-game Maps",
+      "flags": [
+        "ap"
+      ]
     }
   },
   "versions_url": "https://raw.githubusercontent.com/RunInAWeek/Metroid-Fusion-AP-Tracker/refs/heads/main/versions.json"
