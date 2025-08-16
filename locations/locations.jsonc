@@ -579,7 +579,8 @@
         {
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canLavaDive, mb"]
+          "access_rules": ["$canLavaDive, mb",
+                           "$has|etank|4, mb ^$canSB"]
         }
       ],
       "map_locations": [
@@ -1005,7 +1006,9 @@
 
   {
     "name": "Sector 2 Left Side",
-    "access_rules": ["@Sector 2 Hub, $canBombOrPowerBomb", "@Sector 2 Zazabi Zone, space, canBombOrPowerBomb"],
+    "access_rules": ["@Sector 2 Hub, $canBombOrPowerBomb",
+                     "@Sector 2 Zazabi Zone, space, canBombOrPowerBomb",
+                     "@Sector 2 Hub, $canBreakBombBlocks, mb, ^$canSB"],
     "children":[
       {
         "name": "Zoro Zig-Zag",
@@ -1243,7 +1246,10 @@
 
   {
     "name": "Sector 2 Nettori Zone",
-    "access_rules": ["@Reactor Zone, space, dm, $canBombOrPowerBomb", "@Sector 2 Hub, $canPowerBombAndJumpHigh", "@Sector 2 Zazabi Zone, space"],
+    "access_rules": ["@Reactor Zone, space, dm, $canBombOrPowerBomb",
+                     "@Sector 2 Hub, $canPowerBombAndJumpHigh",
+                     "@Sector 2 Hub, $canPowerBomb, ^$canSB",
+                     "@Sector 2 Zazabi Zone, space"],
     "children":[
       {
         "name":"Nettori Arena",
@@ -2075,7 +2081,8 @@
 
   {
     "name": "Sector 4 Serris Zone",
-    "access_rules": ["@Sector 4 Upper Zone, high"],
+    "access_rules": ["@Sector 4 Upper Zone, high",
+                     "@Sector 4 Upper Zone, $canBombOrPowerBomb, ^$canSB"],
     "children":[
       {
         "name": "Serris Arena",
@@ -2083,7 +2090,8 @@
           {
             "chest_unopened_img": "images/bosses/serris.png",
             "chest_opened_img": "images/bosses/serris_gray.png",
-            "access_rules": ["high, ^$canFightBoss"]
+            "access_rules": ["high, ^$canFightBoss",
+                             "^$canFightBoss, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2744,7 +2752,7 @@
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
                      "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
                      "@Sector 5 Before Nightmare Hub, high, $canBeatToughEnemy",
-                     "@Sector 5 Before Nightmare Hub, gravity, space, $canBeatToughEnemy, ^$canSB",
+                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, ^$canSB",
                      "@Sector 5 Nightmare Zone, gravity, suit, ^$canFightLategameBoss"],
     "children":[
       {
@@ -2872,7 +2880,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJumpAndBomb"]
+            "access_rules": ["$canBallJumpAndBomb",
+                             "$canBombOrPowerBomb, ^$canSB"]
           }
         ],
         "map_locations": [
