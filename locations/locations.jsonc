@@ -862,7 +862,10 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canPowerBomb", "high, $canBombOrPowerBomb"]}],
+          "access_rules":["$canPowerBomb", "high, $canBombOrPowerBomb",
+                          "gravity, mb, bomb, ^$canSB",
+                          "gravity, screw, $canJumpHigh, ^$canSB",
+                          "gravity, screw, $canActivatePillar, ^$canSB"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -2129,7 +2132,7 @@
   {
     "name": "Sector 5 Security Zone",
     "access_rules": ["@Sector 5 Frozen Hub, k3, bw, varia",
-                     "@Sector 5 Frozen Hub, speed, $canPowerOrPowerBomb, varia",
+                     "@Sector 5 Frozen Hub, speed, $canBombOrPowerBomb, varia",
                      "@Sector 5 Data Room, varia"],
     "children":[
       {
@@ -2617,7 +2620,8 @@
   
   {
     "name": "Sector 6 Varia Core X Zone",
-    "access_rules": ["@Sector 6 Before Varia Core X Zone, k2, ^$canFightBoss"],
+    "access_rules": ["@Sector 6 Before Varia Core X Zone, k2, bc, ^$canFightBoss",
+                     "@Sector 6 After Varia Core X Zone, varia, bc, ^$canFightBoss"],
     "children":[
       {
         "name": "Varia Core-X Arena",
