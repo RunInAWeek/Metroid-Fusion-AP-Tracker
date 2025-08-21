@@ -1,0 +1,70 @@
+{
+  "maps": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Main Deck",
+        "content": {
+          "type": "map",
+          "maps": [
+            "deck-ingame"
+          ]
+        }
+      },
+      {
+        "title": "Sector 1",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s1-ingame"
+          ]
+        }
+      },
+      {
+        "title": "Sector 2",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s2-ingame"
+          ]
+        }
+      },
+      {
+        "title": "Sector 3",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s3-ingame"
+          ]
+        }
+      },
+      {
+        "title": "Sector 4",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s4-ingame"
+          ]
+        }
+      },
+      {
+        "title": "Sector 5",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s5-ingame"
+          ]
+        }
+      },
+      {
+        "title": "Sector 6",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s6-ingame"
+          ]
+        }
+      }
+    ]
+  }
+}
