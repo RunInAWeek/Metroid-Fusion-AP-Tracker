@@ -756,7 +756,8 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh", "screw", "^$canSee"]}],
+          "access_rules":["$canJumpHigh", "screw", "^$canSee",
+                          "$canFreezeEnemies, ^$canSB"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1248,8 +1249,10 @@
           {
             "chest_unopened_img": "images/events/power.png",
             "chest_opened_img": "images/events/power_gray.png",
-            "access_rules": ["dm, varia",
-                             "dm, $has|etank|4, ^$canSB"]
+            "access_rules": ["dm, varia, space",
+                             "dm, varia, $canFreezeEnemies",
+                             "dm, $has|etank|4, space, ^$canSB",
+                             "dm, $has|etank|4, $canFreezeEnemies, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1266,8 +1269,10 @@
           {
             "chest_unopened_img": "images/bosses/human scientist.png",
             "chest_opened_img": "images/bosses/human scientist_gray.png",
-            "access_rules": ["dm, varia",
-                             "dm, $has|etank|4, ^$canSB"]
+            "access_rules": ["dm, varia, space",
+                             "dm, varia, $canFreezeEnemies",
+                             "dm, $has|etank|4, space, ^$canSB",
+                             "dm, $has|etank|4, $canFreezeEnemies, ^$canSB"]
           }
         ],
         "map_locations": [
