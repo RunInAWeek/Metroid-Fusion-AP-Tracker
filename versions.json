@@ -1,6 +1,24 @@
 {
 	"versions": [
 		{
+			"package_version": "0.3.7",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3.7/Metroid.Fusion.Pack.zip",
+			"sha256": "033480403fd95eefffa5d958faf62b71cc3b698a9fd6c0a96f7ebd9c3c343859",
+			"changelog": ["Various logic fixes"]
+		},
+		{
+			"package_version": "0.3.6",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3.6/Metroid.Fusion.Pack.zip",
+			"sha256": "b835060ce8c57ffc690f761186145c02b89acffba46d99b0cb4f1d9ef0f0b6fe",
+			"changelog": ["SB added in sector 2, logic fix for boiler room"]
+		},
+		{
+			"package_version": "0.3.5",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3.5/Metroid.Fusion.pack.zip",
+			"sha256": "ac95de0c973a314eaef744217b76fd441eb397509e64c0a5e6adf30020898363",
+			"changelog": ["SB added, logic fixes"]
+		},
+		{
 			"package_version": "0.3.4",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3.4/Metroid.Fusion.Pack.zip",
 			"sha256": "aad426dc16410f33df1a245d923a4be6f5798acf1d7e32fcd883b3d2a58eaa4c",

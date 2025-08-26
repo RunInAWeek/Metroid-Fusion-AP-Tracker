@@ -269,7 +269,7 @@ function canAccessDrainPipe()
     if (has("speed") and has("k1")) and (has("bw") or canPowerBomb() or (has("dm") and has("ms")) or has("screw")) then
         return true
     end
-    if (has("speed") or (has("gravity") and has("etank", 2))) and (has("bw") or canPowerBomb() or (has("dm") and has("ms")) or has("screw")) then
+    if has("etank", 2) and (has("bw") or canPowerBomb() or (has("dm") and has("ms")) or (has("screw") and has("gravity"))) then
         return AccessibilityLevel.SequenceBreak
     end
     return false

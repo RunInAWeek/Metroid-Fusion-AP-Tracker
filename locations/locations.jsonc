@@ -768,7 +768,9 @@
 
 {
   "name": "Sector 1 Tourian Hub",
-  "access_rules": ["@Sector 1 Second Stabilizer Zone, screw, space, bw, mb"],
+  "access_rules": ["@Sector 1 Second Stabilizer Zone, screw, space, bw, mb, dm",
+                   "@Sector 1 Second Stabilizer Zone, screw, mb, dm, ^$canSB",
+                   "@Sector 6 Restricted Zone/Restricted Airlock"],
   "children":[
     {
       "name": "Animorphs Cache",
@@ -776,7 +778,10 @@
         {
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": ["bc, dm, ms, space, bw"]
+          "access_rules": ["bc, dm, ms, space, bw",
+                           "dm, ms, screw, ^$canSB",
+                           "$canPowerBomb, dm, ms, ^$canSB",
+                           "$canPowerBomb, screw, ^$canSB"]
         }
       ],
       "map_locations": [
@@ -946,7 +951,8 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh", "screw", "^$canSee"]}],
+          "access_rules":["$canJumpHigh", "screw", "^$canSee",
+                          "$canFreezeEnemies, ^$canSB"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1082,7 +1088,10 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canPowerBomb", "high, $canBombOrPowerBomb"]}],
+          "access_rules":["$canPowerBomb", "high, $canBombOrPowerBomb",
+                          "gravity, mb, bomb, ^$canSB",
+                          "gravity, screw, $canJumpHigh, ^$canSB",
+                          "gravity, screw, $canActivatePillar, ^$canSB"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1560,8 +1569,10 @@
           {
             "chest_unopened_img": "images/events/power.png",
             "chest_opened_img": "images/events/power_gray.png",
-            "access_rules": ["dm, varia",
-                             "dm, $has|etank|4, ^$canSB"]
+            "access_rules": ["dm, varia, space",
+                             "dm, varia, $canFreezeEnemies",
+                             "dm, $has|etank|4, space, ^$canSB",
+                             "dm, $has|etank|4, $canFreezeEnemies, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1583,8 +1594,10 @@
           {
             "chest_unopened_img": "images/bosses/human scientist.png",
             "chest_opened_img": "images/bosses/human scientist_gray.png",
-            "access_rules": ["dm, varia",
-                             "dm, $has|etank|4, ^$canSB"]
+            "access_rules": ["dm, varia, space",
+                             "dm, varia, $canFreezeEnemies",
+                             "dm, $has|etank|4, space, ^$canSB",
+                             "dm, $has|etank|4, $canFreezeEnemies, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1700,12 +1713,12 @@
   {
     "name": "Sector 3 Attic",
     "access_rules": ["@Sector 3 Hub, screw, space, mb, dm",
+                     "@Sector 3 Hub, screw, space, mb, ^$canSB",
                      "@Sector Hub, k1, mb, screw",
                      "@Sector 1 Second Stabilizer Zone, k2, $canLavaDive, mb, screw",
                      "@Sector 1 Second Stabilizer Zone, k2, gravity, $has|etank|2, mb, screw, ^$canSB",
-                     "OSH, mb, screw",
-                     "@Sector 3 BOX Zone, bc, dm, $canJumpHigh",
-                     "@Sector 3 Sova Processing, screw, speed, $canLavaDive"],
+                     "@Sector 3 BOX Zone, ^$canFightBoss, $canJumpHigh",
+                     "@Sector 3 Sova Processing/Garbage Chute - Lower Item/"],
     "children":[
       {
         "name": "Alcove - Lower Item",
@@ -2314,7 +2327,8 @@
     "name": "Sector 4 Right Water Zone",
     "access_rules": ["@Sector 2 Hub, screw, gravity, space",
                      "@Sector 4 Hub, gravity, dm, md",
-                     "@Sector 4 Security Zone, k4, gravity"],
+                     "@Sector 4 Security Zone, k4, gravity, $canFreezeEnemies",
+                     "@Sector 4 Security Zone, k4, gravity, screw"],
     "children":[
       {
         "name": "Aquarium Kago Storage - Right Item",
@@ -2562,8 +2576,7 @@
 
   {
     "name": "Sector 5 Before Nightmare Hub",
-    "access_rules": ["@Sector 5 Frozen Hub, k3",
-                     "@Sector 5 Big Room, k3",
+    "access_rules": ["@Sector 5 Frozen Hub, k3, varia",
                      "@Sector 3 to Sector 5",
                      "@Sector 5 Nightmare Hub, gravity, space, screw"],
     "children":[
@@ -2629,7 +2642,7 @@
   {
     "name": "Sector 5 Security Zone",
     "access_rules": ["@Sector 5 Frozen Hub, k3, bw, varia",
-                     "@Sector 5 Frozen Hub, speed, $canPowerOrPowerBomb, varia",
+                     "@Sector 5 Frozen Hub, speed, $canBombOrPowerBomb, varia",
                      "@Sector 5 Data Room, varia"],
     "children":[
       {
@@ -3228,7 +3241,8 @@
 
   {
     "name": "Sector 6 Varia Core X Zone",
-    "access_rules": ["@Sector 6 Before Varia Core X Zone, k2, ^$canFightBoss"],
+    "access_rules": ["@Sector 6 Before Varia Core X Zone, k2, bc, ^$canFightBoss",
+                     "@Sector 6 After Varia Core X Zone, varia, bc, ^$canFightBoss"],
     "children":[
       {
         "name": "Varia Core-X Arena",
