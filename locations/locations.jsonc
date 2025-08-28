@@ -1438,10 +1438,10 @@
   
   {
     "name": "Sector 3 Sova Processing",
-    "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, ^$needEtanks|5",
-                     "@Sector 3 Main Shaft, k2, varia, space, ^$needEtanks|5",
-                     "@Sector 3 Main Shaft, k2, $has|etank|3, bw, ^$canSB",
-                     "@Sector 3 Main Shaft, k2, $has|etank|3, space, ^$canSB"],
+    "access_rules": ["@Sector 3 Main Shaft, k2, varia, bw, $canBreakBombBlocks, ^$needEtanks|5",
+                     "@Sector 3 Main Shaft, k2, varia, space, $canBreakBombBlocks, ^$needEtanks|5",
+                     "@Sector 3 Main Shaft, k2, $has|etank|3, $canBreakBombBlocks, bw, ^$canSB",
+                     "@Sector 3 Main Shaft, k2, $has|etank|3, $canBreakBombBlocks, space, ^$canSB"],
     "children":[
       {
         "name": "Sova Processing - Left Item",
@@ -2241,7 +2241,7 @@
                      "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
                      "@Sector 5 Before Nightmare Hub, high, $canBeatToughEnemy",
                      "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, ^$canSB",
-                     "@Sector 5 Nightmare Zone, gravity, suit, ^$canFightLategameBoss"],
+                     "@Sector 5 Nightmare Zone, gravity, ^$canFightLategameBoss"],
     "children":[
       {
         "name": "Flooded Airlock to Sector 4 (AQU)",
@@ -2283,7 +2283,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, $canBallJump"]
+            "access_rules": ["$canPowerBomb, $canBallJump, $canJumpHigh"]
           }
         ],
         "map_locations": [
@@ -2300,7 +2300,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb"]
+            "access_rules": ["$canPowerBomb, $canJumpHigh"]
           }
         ],
         "map_locations": [
@@ -2325,7 +2325,8 @@
           {
             "chest_unopened_img": "images/bosses/nightmare.png",
             "chest_opened_img": "images/bosses/nightmare_gray.png",
-            "access_rules": ["^$canFightLategameBoss"]
+            "access_rules": ["^$canFightLategameBoss, mb, $canJumpHigh",
+                             "^$canFightLategameBoss, speed, gravity"]
           }
         ],
         "map_locations": [
@@ -2342,8 +2343,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJumpAndBomb",
-                             "$canBombOrPowerBomb, ^$canSB"]
+            "access_rules": ["$canBallJumpAndBomb, $canJumpHigh",
+                             "$canBombOrPowerBomb, $canJumpHigh, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2612,7 +2613,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["$canBombOrPowerBomb, $canJumpHigh"]
+            "access_rules": ["$canBombOrPowerBomb, $canJumpHigh",
+                             "$canBombOrPowerBomb, $canFreezeEnemies, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2668,7 +2670,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["mb, $canJumpHigh"]
+            "access_rules": ["mb, $canJumpHigh",
+                             "mb, ^$canSB"]
           }
         ],
         "map_locations": [

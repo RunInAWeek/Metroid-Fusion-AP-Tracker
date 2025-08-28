@@ -4,7 +4,7 @@
   // for more info on the manifest check: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#manifest
   "name": "Metroid Fusion AP",
   "game_name": "Metroid Fusion",
-  "package_version": "0.3.7",
+  "package_version": "0.3.8",
   "package_uid": "Metroid Fusion AP",
   // enables SNES memory autotracking interface - remove/change if not needed
   "platform": "GBA",
