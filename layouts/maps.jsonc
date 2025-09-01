@@ -1,0 +1,70 @@
+{
+  "maps": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Main Deck",
+        "content": {
+          "type": "map",
+          "maps": [
+            "deck"
+          ]
+        }
+      },
+      {
+        "title": "Sector 1",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s1"
+          ]
+        }
+      },
+      {
+        "title": "Sector 2",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s2"
+          ]
+        }
+      },
+      {
+        "title": "Sector 3",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "title": "Sector 4",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s4"
+          ]
+        }
+      },
+      {
+        "title": "Sector 5",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s5"
+          ]
+        }
+      },
+      {
+        "title": "Sector 6",
+        "content": {
+          "type": "map",
+          "maps": [
+            "s6"
+          ]
+        }
+      }
+    ]
+  }
+}

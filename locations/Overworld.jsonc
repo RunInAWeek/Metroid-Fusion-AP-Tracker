@@ -3,7 +3,7 @@
 	"name": "Overworld",
 	"children": [
         {
-		"name": "Sector 1 Entrance Area",    
+		"name": "Sector 1 Entrance Area",
 		"sections": [
           {
             "ref": "Sector 1 To Sector 2/Antechamber/",
@@ -29,12 +29,18 @@
             "x": 598,
             "y": 2130,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 29,
+            "y": 140,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 1 Stabilizers Area",    
+        "name": "Sector 1 Stabilizers Area",
 		"sections":[
           {
             "ref": "Sector 1 First Stabilizer Zone/Atmospheric Stabilizer Northeast/",
@@ -75,12 +81,18 @@
             "x": 598,
             "y": 2220,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 29,
+            "y": 147,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 1 Tourian Area",    
+        "name": "Sector 1 Tourian Area",
 		"sections":[
           {
             "ref": "Sector 1 Tourian Hub/Animorphs Cache/",
@@ -101,12 +113,18 @@
             "x": 598,
             "y": 2315,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 29,
+            "y": 154,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 2 Entrance Area",    
+        "name": "Sector 2 Entrance Area",
 		"sections":[
           {
             "ref": "Sector 2 Hub/Crumble City - Upper Item/",
@@ -147,12 +165,18 @@
             "x": 1558,
             "y": 2130,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 59,
+            "y": 140,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 2 Deeper Parts",    
+        "name": "Sector 2 Deeper Parts",
 		"sections":[
           {
             "ref": "Sector 2 Zazabi Zone/Cultivation Station/",
@@ -198,12 +222,18 @@
             "x": 1558,
             "y": 2220,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 59,
+            "y": 147,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 2 Zazabi Area",    
+        "name": "Sector 2 Zazabi Area",
 		"sections":[
           {
             "ref": "Sector 2 Zazabi Zone/Zazabi Arena/",
@@ -220,7 +250,7 @@
           {
             "ref": "Sector 2 Zazabi Zone/Zazabi Speedway - Lower Item/",
             "name": "Zazabi Speedway - Lower Item"
-          }         
+          }
 
         ],
         "map_locations": [
@@ -229,12 +259,18 @@
             "x": 1558,
             "y": 2315,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 59,
+            "y": 154,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 3 Entrance Area",    
+        "name": "Sector 3 Entrance Area",
 		"sections":[
           {
             "ref": "Sector 3 Hub/Fiery Storage - Lower Item/",
@@ -264,12 +300,18 @@
             "x": 357,
             "y": 2130,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 20,
+            "y": 140,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 3 Top Right Area",    
+        "name": "Sector 3 Top Right Area",
 		"sections":[
           {
             "ref": "Sector 3 Main Shaft/Namihe's Lair/",
@@ -311,12 +353,18 @@
             "x": 357,
             "y": 2220,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 20,
+            "y": 147,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 3 Hot Area",    
+        "name": "Sector 3 Hot Area",
 		"sections":[
           {
             "ref": "Sector 3 Boiler Zone/Lava Maze/",
@@ -354,12 +402,18 @@
             "x": 357,
             "y": 2315,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 20,
+            "y": 154,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 4 Middle Area",    
+        "name": "Sector 4 Middle Area",
 		"sections":[
           {
             "ref": "Sector 4 Hub/Drain Pipe/",
@@ -389,12 +443,18 @@
             "x": 1799,
             "y": 2130,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 68,
+            "y": 140,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 4 Top Area",    
+        "name": "Sector 4 Top Area",
 		"sections":[
           {
             "ref": "Sector 4 Upper Zone/Broken Bridge/",
@@ -424,12 +484,18 @@
             "x": 1799,
             "y": 2220,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 68,
+            "y": 147,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 4 Underwater Area",    
+        "name": "Sector 4 Underwater Area",
 		"sections":[
           {
             "ref": "Sector 4 Upper Water Zone/Cargo Hold to Sector 5 (ARC)/",
@@ -471,12 +537,18 @@
             "x": 1799,
             "y": 2315,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 68,
+            "y": 154,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 5 Top Area",    
+        "name": "Sector 5 Top Area",
 		"sections":[
           {
             "ref": "Sector 5 Hub/Gerubus Gully/",
@@ -510,12 +582,18 @@
             "x": 117,
             "y": 2130,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 11,
+            "y": 140,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 5 Bottom Area",    
+        "name": "Sector 5 Bottom Area",
 		"sections":[
           {
             "ref": "Sector 5 Frozen Hub/Ripper Road/",
@@ -549,12 +627,18 @@
             "x": 117,
             "y": 2220,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 11,
+            "y": 147,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 5 Nightmare Area",    
+        "name": "Sector 5 Nightmare Area",
 		"sections":[
           {
             "ref": "Sector 5 Nightmare Hub/Flooded Airlock to Sector 4 (AQU)/",
@@ -588,12 +672,18 @@
             "x": 117,
             "y": 2315,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 11,
+            "y": 154,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 6 Top Area",    
+        "name": "Sector 6 Top Area",
 		"sections":[
           {
             "ref": "Sector 6 Hub/Entrance Lobby/",
@@ -602,7 +692,7 @@
           {
             "ref": "Sector 6 Crossroads/Missile Mimic Lodge/",
             "name": "Missile Mimic Lodge"
-          }, 
+          },
           {
             "ref": "Sector 6 Crossroads/Pillar Highway/",
             "name": "Pillar Highway"
@@ -610,7 +700,7 @@
           {
             "ref": "Sector 6 Crossroads/Vault/",
             "name": "Vault"
-          }       
+          }
 
         ],
         "map_locations": [
@@ -619,12 +709,18 @@
             "x": 2039,
             "y": 2130,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 77,
+            "y": 140,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 6 Middle Area",    
+        "name": "Sector 6 Middle Area",
 		"sections":[
           {
             "ref": "Sector 6 Before BOX Zone/Speedbooster Alley - Lower Item/",
@@ -654,12 +750,18 @@
             "x": 2039,
             "y": 2220,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 77,
+            "y": 147,
+            "size": 6
         }
         ]
         },
 
         {
-        "name": "Sector 6 Bottom Area",    
+        "name": "Sector 6 Bottom Area",
 		"sections":[
           {
             "ref": "Sector 6 Varia Core X Zone/Varia Core-X Arena/",
@@ -689,6 +791,12 @@
             "x": 2039,
             "y": 2315,
             "size": 80
+        },
+        {
+            "map": "deck-ingame",
+            "x": 77,
+            "y": 154,
+            "size": 6
         }
         ]
         }
@@ -718,6 +826,12 @@
           "y": 236,
           "size": 100,
           "border_thickness": 25
+        },
+        {
+          "map": "deck-ingame",
+          "x": 136,
+          "y": 24,
+          "size": 10
         }
       ]
     }
