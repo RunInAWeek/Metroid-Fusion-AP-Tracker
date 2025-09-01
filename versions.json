@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4/Metroid.Fusion.Pack.zip",
+			"sha256": "ef7d0d129e28c4a0032d44e9927dfb8913f735583043dc187189a45d69d585c4",
+			"changelog": ["Various logic and SB fixes + adding variant for in-game map"]
+		},
+		{
 			"package_version": "0.3.8",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.3.8/Metroid.Fusion.Pack.zip",
 			"sha256": "bb275c37640f3085eae2bb8dac9ec86c8131bbea308e02abb14d56ef497cc8b3",
