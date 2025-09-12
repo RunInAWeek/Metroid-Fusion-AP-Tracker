@@ -428,7 +428,7 @@
             "name": "Pump Control Unit"
           },
           {
-            "ref": "Sector 4 Upper Water Zone/Waterway/",
+            "ref": "Sector 4 Upper Zone/Waterway/",
             "name": "Waterway"
           },
           {
@@ -555,15 +555,15 @@
             "name": "Gerubus Gully"
           },
           {
-            "ref": "Sector 5 Hub/Magic Box/",
+            "ref": "Sector 5 Magic Box Room/Magic Box/",
             "name": "Magic Box"
           },
           {
-            "ref": "Sector 5 Big Room/Training - Left Item/",
+            "ref": "Sector 5 Top Left Big Room/Training - Left Item/",
             "name": "Training - Left Item"
           },
           {
-            "ref": "Sector 5 Big Room/Training - Right Item/",
+            "ref": "Sector 5 Top Left Big Room/Training - Right Item/",
             "name": "Training - Right Item"
           },
           {
@@ -657,11 +657,11 @@
             "name": "Ruined Break Room"
           },
           {
-            "ref": "Sector 5 Nightmare Zone/Nightmare Arena/",
+            "ref": "Sector 5 Nightmare Zone Arena/Nightmare Arena/",
             "name": "Nightmare Arena"
           },
           {
-            "ref": "Sector 5 Nightmare Zone/Nightmare Nook/",
+            "ref": "Sector 5 Nightmare Zone Upper/Nightmare Nook/",
             "name": "Nightmare Nook"
           }
 

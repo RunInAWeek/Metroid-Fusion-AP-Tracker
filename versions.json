@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4.1",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.1/Metroid.Fusion.Pack.zip",
+			"sha256": "2570003f93aa56cc28969dc7256fac31225c10752aaeaf7d04b4703ce4d7cc9a",
+			"changelog": ["Elevator/Tube shuffle added"]
+		},
+		{
 			"package_version": "0.4",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4/Metroid.Fusion.Pack.zip",
 			"sha256": "ef7d0d129e28c4a0032d44e9927dfb8913f735583043dc187189a45d69d585c4",

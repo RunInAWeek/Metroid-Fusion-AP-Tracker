@@ -20,7 +20,8 @@ function hasnot(item)
 	else return true
 	end
 end
-    
+
+
 function morph()
        
     return has("mb")
@@ -147,6 +148,10 @@ function canDefeatLargeGeron()
     return canPowerBomb() or has("screw")
 end
 
+function canDefeatStabilizers()
+    return has("screw") or has("dm") or has("bc")
+end
+
 function canFightBoss()
     if has("dm") then
         if has("etank", 2) and has("bc") then
@@ -188,7 +193,7 @@ function canReachAnimals()
 end
 
 function canAccessArachnusZone()
-    return canDefeatSmallGeron() or (has("mb") and has("screw") and has("space"))
+    return canDefeatSmallGeron() or (has("mb") and has("screw") and (has("space") or has(SimpleWalljumps)))
 end
 
 function canAccessReactorZone()
@@ -233,14 +238,6 @@ function canFinish()
     return result
 end
 
-
-
-function canWallJumpTutorial()
-    if has("mb") then
-        return AccessibilityLevel.SequenceBreak
-    else return false
-    end
-end
 
 function canAccessLevel4SecurityRoom()
     if (has("dm") and canBombOrPowerBomb) or has("k4") then

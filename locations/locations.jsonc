@@ -1,7 +1,11 @@
 [
   {
     "name": "Main Deck Hub",
-    "access_rules":["$hasnot|SHO", "SHO, mb", "SHO, speed"],
+    "access_rules":["$hasnot|SHO", 
+                    "$hasnot|ElevatorRandom2, SHO, mb", "$hasnot|ElevatorRandom2, SHO, speed",
+                    "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, mb", "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, speed",
+                    "ElevatorRandom2, OperationDeckElevatorBot",
+                    "ElevatorRandom2, HabitationDeckElevatorBot, k2"],
     "children": [
       {
         "name": "Quarantine Bay",
@@ -93,11 +97,411 @@
     ]
   },
 
+    {
+    "name": "Main Deck West Elevator",
+    "access_rules":["@Main Deck Hub, mb", "@Main Deck Hub, speed, TrickyShinespark",
+                    "ElevatorRandom, ElevatorRandom2, MainDeckElevatorfromMainHub",
+                    "$hasnot|ElevatorRandom2, @Sector Hub"],
+    "children": [
+      {
+        "name": "Main Elevator Cache",
+        "sections":[{
+          "chest_unopened_img": "images/items/missile.png",
+          "chest_opened_img": "images/items/missile_gray.png",
+          "access_rules": ["^$canSee", "speed"]}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 792,
+            "y": 1414
+          },
+          {
+            "map": "deck-ingame",
+            "x": 36,
+            "y": 76
+          }
+        ]
+      }
+      
+    ]
+
+  },
+
+  {
+    "name": "Main Deck Elevator from Sector Hub",
+    "children": [
+      {
+        "name": "Elevator access Main Deck from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Main Deck Hub, mb", "@Main Deck Hub, speed", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "MainDeckElevatorfromMainHub"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 1072,
+            "y": 1358,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 44,
+            "y": 76,
+            "shape": "diamond"
+      }
+    ]
+      }
+      
+    ]
+
+  },
+
+  {
+    "name": "Sector Hub",
+    "access_rules":["SHO", "@Sector Hub - Sector 1", "@Sector Hub - Sector 2", "ElevatorRandom, ElevatorRandom2, SectorHubElevatorToMainDeck", "$hasnot|ElevatorRandom2, @Main Deck West Elevator"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator from Main Deck",
+        "sections":[{
+        "access_rules": ["@Sector Hub - Sector 1", "@Sector Hub - Sector 2", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "SectorHubElevatorToMainDeck"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 1072,
+            "y": 2002,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 44,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 1",
+    "access_rules":["@Sector Hub", "@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k1", "ElevatorRandom, SectorHubElevatorToSector1"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 1 Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator to Sector 1",
+        "sections":[{
+        "access_rules": ["@Sector Hub", "@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k1", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "SectorHubElevatorToSector1"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 599,
+            "y": 2013,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 28,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Sector Hub - Sector 2",
+    "access_rules":["@Sector Hub", "@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k1", "ElevatorRandom, SectorHubElevatorToSector2"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 2 Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator to Sector 2",
+        "sections":[{
+        "access_rules": ["@Sector Hub", "@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k1", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "SectorHubElevatorToSector2"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 1556,
+            "y": 2013,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 60,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Sector Hub - Sector 3",
+    "access_rules":["@Sector Hub - Sector 1, SHO", "@Sector Hub - Sector 1, k1", "@Sector Hub - Sector 5, SHO", "@Sector Hub - Sector 5, k2", "ElevatorRandom, SectorHubElevatorToSector3"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 3 Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator to Sector 3",
+        "sections":[{
+        "access_rules": ["@Sector Hub - Sector 1, SHO", "@Sector Hub - Sector 1, k1", "@Sector Hub - Sector 5, SHO", "@Sector Hub - Sector 5, k2", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "SectorHubElevatorToSector3"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 359,
+            "y": 2013,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 20,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Sector Hub - Sector 4",
+    "access_rules":["@Sector Hub - Sector 2, SHO", "@Sector Hub - Sector 2, k1",
+                    "@Sector Hub - Sector 6, SHO", "@Sector Hub - Sector 6, k2",
+                    "ElevatorRandom, SectorHubElevatorToSector4"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 4 Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator to Sector 4",
+        "sections":[{
+        "access_rules": ["@Sector Hub - Sector 2, SHO", "@Sector Hub - Sector 2, k1",
+                         "@Sector Hub - Sector 6, SHO", "@Sector Hub - Sector 6, k2", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "SectorHubElevatorToSector4"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 1800,
+            "y": 2013,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 68,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Sector Hub - Sector 5",
+    "access_rules":["@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k2",
+                    "ElevatorRandom, SectorHubElevatorToSector5"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 5 Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator to Sector 5",
+        "sections":[{
+        "access_rules": ["@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k2", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "SectorHubElevatorToSector5"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 119,
+            "y": 2013,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 12,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Sector Hub - Sector 6",
+    "access_rules":["@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k2",
+                    "ElevatorRandom, SectorHubElevatorToSector6"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector Hub - Sector 6 Elevator",
+    "children": [
+      {
+        "name": "Sector Hub Elevator to Sector 6",
+        "sections":[{
+        "access_rules": ["@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k2", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "SectorHubElevatorToSector6"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 2040,
+            "y": 2013,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 76,
+            "y": 108,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
 /////////////////////////////////////////////////////////////////////////////////////
+
+
+{
+    "name": "Main Deck Elevator to Operation Deck",
+    "access_rules":["@Main Deck Hub"/*, 
+                    "ElevatorRandom, OperationDeckElevatorBot"*/],
+    "children": [
+      {
+      }
+    ]
+  },
+/*
+  {
+    "name": "Operation Deck Elevator Bottom",
+    "children": [
+      {
+        "name": "Operation Deck Elevator Bottom",
+        "sections":[{
+        "access_rules": ["@Main Deck Hub", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "OperationDeckElevatorBot"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 4200,
+            "y": 890,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 148,
+            "y": 52,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+  */
+
+
+{
+    "name": "Operation Deck Entrance",
+    "access_rules":["@Main Deck Hub"
+                    /*"$hasnot|ElevatorRandom, @Main Deck Hub",
+                    "ElevatorRandom2, OperationDeckElevatorTop"*/],
+    "children": [
+      {
+      }
+    ]
+  },
+/*
+  {
+    "name": "Operation Deck Elevator Top",
+    "children": [
+      {
+        "name": "Operation Deck Elevator Top",
+        "sections":[{
+        "access_rules": ["^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "OperationDeckElevatorTop"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 4200,
+            "y": 410,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 148,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+*/
 
   {
     "name": "Operation Deck",
-    "access_rules":["@Main Deck Hub"],
+    "access_rules":["@Operation Deck Entrance"],
     "children": [
       {
         "name": "Data Room",
@@ -122,15 +526,14 @@
   },
   {
     "name": "Arachnus Zone Upper",
-    "access_rules":["@Main Deck Hub, $canAccessArachnusZone"],
+    "access_rules":["@Main Deck Hub, $canAccessArachnusZone", "@Ventilation Zone, dm"],
     "children":[
       {
         "name": "Arachnus Arena - Upper Item",
         "sections": [
           {
             "chest_unopened_img": "images/items/etank.png",
-            "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules":["dm", "bc, $canDefeatSmallGeron", "mb, space, screw"]
+            "chest_opened_img": "images/items/etank_gray.png"
           }
         ],
         "map_locations": [
@@ -169,7 +572,7 @@
   },
   {
   "name": "Arachnus Zone Lower",
-  "access_rules":["@Main Deck Hub, mb","@Main Deck Hub, dm"],
+  "access_rules":["@Main Deck Hub, mb", "@Operation Deck, dm"],
   "children":[
       {
         "name": "Arachnus Arena - Core X",
@@ -244,8 +647,83 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
   {
+    "name": "Main Deck Elevator to Habitation Deck",
+    "access_rules":["@Main Deck Hub, k2", "ElevatorRandom, HabitationDeckElevatorBot"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Habitation Deck Elevator Bottom",
+    "children": [
+      {
+        "name": "Habitation Deck Elevator Bottom",
+        "sections":[{
+        "access_rules": ["@Main Deck Hub, k2", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "HabitationDeckElevatorBot"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 2518,
+            "y": 1212,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 92,
+            "y": 68,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+  {
+    "name": "Habitation Deck Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Main Deck Hub, k2",
+                    "ElevatorRandom, HabitationDeckElevatorTop"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Habitation Deck Elevator Top",
+    "children": [
+      {
+        "name": "Habitation Deck Elevator Top",
+        "sections":[{
+        "access_rules": ["^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "HabitationDeckElevatorTop"}],
+        "map_locations": [
+          {
+            "map": "deck",
+            "x": 2517,
+            "y": 732,
+            "shape": "diamond"
+          },
+          {
+            "map": "deck-ingame",
+            "x": 92,
+            "y": 44,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
+  {
     "name": "Habitation Deck",
-    "access_rules":["@Main Deck Hub, k2"],
+    "access_rules":["@Habitation Deck Entrance, k2"],
     "children":[
       {
         "name": "Animals",
@@ -391,39 +869,13 @@
     ]
   },
 
-/////////////////////////////////////////////////////////////////////////////////////
 
-  {
-    "name": "Sector Hub",
-    "access_rules": ["SHO", "mb", "speed, TrickyShinespark"],
-    "children":[
-      {
-        "name": "Main Elevator Cache",
-        "sections":[{
-          "chest_unopened_img": "images/items/missile.png",
-          "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["^$canSee", "speed"]}],
-        "map_locations": [
-          {
-            "map": "deck",
-            "x": 792,
-            "y": 1414
-          },
-          {
-            "map": "deck-ingame",
-            "x": 36,
-            "y": 76
-          }
-        ]
-      }
-    ]
-  },
 
 /////////////////////////////////////////////////////////////////////////////////////
 
   {
     "name": "Nexus Storage",
-    "access_rules": ["@Main Deck Hub, k2, $canDefeatLargeGeron"],
+    "access_rules": ["@Main Deck Hub, k2, $canDefeatLargeGeron, ^$needEtanks|5"],
     "children":[
       {
         "name": "Nexus Storage",
@@ -464,15 +916,14 @@
 {
   "name": "Sector 1 To Sector 2",
   "access_rules": ["@Sector Hub, k2, space, screw",
-                   "@Sector 2 Hub, screw, $canBallJump"],
+                   "@Tube from 1 to 2, $canBallJump"],
   "children":[
     {
       "name": "Antechamber",
       "sections":[
         {
           "chest_unopened_img": "images/items/pbomb.png",
-          "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": []
+          "chest_opened_img": "images/items/pbomb_gray.png"
         }
       ],
       "map_locations": [
@@ -493,12 +944,56 @@
 
 /////////////////////////////////////////////////////////////////////////////////////
 
+
+{
+    "name": "Sector 1 Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector Hub - Sector 1",
+                    "ElevatorRandom, Sector1Elevator",
+                    "@Sector 1 First Stabilizer Zone, $canDefeatSmallGeron",
+                    "@Sector 1 To Sector 2, screw, k2",
+                    "@Tube from 1 to 3, screw, mb, k1"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 1 Elevator",
+    "children": [
+      {
+        "name": "Sector 1 Elevator from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Sector 1 First Stabilizer Zone", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "Sector1Elevator"}],
+        "map_locations": [
+          {
+            "map": "s1",
+            "x": 120,
+            "y": 207,
+            "shape": "diamond"
+          },
+          {
+            "map": "s1-ingame",
+            "x": 12,
+            "y": 20,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
 {
   "name": "Sector 1 First Stabilizer Zone",
-  "access_rules": ["@Sector Hub, $canDefeatSmallGeron",
-                   "@Sector Hub, k1, k2, $canLavaDive",
+  "access_rules": ["@Sector 1 Entrance, $canDefeatSmallGeron",
+                   "@Sector 1 Entrance, k1, k2, $canLavaDive",
                    "@Sector 1 After Charge Core Zone",
-                   "@Sector Hub, speed, TrickyShinespark"],
+                   "@Sector 1 Entrance, speed, TrickyShinespark",
+                   "@Sector 1 Second Stabilizer Zone, $canDefeatStabilizers"],
   "children":[
     {
       "name": "Atmospheric Stabilizer Northeast",
@@ -550,7 +1045,7 @@
       "sections":[{
         "chest_unopened_img": "images/items/missile.png",
         "chest_opened_img": "images/items/missile_gray.png",
-        "access_rules":["space, $canBallJump", "^$canWallJumpTutorial"]}],
+        "access_rules":["space, $canBallJump", "SimpleWalljumps, $canBallJump", "mb, ^$canSB"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -569,9 +1064,102 @@
 
 /////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+{
+    "name": "Tube from 1 to 3",
+    "access_rules":["@Sector 1 Entrance, screw, mb, k1",
+                    "@Sector 1 Second Stabilizer Zone, screw, mb, $canLavaDive, k2",
+                    "$hasnot|TubeRandom, @Tube from 3 to 1",
+                    "TubeRandom, Tube1to3"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 1 to Sector 3",
+    "children": [
+      {
+        "name": "Tube from Sector 1 to Sector 3",
+        "sections":[{
+        "access_rules": ["@Sector 1 Entrance, screw, mb, k1", 
+                         "@Sector 1 Second Stabilizer Zone, screw, mb, $canLavaDive, k2", 
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube1to3"}],
+        "map_locations": [
+          {
+            "map": "s1",
+            "x": 432,
+            "y": 400,
+            "shape": "diamond"
+          },
+          {
+            "map": "s1-ingame",
+            "x": 21,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Tube from 1 to 2",
+    "access_rules":["@Sector 1 To Sector 2, mb",
+                    "$hasnot|TubeRandom, @Tube from 2 to 1",
+                    "TubeRandom, Tube1to2"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 1 to Sector 2",
+    "children": [
+      {
+        "name": "Tube from Sector 1 to Sector 2",
+        "sections":[{
+        "access_rules": ["@Sector 1 To Sector 2, mb", 
+                         "$hasnot|TubeRandom, @Tube from 2 to 1", 
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube1to2"}],
+        "map_locations": [
+          {
+            "map": "s1",
+            "x": 1968,
+            "y": 82,
+            "shape": "diamond"
+          },
+          {
+            "map": "s1-ingame",
+            "x": 75,
+            "y": 12,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
 {
   "name": "Sector 1 Second Stabilizer Zone",
-  "access_rules": ["@Sector 1 First Stabilizer Zone"],
+  "access_rules": ["@Sector 1 First Stabilizer Zone",
+                   "@Sector 1 Tourian Hub, screw, space, mb, bw, dm, ^$needEtanks|10",
+                   "@Tube from 1 to 3, k2, $canLavaDive",
+                   "@Sector 1 Entrance, k1, k2, $canLavaDive"],
   "children":[
     {
       "name": "Lava Lake - Lower Item",
@@ -602,7 +1190,7 @@
         {
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["space", "speed"]
+          "access_rules": ["space", "speed, ^$canSB", "speed, TrickyShinespark"]
         }
       ],
       "map_locations": [
@@ -622,8 +1210,7 @@
       "name": "Lava Lake - Upper Right Item",
       "sections":[{
         "chest_unopened_img": "images/items/missile.png",
-        "chest_opened_img": "images/items/missile_gray.png",
-        "access_rules":[]}],
+        "chest_opened_img": "images/items/missile_gray.png"}],
       "map_locations": [
         {
           "map": "s1",
@@ -641,8 +1228,7 @@
       "name": "Stabilizer Storage",
       "sections":[{
         "chest_unopened_img": "images/items/missile.png",
-        "chest_opened_img": "images/items/missile_gray.png",
-        "access_rules":["screw", "bc", "dm"]}],
+        "chest_opened_img": "images/items/missile_gray.png"}],
       "map_locations": [
         {
           "map": "s1",
@@ -767,10 +1353,50 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
 {
+    "name": "Tourian Hub Restricted Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector 6 Restricted Zone/Restricted Airlock",
+                    "@Sector 1 Tourian Hub",
+                    "ElevatorRandom2, RestrictedAreaElevator"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tourian Hub Restricted Elevator",
+    "children": [
+      {
+        "name": "Tourian Hub Restricted Elevator",
+        "sections":[{
+        "access_rules": ["@Sector 1 Tourian Hub", "@Sector 6 Restricted Zone/Restricted Airlock", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom, ElevatorRandom2"],
+        "hosted_item": "RestrictedAreaElevator"}],
+        "map_locations": [
+          {
+            "map": "s1",
+            "x": 360,
+            "y": 1858,
+            "shape": "diamond"
+          },
+          {
+            "map": "s1-ingame",
+            "x": 20,
+            "y": 100,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+{
   "name": "Sector 1 Tourian Hub",
-  "access_rules": ["@Sector 1 Second Stabilizer Zone, screw, space, bw, mb, dm",
+  "access_rules": ["@Sector 1 Second Stabilizer Zone, screw, space, mb, dm, ^$needEtanks|10",
+                   "@Sector 1 Second Stabilizer Zone, screw, SimpleWalljumps, mb, dm, ^$needEtanks|10",
                    "@Sector 1 Second Stabilizer Zone, screw, mb, dm, ^$canSB",
-                   "@Sector 6 Restricted Zone/Restricted Airlock"],
+                   "@Tourian Hub Restricted Entrance"],
   "children":[
     {
       "name": "Animorphs Cache",
@@ -779,7 +1405,9 @@
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
           "access_rules": ["bc, dm, ms, space, bw",
-                           "dm, ms, screw, ^$canSB",
+                           "bc, dm, ms, SimpleWalljumps, bw",
+                           "bc, bw, screw, ^$canSB",
+                           "bc, bw, dm, ms, ^$canSB",
                            "$canPowerBomb, dm, ms, ^$canSB",
                            "$canPowerBomb, screw, ^$canSB"]
         }
@@ -824,7 +1452,7 @@
       "sections":[{
         "chest_unopened_img": "images/items/etank.png",
         "chest_opened_img": "images/items/etank_gray.png",
-        "access_rules":["dm"]}],
+        "access_rules":["dm, md"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -854,6 +1482,128 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
 
+{
+    "name": "Sector 2 Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector Hub - Sector 2",
+                    "ElevatorRandom, Sector2Elevator",
+                    "@Sector 2 Hub"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 2 Elevator",
+    "children": [
+      {
+        "name": "Sector 2 Elevator from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Sector 2 Hub", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "Sector2Elevator"}],
+        "map_locations": [
+          {
+            "map": "s2",
+            "x": 600,
+            "y": 360,
+            "shape": "diamond"
+          },
+          {
+            "map": "s2-ingame",
+            "x": 36,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
+  /////////////////////////////////////////////////////////////////////////////////////
+
+ {
+    "name": "Tube from 2 to 1",
+    "access_rules":["@Sector 2 Hub, screw",
+                    "$hasnot|TubeRandom, @Tube from 1 to 2",
+                    "TubeRandom, Tube2to1"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 2 to Sector 1",
+    "children": [
+      {
+        "name": "Tube from Sector 2 to Sector 1",
+        "sections":[{
+        "access_rules": ["@Sector 2 Hub, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube2to1"}],
+        "map_locations": [
+          {
+            "map": "s2",
+            "x": 672,
+            "y": 560,
+            "shape": "diamond"
+          },
+          {
+            "map": "s2-ingame",
+            "x": 37,
+            "y": 36,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Tube from 2 to 4",
+    "access_rules":["@Sector 2 Hub, screw",
+                    "$hasnot|TubeRandom, @Tube from 4 to 2",
+                    "TubeRandom, Tube2to4"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 2 to Sector 4",
+    "children": [
+      {
+        "name": "Tube from Sector 2 to Sector 4",
+        "sections":[{
+        "access_rules": ["@Sector 2 Hub, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube2to4"}],
+        "map_locations": [
+          {
+            "map": "s2",
+            "x": 2928,
+            "y": 399,
+            "shape": "diamond"
+          },
+          {
+            "map": "s2-ingame",
+            "x": 115,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+  ////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -861,7 +1611,9 @@
 
   {
     "name": "Sector 2 Hub",
-    "access_rules": "@Sector Hub",
+    "access_rules": ["@Sector 2 Entrance",
+                     "@Tube from 2 to 1, screw",
+                     "@Tube from 2 to 4, screw"],
     "children":[
       {
         "name": "Crumble City - Upper Item",
@@ -952,7 +1704,7 @@
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
           "access_rules":["$canJumpHigh", "screw", "^$canSee",
-                          "$canFreezeEnemies, ^$canSB"]}],
+                          "$canFreezeEnemies"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1088,9 +1840,10 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canPowerBomb", "high, $canBombOrPowerBomb",
+          "access_rules":["$canPowerBomb", 
+                          "high, $canBombOrPowerBomb",
                           "gravity, mb, bomb, ^$canSB",
-                          "gravity, screw, $canJumpHigh, ^$canSB",
+                          "gravity, screw, $canJumpHigh",
                           "gravity, screw, $canActivatePillar, ^$canSB"]}],
         "map_locations": [
           {
@@ -1229,7 +1982,8 @@
 
   {
     "name": "Sector 2 Zazabi Zone Upper",
-    "access_rules": ["@Sector 2 Hub, $canBombOrPowerBomb", "@Sector 2 Zazabi Zone/Zazabi Speedway - Upper Item"],
+    "access_rules": ["@Sector 2 Hub, $canBombOrPowerBomb", 
+                     "@Sector 2 Zazabi Zone, $canJumpHigh"],
     "children":[
       {
         "name": "Dessgeega Dorm",
@@ -1283,7 +2037,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/etank.png",
           "chest_opened_img": "images/items/etank_gray.png",
-          "access_rules":"mb"}],
+          "access_rules":["mb"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1331,15 +2085,137 @@
   /////////////////////////////////////////////////////////////////////////////////////
 
 
+{
+    "name": "Sector 3 Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector Hub - Sector 3",
+                    "ElevatorRandom, Sector3Elevator",
+                    "@Sector 3 Hub"],
+    "children": [
+      {
+      }
+    ]
+  },
 
+  {
+    "name": "Sector 3 Elevator",
+    "children": [
+      {
+        "name": "Sector 3 Elevator from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Sector 3 Hub", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "Sector3Elevator"}],
+        "map_locations": [
+          {
+            "map": "s3",
+            "x": 1080,
+            "y": 370,
+            "shape": "diamond"
+          },
+          {
+            "map": "s3-ingame",
+            "x": 52,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+{
+    "name": "Tube from 3 to 5",
+    "access_rules":["@Sector 3 Hub/Fiery Storage - Lower Item, screw",
+                    "$hasnot|TubeRandom, @Tube from 5 to 3",
+                    "TubeRandom, Tube3to5"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 3 to Sector 5",
+    "children": [
+      {
+        "name": "Tube from Sector 3 to Sector 5",
+        "sections":[{
+        "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube3to5"}],
+        "map_locations": [
+          {
+            "map": "s3",
+            "x": 360,
+            "y": 880,
+            "shape": "diamond"
+          },
+          {
+            "map": "s3-ingame",
+            "x": 28,
+            "y": 52,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Tube from 3 to 1",
+    "access_rules":["@Sector 3 Attic, $canJumpHigh, screw",
+                    "$hasnot|TubeRandom, @Tube from 1 to 3",
+                    "TubeRandom, Tube3to1"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 3 to Sector 1",
+    "children": [
+      {
+        "name": "Tube from Sector 3 to Sector 1",
+        "sections":[{
+        "access_rules": ["@Sector 3 Attic, $canJumpHigh, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube3to1"}],
+        "map_locations": [
+          {
+            "map": "s3",
+            "x": 4368,
+            "y": 80,
+            "shape": "diamond"
+          },
+          {
+            "map": "s3-ingame",
+            "x": 163,
+            "y": 12,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   {
     "name": "Sector 3 Hub",
-    "access_rules": ["@Sector Hub, k1",
-                     "SHO",
+    "access_rules": ["@Sector 3 Entrance",
                      "@Sector 3 to Sector 5, screw, $canJumpHigh",
-                     "Sector 3 Bob Zone, $canBomb",
+                     "@Sector 3 to Sector 5, screw, SimpleWalljumps",
+                     "@Sector 3 Bob Zone/Bob's Abode",
                      "@Sector 3 Attic, canBombOrPowerBomb"],
     "children":[
       {
@@ -1348,7 +2224,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["@Sector 3 to Sector 5, screw, $canJumpHigh, ^$canSB",
+            "access_rules": ["@Sector 3 to Sector 5, screw, ^$canSB",
                              "$canAccessFieryStorageFromSector3",
                              "$has|etank|2, ^$canSB"]
           }
@@ -1399,7 +2275,7 @@
   {
     "name": "Sector 3 to Sector 5",
     "access_rules": ["@Sector 3 Hub/Fiery Storage - Lower Item/, screw",
-                     "@Sector 5 Before Nightmare Hub, $canJumpHigh"],
+                     "@Tube from 3 to 5"],
     "children":[
       {
         "name": "Glass Tube to Sector 5 (ARC)",
@@ -1622,7 +2498,8 @@
     "name": "Sector 3 BOX Zone",
     "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, ^$needEtanks|5",
                      "@Sector 3 Main Shaft, k2, $canBallJumpAndBomb, ^$needEtanks|5",
-                     "@Sector 3 Attic, ^$canFightBoss"],
+                     "@Sector 3 Attic, ^$canFightBoss",
+                     "@Sector 3 Bob Zone/Bob's Abode, $canBallJump"],
     "children":[
       {
         "name": "Data Room",
@@ -1712,12 +2589,10 @@
 
   {
     "name": "Sector 3 Attic",
-    "access_rules": ["@Sector 3 Hub, screw, space, mb, dm",
-                     "@Sector 3 Hub, screw, space, mb, ^$canSB",
-                     "@Sector Hub, k1, mb, screw",
-                     "@Sector 1 Second Stabilizer Zone, k2, $canLavaDive, mb, screw",
-                     "@Sector 1 Second Stabilizer Zone, k2, gravity, $has|etank|2, mb, screw, ^$canSB",
+    "access_rules": ["@Sector 3 Hub, screw, space, mb",
+                     "@Tube from 3 to 1, screw",
                      "@Sector 3 BOX Zone, ^$canFightBoss, $canJumpHigh",
+                     "@Sector 3 BOX Zone, ^$canFightBoss, SimpleWalljumps",
                      "@Sector 3 Sova Processing/Garbage Chute - Lower Item/"],
     "children":[
       {
@@ -1726,7 +2601,10 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBombOrPowerBomb"]
+            "access_rules": ["$canBombOrPowerBomb",
+                             "screw, $canActivatePillar",
+                             "screw, speed",
+                             "screw, canJumpHigh"]
           }
         ],
         "map_locations": [
@@ -1748,7 +2626,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["speed, $canPowerBomb", "$canJumpHigh, $canPowerBomb"]
+            "access_rules": ["speed, $canPowerBomb", "$canJumpHigh, $canPowerBomb, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -1906,15 +2784,142 @@
 
 
 
+  {
+    "name": "Sector 4 Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector Hub - Sector 4",
+                    "ElevatorRandom, Sector4Elevator",
+                    "@Sector 4 Hub"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 4 Elevator",
+    "children": [
+      {
+        "name": "Sector 4 Elevator from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Sector 4 Hub", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "Sector4Elevator"}],
+        "map_locations": [
+          {
+            "map": "s4",
+            "x": 4920,
+            "y": 687,
+            "shape": "diamond"
+          },
+          {
+            "map": "s4-ingame",
+            "x": 172,
+            "y": 44,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   {
+    "name": "Tube from 4 to 6",
+    "access_rules":["@Sector 4 Data Zone, dm, md, $canBombOrPowerBomb, mb",
+                    "@Sector 4 Right Water Zone, gravity, $canFreezeEnemies, dm, mb",
+                    "@Sector 4 Right Water Zone, gravity, space, dm, mb",
+                    "$hasnot|TubeRandom, @Tube from 6 to 4",
+                    "TubeRandom, Tube4to6"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 4 to Sector 6",
+    "children": [
+      {
+        "name": "Tube from Sector 4 to Sector 6",
+        "sections":[{
+        "access_rules": ["@Sector 4 Data Zone, dm, md, $canBombOrPowerBomb",
+                         "@Sector 4 Right Water Zone, gravity, $canFreezeEnemies, dm",
+                         "@Sector 4 Right Water Zone, gravity, space, dm",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube4to6"}],
+        "map_locations": [
+          {
+            "map": "s4",
+            "x": 5328,
+            "y": 879,
+            "shape": "diamond"
+          },
+          {
+            "map": "s4-ingame",
+            "x": 187,
+            "y": 52,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Tube from 4 to 2",
+    "access_rules":["@Sector 4 Right Water Zone, gravity, screw",
+                    "$hasnot|TubeRandom, @Tube from 2 to 4",
+                    "TubeRandom, Tube4to2"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 4 to Sector 2",
+    "children": [
+      {
+        "name": "Tube from Sector 4 to Sector 2",
+        "sections":[{
+        "access_rules": ["@Sector 4 Data Zone, dm, md, $canBombOrPowerBomb",
+                         "@Sector 4 Right Water Zone, gravity, $canFreezeEnemies, dm",
+                         "@Sector 4 Right Water Zone, gravity, space, dm",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube4to2"}],
+        "map_locations": [
+          {
+            "map": "s4",
+            "x": 4752,
+            "y": 1842,
+            "shape": "diamond"
+          },
+          {
+            "map": "s4-ingame",
+            "x": 165,
+            "y": 100,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  {
     "name": "Sector 4 Hub",
-    "access_rules": ["@Sector Hub, k1",
-                     "SHO",
-                     "@Sector 4 Upper Zone, speed",
+    "access_rules": ["@Sector 4 Entrance",
+                     "@Sector 4 Upper Zone, speed, ^$canSB",
                      "@Sector 4 Upper Zone, space, $canBomb, ^$canSB",
-                     "@Sector 6 Hub, k2",
+                     "@Sector 4 Upper Zone, @Sector 4 Pump Control",
                      "@Sector 4 Right Water Zone, gravity, dm, md, $has|etank|2, ^$canSB"],
     "children":[
       {
@@ -1923,7 +2928,13 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["^$canAccessDrainPipe"]
+            "access_rules": ["^$canAccessDrainPipe",
+                             "@Sector 4 Pump Control, mb, $canDefeatLargeGeron",
+                             "@Sector 4 Pump Control, mb, bw",
+                             "$has|etank|2, ^$canSB, $canPowerBomb",
+                             "$has|etank|2, ^$canSB, gravity, screw",
+                             "$has|etank|2, ^$canSB, bw",
+                             "$has|etank|2, ^$canSB, dm, ms"]
           }
         ],
         "map_locations": [
@@ -1945,7 +2956,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["speed, $canPowerBomb",
+            "access_rules": ["@Sector 4 Pump Control, $canPowerBomb",
                              "$canPowerBomb, $has|etank, ^$canSB"]
           }
         ],
@@ -1967,9 +2978,19 @@
 
   /////////////////////////////////////////////////////////////////////////////////////
 
+{
+    "name": "Sector 4 Before Pump Control",
+    "access_rules": ["@Sector 4 Upper Zone, $canBombOrPowerBomb",
+                     "@Sector 4 Upper Water Zone, @Sector 4 Pump Control, gravity, k4",
+                     "@Sector 4 Serris Zone, gravity, $canBombOrPowerBomb, space",
+                     "@Sector 4 Serris Zone, gravity, $canBombOrPowerBomb, SimpleWalljumps",
+                     "@Sector 4 Pump Control, $canBallJump"]
+  },
+
+
   {
     "name": "Sector 4 Pump Control",
-    "access_rules": ["@Sector 4 Upper Zone, speed"],
+    "access_rules": ["@Sector 4 Before Pump Control, speed, k1"],
     "children":[
       {
         "name": "Pump Control Unit",
@@ -1977,7 +2998,7 @@
           {
             "chest_unopened_img": "images/events/power.png",
             "chest_opened_img": "images/events/power_gray.png",
-            "access_rules": ["mb, k1"]
+            "access_rules": ["mb"]
           }
         ],
         "map_locations": [
@@ -2002,9 +3023,7 @@
     "name": "Sector 4 Upper Zone",
     "access_rules": ["@Sector 4 Hub, $canBombOrPowerBomb",
                      "@Sector 4 Serris Zone, speed",
-                     "@Sector 4 Pump Control, $canBallJump",
-                     "@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater, k4, mb",
-                     "@Sector 4 Upper Water Zone, mb, screw"
+                     "@Sector 4 Before Pump Control, $canBombOrPowerBomb"
                     ],
     "children":[
       {
@@ -2056,7 +3075,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["^$canAccessReservoirVaultLowerItem"]}],
+          "access_rules":["@Sector 4 Upper Zone/Reservoir Vault - Upper Item, dm"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -2075,7 +3094,9 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh, $canBombOrPowerBomb"]}],
+          "access_rules":["high, $canBombOrPowerBomb, SimpleWalljumps",
+                          "space, $canBallJump, $canBombOrPowerBomb",
+                          "^$canSB, $canBombOrPowerBomb"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -2088,6 +3109,28 @@
             "y": 20
           }
         ]
+      },
+      {
+        "name": "Waterway",
+        "sections":[
+          {
+            "chest_unopened_img": "images/items/missile.png",
+            "chest_opened_img": "images/items/missile_gray.png",
+            "access_rules": ["@Sector 4 Pump Control, mb"]
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "s4",
+            "x": 2280,
+            "y": 1030
+          },
+          {
+            "map": "s4-ingame",
+            "x": 84,
+            "y": 60
+          }
+        ]
       }
     ]
   },
@@ -2096,8 +3139,8 @@
 
   {
     "name": "Sector 4 Serris Zone",
-    "access_rules": ["@Sector 4 Upper Zone, high",
-                     "@Sector 4 Upper Zone, $canBombOrPowerBomb, ^$canSB"],
+    "access_rules": ["@Sector 4 Before Pump Control, high, $canBombOrPowerBomb",
+                     "@Sector 4 Before Pump Control, $canBomb, gravity"],
     "children":[
       {
         "name": "Serris Arena",
@@ -2106,6 +3149,7 @@
             "chest_unopened_img": "images/bosses/serris.png",
             "chest_opened_img": "images/bosses/serris_gray.png",
             "access_rules": ["high, ^$canFightBoss",
+                             "space, ^$canFightBoss",
                              "^$canFightBoss, ^$canSB"]
           }
         ],
@@ -2130,9 +3174,10 @@
   {
     "name": "Sector 4 Upper Water Zone",
     "access_rules": ["@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater",
-                     "@Sector 4 Upper Zone, speed, gravity, k4",
-                     "@Sector 4 Security Zone, speed",
-                     "@Sector 4 Security Zone, screw"],
+                     "@Sector 5 Nightmare Hub, screw, gravity, $canBallJump",
+                     "@Sector 4 Before Pump Control, @Sector 4 Pump Control, gravity, k4",
+                     "@Sector 4 Security Zone, speed, gravity",
+                     "@Sector 4 Security Zone, screw, gravity"],
     "children":[
       {
         "name": "Cargo Hold to Sector 5 (ARC)",
@@ -2156,28 +3201,7 @@
           }
         ]
       },
-      {
-        "name": "Waterway",
-        "sections":[
-          {
-            "chest_unopened_img": "images/items/missile.png",
-            "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["speed"]
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "s4",
-            "x": 2280,
-            "y": 1030
-          },
-          {
-            "map": "s4-ingame",
-            "x": 84,
-            "y": 60
-          }
-        ]
-      },
+      
       {
         "name": "Aquarium Pirate Tank",
         "sections":[
@@ -2208,9 +3232,9 @@
   {
     "name": "Sector 4 Security Zone",
     "access_rules": ["@Sector 4 Upper Water Zone, speed, gravity",
-                     "@Sector 4 Upper Water Zone, screw, $canBallJump, gravity",
+                     "@Sector 4 Upper Water Zone, screw, gravity",
                      "@Sector 4 Right Water Zone, k4",
-                     "@Sector 4 Lower Security Zone, k4"],
+                     "@Sector 4 Lower Security Zone, k4, dm, $canBombOrPowerBomb"],
     "children":[
       {
         "name": "Yard Firing Range",
@@ -2263,8 +3287,9 @@
 
   {
     "name": "Sector 4 Lower Security Zone",
-    "access_rules": ["@Sector 4 Security Zone, k4",
-                     "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canSB"],
+    "access_rules": ["@Sector 4 Security Zone, k4, dm, $canBombOrPowerBomb",
+                     "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canSB",
+                     "@Sector 4 Security Room, k4"],
     "children":[
       {
         "name": "Sanctuary Cache",
@@ -2296,7 +3321,7 @@
   {
     "name": "Sector 4 Security Room",
     "access_rules": ["@Sector 4 Security Zone, dm, $canBombOrPowerBomb",
-                     "@Sector 4 Security Zone, k4"],
+                     "@Sector 4 Lower Security Zone, k4"],
     "children":[
       {
         "name": "Level 4 Security Room",
@@ -2327,10 +3352,16 @@
 
   {
     "name": "Sector 4 Right Water Zone",
-    "access_rules": ["@Sector 2 Hub, screw, gravity, space",
-                     "@Sector 4 Hub, gravity, dm, md",
-                     "@Sector 4 Security Zone, k4, gravity, $canFreezeEnemies",
-                     "@Sector 4 Security Zone, k4, gravity, screw"],
+    "access_rules": ["@Tube from 4 to 2, screw, gravity, space",
+                     "@Tube from 4 to 2, screw, gravity, SimpleWalljumps",
+                     "@Tube from 4 to 2, screw, gravity",
+                     "@Sector 4 Hub, @Sector 4 Pump Control, gravity, dm, md",
+                     "@Sector 4 Hub, gravity, dm, md, ^$canSB",
+                     "@Sector 4 Hub, @Sector 4 Pump Control, gravity, bi, bw",
+                     "@Sector 4 Hub, gravity, bi, bw, ^$canSB",
+                     "@Sector 4 Security Zone, k4, mb, gravity, speed, $canFreezeEnemies",
+                     "@Sector 4 Security Zone, k4, mb, gravity, screw",
+                     "@Tube from 4 to 6, dm, gravity, mb"],
     "children":[
       {
         "name": "Aquarium Kago Storage - Right Item",
@@ -2383,9 +3414,13 @@
 
   {
     "name": "Sector 4 Data Zone",
-    "access_rules": ["@Sector 4 Hub, mb, md, dm, $canBombOrPowerBomb",
+    "access_rules": ["@Sector 4 Hub, @Sector 4 Pump Control, mb, md, dm",
+                     "@Sector 4 Hub, mb, md, dm, ^$canSB",
+                     "@Sector 4 Hub, @Sector 4 Pump Control, mb, bi, bw",
+                     "@Sector 4 Hub, mb, bi, bw, ^$canSB",
                      "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb, dm",
-                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb, dm"],
+                     "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb, dm",
+                     "@Tube from 4 to 6, dm, $canBombOrPowerBomb"],
     "children":[
       {
         "name": "Data Room",
@@ -2425,15 +3460,138 @@
 
 
 
+  {
+    "name": "Sector 5 Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector Hub - Sector 5",
+                    "ElevatorRandom, Sector5Elevator",
+                    "@Sector 5 Hub"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 5 Elevator",
+    "children": [
+      {
+        "name": "Sector 5 Elevator from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Sector 5 Hub", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "Sector5Elevator"}],
+        "map_locations": [
+          {
+            "map": "s5",
+            "x": 120,
+            "y": 206,
+            "shape": "diamond"
+          },
+          {
+            "map": "s5-ingame",
+            "x": 12,
+            "y": 20,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+  
+
+
+  /////////////////////////////////////////////////////////////////////////////////
+
+{
+    "name": "Tube from 5 to 6",
+    "access_rules":["@Sector 5 Magic Box Room, screw",
+                    "$hasnot|TubeRandom, @Tube from 6 to 5",
+                    "TubeRandom, Tube5to6"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 5 to Sector 6",
+    "children": [
+      {
+        "name": "Tube from Sector 5 to Sector 6",
+        "sections":[{
+        "access_rules": ["@Sector 5 Magic Box Room, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube5to6"}],
+        "map_locations": [
+          {
+            "map": "s5",
+            "x": 432,
+            "y": 567,
+            "shape": "diamond"
+          },
+          {
+            "map": "s5-ingame",
+            "x": 21,
+            "y": 36,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
+  {
+    "name": "Tube from 5 to 3",
+    "access_rules":["@Sector 5 Before Nightmare Hub, $canJumpHigh",
+                    "$hasnot|TubeRandom, @Tube from 3 to 5",
+                    "TubeRandom, Tube5to3"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 5 to Sector 3",
+    "children": [
+      {
+        "name": "Tube from Sector 5 to Sector 3",
+        "sections":[{
+        "access_rules": ["@Sector 5 Before Nightmare Hub, $canJumpHigh",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube5to3"}],
+        "map_locations": [
+          {
+            "map": "s5",
+            "x": 2928,
+            "y": 402,
+            "shape": "diamond"
+          },
+          {
+            "map": "s5-ingame",
+            "x": 107,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  /////////////////////////////////////////////////////////////////////////////////
 
 
   {
     "name": "Sector 5 Hub",
-    "access_rules": ["@Sector Hub, k1, k2",
-                     "SHO",
-                     "@Sector 5 Big Room, k3",
-                     "@Sector 5 Big Room, mb, dm, $canJumpHigh",
-                     "@Sector 6 Crossroads, screw, k3"],
+    "access_rules": ["@Sector 5 Entrance",
+                     "@Sector 5 Top Left Big Room, k3",
+                     "@Sector 5 Top Left Big Room, mb, dm, $canJumpHigh",
+                     "@Sector 5 Magic Box Room, k3"],
     "children":[
       {
         "name": "Gerubus Gully",
@@ -2458,14 +3616,22 @@
             "y": 36
           }
         ]
-      },
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 5 Magic Box Room",
+    "access_rules": ["@Sector 5 Hub, k3",
+                     "@Tube from 5 to 6, screw"],
+    "children":[
       {
         "name": "Magic Box",
         "sections":[
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k3"]
+            "access_rules": []
           }
         ],
         "map_locations": [
@@ -2484,13 +3650,18 @@
     ]
   },
 
+
+
+
   /////////////////////////////////////////////////////////////////////////////////////
 
   {
-    "name": "Sector 5 Big Room",
+    "name": "Sector 5 Top Left Big Room",
     "access_rules": ["@Sector 5 Hub, mb, dm",
-                     "@Sector 5 Hub, k3",
-                     "@Sector 5 Frozen Hub, varia"],
+                     "@Sector 5 Hub, k3, $canJumpHigh",
+                     "@Sector 5 Hub, k3, SimpleWalljumps",
+                     "@Sector 5 Frozen Hub, $canJumpHigh",
+                     "@Sector 5 Frozen Hub, SimpleWalljumps"],
     "children":[
       {
         "name": "Training - Left Item",
@@ -2543,10 +3714,14 @@
 
   {
     "name": "Sector 5 Frozen Hub",
-    "access_rules": ["@Sector 5 Big Room, varia",
+    "access_rules": ["@Sector 5 Hub, varia, k3",
+                     "@Sector 5 Hub, varia, dm, mb",
+                     "@Sector 5 Top Left Big Room, varia",
                      "@Sector 5 Before Nightmare Hub, k3, varia",
-                     "@Sector 5 Security Zone, k3, space, varia, $canBombOrPowerBomb",
-                     "@Sector 5 Data Room, bw, varia"],
+                     "@Sector 5 Security Zone, space, $canBombOrPowerBomb",
+                     "@Sector 5 Security Zone, space, speed, mb, $canFreezeEnemies",
+                     "@Sector 5 Security Zone, k3",
+                     "@Sector 5 Data Room, bw, k3"],
     "children":[
       {
         "name": "Ripper Road",
@@ -2554,8 +3729,10 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canBallJump, screw, $canFreezeEnemies",
-                             "$canBallJump, $canPowerBomb, $canFreezeEnemies"]
+            "access_rules": ["mb, high, screw, bomb, $canFreezeEnemies",
+                             "mb, high, pb, $canFreezeEnemies",
+                             "mb, bomb, screw, $canFreezeEnemies, ^$canSB",
+                             "mb, bomb, pb, $canFreezeEnemies, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2579,7 +3756,7 @@
   {
     "name": "Sector 5 Before Nightmare Hub",
     "access_rules": ["@Sector 5 Frozen Hub, k3, varia",
-                     "@Sector 3 to Sector 5",
+                     "@Tube from 5 to 3",
                      "@Sector 5 Nightmare Hub, gravity, space, screw"],
     "children":[
       {
@@ -2588,7 +3765,10 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, space"]
+            "access_rules": ["mb, pb, space",
+                             "mb, space, screw",
+                             "mb, pb, SimpleWalljumps",
+                             "mb, screw, SimpleWalljumps"]
           }
         ],
         "map_locations": [
@@ -2611,8 +3791,8 @@
 
   {
     "name": "Sector 5 Data Room",
-    "access_rules": ["@Sector 5 Frozen Hub, k3, varia",
-                     "@Sector 5 Security Zone, k3, space, varia"],
+    "access_rules": ["@Sector 5 Frozen Hub, k3",
+                     "@Sector 5 Security Zone, k3, space"],
     "children":[
       {
         "name": "Data Room",
@@ -2643,9 +3823,9 @@
 
   {
     "name": "Sector 5 Security Zone",
-    "access_rules": ["@Sector 5 Frozen Hub, k3, bw, varia",
-                     "@Sector 5 Frozen Hub, speed, $canBombOrPowerBomb, varia",
-                     "@Sector 5 Data Room, varia"],
+    "access_rules": ["@Sector 5 Frozen Hub, k3, bw",
+                     "@Sector 5 Frozen Hub, speed, $canBombOrPowerBomb",
+                     "@Sector 5 Data Room"],
     "children":[
       {
         "name": "E-Tank Mimic Den",
@@ -2653,7 +3833,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["k3, $canFreezeEnemies, mb, $canBreakBombBlocks", "k3, mb, space, $canBreakBombBlocks"]
+            "access_rules": ["k3, $canFreezeEnemies, mb, $canBreakBombBlocks", 
+                             "k3, mb, space, $canBreakBombBlocks"]
           }
         ],
         "map_locations": [
@@ -2697,7 +3878,9 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, space", "$canPowerBomb, high, $canFreezeEnemies"]
+            "access_rules": ["$canPowerBomb, space", 
+                             "$canPowerBomb, high, $canFreezeEnemies",
+                             "SimpleWalljumps, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -2741,7 +3924,9 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k3, high, space, $canBallJump", "k3, high, $canFreezeEnemies, $canBallJump", "k3, space, $canBallJump, ^$canSB"]
+            "access_rules": ["k3, high, space, $canBallJump", 
+                             "k3, high, $canFreezeEnemies, $canBallJump", 
+                             "k3, space, $canBallJump, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2766,9 +3951,8 @@
     "name": "Sector 5 Nightmare Hub",
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
                      "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
-                     "@Sector 5 Before Nightmare Hub, high, $canBeatToughEnemy",
-                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, ^$canSB",
-                     "@Sector 5 Nightmare Zone, gravity, ^$canFightLategameBoss"],
+                     "@Sector 5 Before Nightmare Hub, $canJumpHigh, $canBeatToughEnemy",
+                     "@Sector 5 Nightmare Zone Arena, gravity, speed, ^$canFightLategameBoss"],
     "children":[
       {
         "name": "Flooded Airlock to Sector 4 (AQU)",
@@ -2798,7 +3982,8 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["varia, gravity, $canBallJump, dm"]
+            "access_rules": ["varia, gravity, mb, dm, space",
+                             "varia, gravity, mb, dm, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -2843,8 +4028,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, $canJumpHigh",
-                             "$canPowerBomb, $canSpeedBoostUnderWater, ^$canSB"]
+            "access_rules": ["$canPowerBomb"]
           }
         ],
         "map_locations": [
@@ -2866,8 +4050,9 @@
   /////////////////////////////////////////////////////////////////////////////////////
 
   {
-    "name": "Sector 5 Nightmare Zone",
-    "access_rules": ["@Sector 5 Nightmare Hub, ^$canFightBoss"],
+    "name": "Sector 5 Nightmare Zone Arena",
+    "access_rules": ["@Sector 5 Nightmare Hub, gravity, speed",
+                     "@Sector 5 Nightmare Zone Upper"],
     "children":[
       {
         "name": "Nightmare Arena",
@@ -2875,8 +4060,7 @@
           {
             "chest_unopened_img": "images/bosses/nightmare.png",
             "chest_opened_img": "images/bosses/nightmare_gray.png",
-            "access_rules": ["^$canFightLategameBoss, mb, $canJumpHigh",
-                             "^$canFightLategameBoss, speed, gravity"]
+            "access_rules": ["^$canFightLategameBoss"]
           }
         ],
         "map_locations": [
@@ -2891,16 +4075,25 @@
             "y": 51
           }
         ]
-      },
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 5 Nightmare Zone Upper",
+    "access_rules": ["@Sector 5 Nightmare Hub, bc, space",
+                     "@Sector 5 Nightmare Hub, bc, SimpleWalljumps",
+                     "@Sector 5 Nightmare Hub, dm, space",
+                     "@Sector 5 Nightmare Hub, dm, SimpleWalljumps"],
+    "children":[
       {
         "name": "Nightmare Nook",
         "sections":[
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJumpAndBomb, $canJumpHigh",
-                             "$canBombOrPowerBomb, $canJumpHigh, ^$canSB",
-                             "$canBombOrPowerBomb, $canSpeedBoostUnderWater, ^$canSB"]
+            "access_rules": ["$canBallJumpAndBomb",
+                             "$canBombOrPowerBomb ^$canSB"]
           }
         ],
         "map_locations": [
@@ -2930,17 +4123,139 @@
   /////////////////////////////////////////////////////////////////////////////////////
 
 
+{
+    "name": "Sector 6 Entrance",
+    "access_rules":["$hasnot|ElevatorRandom, @Sector Hub - Sector 6",
+                    "ElevatorRandom, Sector6Elevator",
+                    "@Sector 6 Hub"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Sector 6 Elevator",
+    "children": [
+      {
+        "name": "Sector 6 Elevator from Sector Hub",
+        "sections":[{
+        "access_rules": ["@Sector 6 Hub", "^$canSee"],
+        "visibility_rules": ["ElevatorRandom"],
+        "hosted_item": "Sector6Elevator"}],
+        "map_locations": [
+          {
+            "map": "s6",
+            "x": 120,
+            "y": 205,
+            "shape": "diamond"
+          },
+          {
+            "map": "s6-ingame",
+            "x": 12,
+            "y": 20,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+{
+    "name": "Tube from 6 to 4",
+    "access_rules":["@Sector 6 Hub, screw",
+                    "$hasnot|TubeRandom, @Tube from 4 to 6",
+                    "TubeRandom, Tube6to4"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 6 to Sector 4",
+    "children": [
+      {
+        "name": "Tube from Sector 6 to Sector 4",
+        "sections":[{
+        "access_rules": ["@Sector 6 Hub, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube6to4"}],
+        "map_locations": [
+          {
+            "map": "s6",
+            "x": 672,
+            "y": 400,
+            "shape": "diamond"
+          },
+          {
+            "map": "s6-ingame",
+            "x": 29,
+            "y": 28,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+  {
+    "name": "Tube from 6 to 5",
+    "access_rules":["@Sector 6 Crossroads, screw",
+                    "$hasnot|TubeRandom, @Tube from 5 to 6",
+                    "TubeRandom, Tube6to5"],
+    "children": [
+      {
+      }
+    ]
+  },
+
+  {
+    "name": "Tube from Sector 6 to Sector 5",
+    "children": [
+      {
+        "name": "Tube from Sector 6 to Sector 5",
+        "sections":[{
+        "access_rules": ["@Sector 6 Crossroads, screw",  
+                         "^$canSee"],
+        "visibility_rules": ["TubeRandom"],
+        "hosted_item": "Tube6to5"}],
+        "map_locations": [
+          {
+            "map": "s6",
+            "x": 2928,
+            "y": 239,
+            "shape": "diamond"
+          },
+          {
+            "map": "s6-ingame",
+            "x": 107,
+            "y": 20,
+            "shape": "diamond"
+      }
+    ]
+      }
+    ]
+  },
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
   {
     "name": "Sector 6 Hub",
-    "access_rules": ["@Sector Hub, k1, k2",
-                     "SHO",
-                     "@Sector 4 Hub, k2",
-                     "@Sector 4 Right Water Zone, dm, $canFreezeEnemies, space, screw",
-                     "@Sector 4 Data Zone, dm, md, screw, k4, bm, bomb",
-                     "Sector 6 Crossroads, $canDefeatMediumGeron"],
+    "access_rules": ["@Sector 6 Entrance",
+                     "@Tube from 6 to 4, $canJumpHigh, screw",
+                     "@Tube from 6 to 4, ^$canSB, screw",
+                     "@Sector 6 Crossroads, $canDefeatMediumGeron"],
     "children":[
       {
         "name": "Entrance Lobby",
@@ -2975,7 +4290,7 @@
     "name": "Sector 6 Crossroads",
     "access_rules": ["@Sector 6 Hub, $canDefeatMediumGeron",
                      "@Sector 6 After Varia Core X Zone, mb",
-                     "@Sector 5 Hub, screw, k3"],
+                     "@Tube from 6 to 5, screw"],
     "children":[
       {
         "name": "Catacombs",
@@ -3078,7 +4393,9 @@
     "name": "Sector 6 Before BOX Zone",
     "access_rules": ["@Sector 6 Crossroads, varia, k4, $canPowerBomb",
                      "@Sector 6 Crossroads, $has|etank|5, k4, $canPowerBomb, ^$canSB",
-                     "@Sector 6 After XBOX Zone, space, screw"],
+                     "@Sector 6 After XBOX Zone, space, screw",
+                     "@Sector 6 After XBOX Zone, screw, high, $canFreezeEnemies",
+                     "@Sector 6 After XBOX Zone, screw, high, SimpleWalljumps"],
     "children":[
       {
         "name": "Speedbooster Alley - Lower Item",
@@ -3087,7 +4404,7 @@
             "inspectable_sequence_break": false,
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["high, space, speed, screw", "speed, screw, ^$canSee"],
+            "access_rules": ["high, space, speed, screw", "speed, screw, ^$canSee"]
           }
         ],
         "map_locations": [
@@ -3216,7 +4533,8 @@
 
   {
     "name": "Sector 6 Before Varia Core X Zone",
-    "access_rules": ["@Sector 6 Crossroads, speed, $canBombOrPowerBomb"],
+    "access_rules": ["@Sector 6 Crossroads, speed, $canBombOrPowerBomb",
+                     "@Sector 6 Varia Core X Zone, k2, bc, ^$canFightBoss"],
     "children":[
       {
         "name": "Zororo Wine Cellar",
@@ -3283,7 +4601,7 @@
     "access_rules": ["@Sector 6 Crossroads, varia, screw, mb",
                      "@Sector 6 Varia Core X Zone, varia, ^$canFightBoss",
                      "@Sector 6 Crossroads, screw, mb, $has|etank, ^$canSB",
-                     "@Sector 6 Varia Core X Zone, ^$canFightBoss, $has|etank, ^$canSB"],
+                     "@Sector 6 Varia Core X Zone, ^$canFightBoss, $has|etank|5, ^$canSB"],
     "children":[
       {
         "name": "Twin Caverns West - Lower Item",

@@ -264,6 +264,12 @@
     "codes": "TrickyShinespark"
   },
   {
+    "name": "Simple Walljumps",
+    "type": "toggle",
+    "img": "images/options/TrickyWalljumps.png",
+    "codes": "SimpleWalljumps"
+  },
+  {
     "name": "Game Mode",
     "type": "static",
     "img": "images/options/GameMode.png",
@@ -275,6 +281,24 @@
     "img": "images/options/SectorHubOpen.png",
     "codes": "SHO"
   },
+  {
+    "name": "Elevator Shuffle",
+    "type": "toggle",
+    "img":"images/options/ElevatorShuffle.png",
+    "codes":"ElevatorRandom"
+  },
+  {
+    "name": "Additional Elevators",
+    "type": "toggle",
+    "img":"images/options/ElevatorShuffle2.png",
+    "codes":"ElevatorRandom2"
+  },
+  {
+    "name": "Tube Shuffle",
+    "type": "toggle",
+    "img":"images/options/TubeShuffle.png",
+    "codes":"TubeRandom"
+  },
 
 
 
@@ -284,16 +308,473 @@
     "name": "Enable/Disable Map Auto-Switcher",
     "type": "toggle",
     "disabled_img_mods": "none",
-                "disabled_img": "images/items/switch off.png",
-                "img": "images/items/switch on.png",
-                "codes": "tab_switch"
+    "disabled_img": "images/items/switch off.png",
+    "img": "images/items/switch on.png",
+    "codes": "tab_switch"
   },
   {
     "name": "Go Mode!",
     "type": "toggle",
-                "disabled_img": "images/items/go_gray.png",
-                "img": "images/items/go.png",
-                "codes": "go"
+    "disabled_img": "images/items/go_gray.png",
+    "img": "images/items/go.png",
+    "codes": "go"
+  },
+
+  {
+    "name": "Operation Deck Elevator Top",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "OperationDeckElevatorTop"
+  },
+  {
+    "name": "Operation Deck Elevator Bot",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "OperationDeckElevatorBot"
+  },
+
+  {
+    "name": "Habitation Deck Elevator Top",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "HabitationDeckElevatorTop"
+  },
+  {
+    "name": "Habitation Deck Elevator Bot",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "HabitationDeckElevatorBot"
+  },
+
+
+  {
+    "name": "Tourian Hub Restricted Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "RestrictedAreaElevator"
+  },
+
+
+  {
+    "name": "Main Deck Elevator from Main Hub",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "MainDeckElevatorfromMainHub"
+  },
+
+  {
+    "name": "Sector Hub Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToMainDeck"
+  },
+
+  {
+    "name": "Sector Hub Elevator to Sector 1",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToSector1"
+  },
+
+  {
+    "name": "Sector 1 Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Sector1Elevator"
+  },
+
+  {
+    "name": "Sector Hub Elevator to Sector 2",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToSector2"
+  },
+
+  {
+    "name": "Sector 2 Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Sector2Elevator"
+  },
+
+  {
+    "name": "Sector Hub Elevator to Sector 3",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToSector3"
+  },
+
+  {
+    "name": "Sector 3 Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Sector3Elevator"
+  },
+
+  {
+    "name": "Sector Hub Elevator to Sector 4",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToSector4"
+  },
+
+  {
+    "name": "Sector 4 Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Sector4Elevator"
+  },
+
+  {
+    "name": "Sector Hub Elevator to Sector 5",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToSector5"
+  },
+
+  {
+    "name": "Sector 5 Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Sector5Elevator"
+  },
+
+  {
+    "name": "Sector Hub Elevator to Sector 6",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "SectorHubElevatorToSector6"
+  },
+
+  {
+    "name": "Sector 6 Elevator",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Sector6Elevator"
+  },
+
+
+
+  {
+    "name": "Tube 1 to 3",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube1to3"
+  },
+  {
+    "name": "Tube 3 to 1",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube3to1"
+  },
+  {
+    "name": "Tube 1 to 2",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube1to2"
+  },
+  {
+    "name": "Tube 2 to 1",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube2to1"
+  },
+  {
+    "name": "Tube 2 to 4",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube2to4"
+  },
+  {
+    "name": "Tube 4 to 2",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube4to2"
+  },
+  {
+    "name": "Tube 3 to 5",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube3to5"
+  },
+  {
+    "name": "Tube 5 to 3",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube5to3"
+  },
+  {
+    "name": "Tube 4 to 6",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube4to6"
+  },
+  {
+    "name": "Tube 6 to 4",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube6to4"
+  },
+  {
+    "name": "Tube 5 to 6",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube5to6"
+  },
+  {
+    "name": "Tube 6 to 5",
+    "type": "toggle",
+    "img": "images/maps/Elevator Tubes/Question_mark.png",
+    "codes": "Tube6to5"
+  },
+
+
+
+
+
+// Next part is about the elevator stuff in the settings popup. It started as a way to handle it but resorted to another way and didn't feel like deleting everything
+/*
+  {
+    "name": "Elevator Operation Deck top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator Operation Deck top.png",
+    "codes": "Elevator ODT"
+  },*/
+  {
+    "name": "Elevator Habitation Deck top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator animals top.png",
+    "codes": "Elevator HDT"
+  },
+  {
+    "name": "Elevator Restricted Area top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator restricted sector top.png",
+    "codes": "Elevator RAT"
+  },
+  {
+    "name": "Elevator Sector Hub top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator Main deck sector hub top.png",
+    "codes": "Elevator SHT"
+  },
+  {
+    "name": "Elevator Sector 1 top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator sector 1 top.png",
+    "codes": "Elevator S1T"
+  },
+  {
+    "name": "Elevator Sector 2 top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator sector 2 top.png",
+    "codes": "Elevator S2T"
+  },
+  {
+    "name": "Elevator Sector 3 top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator sector 3 top.png",
+    "codes": "Elevator S3T"
+  },
+  {
+    "name": "Elevator Sector 4 top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator sector 4 top.png",
+    "codes": "Elevator S4T"
+  },
+  {
+    "name": "Elevator Sector 5 top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator sector 5 top.png",
+    "codes": "Elevator S5T"
+  },
+  {
+    "name": "Elevator Sector 6 top",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Elevator sector 6 top.png",
+    "codes": "Elevator S6T"
+  },
+/*
+  {
+    "name": "Operation Deck elevator destination",
+    "codes": "Elevator ODB",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+   
+    ]
+  },*/   
+  {
+    "name": "Habitation Deck elevator destination",
+    "codes": "Elevator HDB",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Restricted Area elevator destination",
+    "codes": "Elevator RAB",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector Hub elevator destination",
+    "codes": "Elevator SHB",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector 1 elevator destination",
+    "codes": "Elevator S1B",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector 2 elevator destination",
+    "codes": "Elevator S2B",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector 3 elevator destination",
+    "codes": "Elevator S3B",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector 4 elevator destination",
+    "codes": "Elevator S4B",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector 5 elevator destination",
+    "codes": "Elevator S5B",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
+  },
+  {
+    "name": "Sector 6 elevator destination",
+    "codes": "Elevator S6B",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Elevator animals bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator restricted sector bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator Main deck sector hub bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 1 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 2 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 3 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 4 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 5 bot.png"},
+      {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
+      
+    ]
   }
+
 
 ]
