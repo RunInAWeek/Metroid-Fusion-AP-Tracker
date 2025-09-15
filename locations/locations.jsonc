@@ -2219,7 +2219,7 @@
                      "@Sector 3 to Sector 5, screw, $canJumpHigh",
                      "@Sector 3 to Sector 5, screw, SimpleWalljumps",
                      "@Sector 3 Bob Zone/Bob's Abode",
-                     "@Sector 3 Attic, canBombOrPowerBomb"],
+                     "@Sector 3 Attic, $canBombOrPowerBomb"],
     "children":[
       {
         "name": "Fiery Storage - Lower Item",
