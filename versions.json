@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4.3",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.3/Metroid.Fusion.Pack.zip",
+			"sha256": "ed30b172720f0b32471dd7ab7801efd9b0306caa2be6cd216bcdb1ee3c8090f8",
+			"changelog": ["Logic in sector 2 + missing elevator"]
+		},
+		{
 			"package_version": "0.4.2",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.2/Metroid.Fusion.Pack.zip",
 			"sha256": "42b0b8f01b1a5e27a9fd6d1fffe5a400b80ce825a31aa836650810c4e1210b4d",

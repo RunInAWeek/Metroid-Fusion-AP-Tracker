@@ -84,8 +84,8 @@
               "item_size": "150, 130",
               "rows": [
 
-                ["Elevator HDT", "Elevator RAT","Elevator SHT", "Elevator S1T", "Elevator S2T", "Elevator S3T", "Elevator S4T", "Elevator S5T", "Elevator S6T"],
-                ["Elevator HDB", "Elevator RAB", "Elevator SHB", "Elevator S1B", "Elevator S2B", "Elevator S3B", "Elevator S4B", "Elevator S5B", "Elevator S6B"]
+                ["Elevator ODT", "Elevator HDT", "Elevator RAT","Elevator SHT", "Elevator S1T", "Elevator S2T", "Elevator S3T", "Elevator S4T", "Elevator S5T", "Elevator S6T"],
+                ["Elevator ODB", "Elevator HDB", "Elevator RAB", "Elevator SHB", "Elevator S1B", "Elevator S2B", "Elevator S3B", "Elevator S4B", "Elevator S5B", "Elevator S6B"]
 
 
               ]
