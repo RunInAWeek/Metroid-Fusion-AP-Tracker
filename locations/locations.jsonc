@@ -1301,7 +1301,10 @@
         "chest_opened_img": "images/items/pbomb_gray.png",
         "access_rules":["bc, gravity, speed, $canBallJump",
                         "bp, gravity, speed, $canBallJump",
-                        "dm, gravity, speed, $canBallJump", "^$canSee, speed"]}],
+                        "dm, gravity, speed, $canBallJump", 
+                        "^$canSee, speed, $canPowerBomb",
+                        "^$canSee, speed, bw",
+                        "dm, gravity, speed, ^$canSee"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -1430,7 +1433,7 @@
         {
           "chest_unopened_img": "images/bosses/ridley.png",
           "chest_opened_img": "images/bosses/ridley_gray.png",
-          "access_rules": ["^$canFightLategameBoss"]
+          "access_rules": ["$canBombOrPowerBomb, ^$canFightLategameBoss"]
         }
       ],
       "map_locations": [
@@ -1866,7 +1869,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules":["mb, $canFreezeEnemies"]}],
+          "access_rules":["mb, $canFreezeEnemies", "^$canSee"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1885,7 +1888,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules":["mb, $canFreezeEnemies"]}],
+          "access_rules":["mb, $canFreezeEnemies", "bw, ^$canSee", "$canPowerBomb, ^$canSee"]}],
             "map_locations": [
               {
                 "map": "s2",
@@ -2922,7 +2925,7 @@
     "access_rules": ["@Sector 4 Entrance",
                      "@Sector 4 Upper Zone, speed, ^$canSB",
                      "@Sector 4 Upper Zone, space, $canBomb, ^$canSB",
-                     "@Sector 4 Upper Zone, @Sector 4 Pump Control",
+                     "@Sector 4 Upper Zone, @Sector 4 Pump Control, $canBallJump",
                      "@Sector 4 Right Water Zone, gravity, dm, md, $has|etank|2, ^$canSB"],
     "children":[
       {
@@ -2931,9 +2934,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["^$canAccessDrainPipe",
-                             "@Sector 4 Pump Control, mb, $canDefeatLargeGeron",
-                             "@Sector 4 Pump Control, mb, bw",
+            "access_rules": ["@Sector 4 Pump Control, ^$canAccessDrainPipe",
                              "$has|etank|2, ^$canSB, $canPowerBomb",
                              "$has|etank|2, ^$canSB, gravity, screw",
                              "$has|etank|2, ^$canSB, bw",
@@ -2959,7 +2960,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["@Sector 4 Pump Control, $canPowerBomb",
+            "access_rules": ["@Sector 4 Pump Control, $canBallJump, $canPowerBomb",
                              "$canPowerBomb, $has|etank, ^$canSB"]
           }
         ],
@@ -2984,10 +2985,10 @@
 {
     "name": "Sector 4 Before Pump Control",
     "access_rules": ["@Sector 4 Upper Zone, $canBombOrPowerBomb",
-                     "@Sector 4 Upper Water Zone, @Sector 4 Pump Control, gravity, k4",
+                     "@Sector 4 Upper Water Zone, @Sector 4 Pump Control, $canBallJump, gravity, k4",
                      "@Sector 4 Serris Zone, gravity, $canBombOrPowerBomb, space",
                      "@Sector 4 Serris Zone, gravity, $canBombOrPowerBomb, SimpleWalljumps",
-                     "@Sector 4 Pump Control, $canBallJump"]
+                     "@Sector 4 Pump Control, $canBallJump, $canBallJump"]
   },
 
 
@@ -3078,7 +3079,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["@Sector 4 Upper Zone/Reservoir Vault - Upper Item, dm"]}],
+          "access_rules":["@Sector 4 Upper Zone/Reservoir Vault - Upper Item, dm", "space, ^$canSee", "SimpleWalljumps, ^$canSee"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -3119,7 +3120,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["@Sector 4 Pump Control, mb"]
+            "access_rules": ["@Sector 4 Pump Control, $canBallJump, mb"]
           }
         ],
         "map_locations": [
@@ -3178,7 +3179,7 @@
     "name": "Sector 4 Upper Water Zone",
     "access_rules": ["@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater",
                      "@Sector 5 Nightmare Hub, screw, gravity, $canBallJump",
-                     "@Sector 4 Before Pump Control, @Sector 4 Pump Control, gravity, k4",
+                     "@Sector 4 Before Pump Control, @Sector 4 Pump Control, $canBallJump, gravity, k4",
                      "@Sector 4 Security Zone, speed, gravity",
                      "@Sector 4 Security Zone, screw, gravity"],
     "children":[
@@ -3300,7 +3301,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJump, $canAccessSanctuaryCache"]
+            "access_rules": ["$canBallJump, $canBombOrPowerBomb, $canAccessSanctuaryCache"]
           }
         ],
         "map_locations": [
@@ -3358,9 +3359,9 @@
     "access_rules": ["@Tube from 4 to 2, screw, gravity, space",
                      "@Tube from 4 to 2, screw, gravity, SimpleWalljumps",
                      "@Tube from 4 to 2, screw, gravity",
-                     "@Sector 4 Hub, @Sector 4 Pump Control, gravity, dm, md",
+                     "@Sector 4 Hub, @Sector 4 Pump Control, $canBallJump, gravity, dm, md",
                      "@Sector 4 Hub, gravity, dm, md, ^$canSB",
-                     "@Sector 4 Hub, @Sector 4 Pump Control, gravity, bi, bw",
+                     "@Sector 4 Hub, @Sector 4 Pump Control, $canBallJump, gravity, bi, bw",
                      "@Sector 4 Hub, gravity, bi, bw, ^$canSB",
                      "@Sector 4 Security Zone, k4, mb, gravity, speed, $canFreezeEnemies",
                      "@Sector 4 Security Zone, k4, mb, gravity, screw",
@@ -3417,9 +3418,9 @@
 
   {
     "name": "Sector 4 Data Zone",
-    "access_rules": ["@Sector 4 Hub, @Sector 4 Pump Control, mb, md, dm",
+    "access_rules": ["@Sector 4 Hub, @Sector 4 Pump Control, $canBallJump, mb, md, dm",
                      "@Sector 4 Hub, mb, md, dm, ^$canSB",
-                     "@Sector 4 Hub, @Sector 4 Pump Control, mb, bi, bw",
+                     "@Sector 4 Hub, @Sector 4 Pump Control, $canBallJump, mb, bi, bw",
                      "@Sector 4 Hub, mb, bi, bw, ^$canSB",
                      "@Sector 4 Right Water Zone, canFreezeEnemies, gravity, $canBombOrPowerBomb, dm",
                      "@Sector 4 Right Water Zone, space, gravity, $canBombOrPowerBomb, dm",
@@ -3431,7 +3432,8 @@
           {
             "chest_unopened_img": "images/items/Datastation.png",
             "chest_opened_img": "images/items/Datastation_gray.png",
-            "access_rules": ["k4"]
+            "access_rules": ["k4, @Sector 4 Pump Control, $canBallJump",
+                             "k4, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -3735,7 +3737,9 @@
             "access_rules": ["mb, high, screw, bomb, $canFreezeEnemies",
                              "mb, high, pb, $canFreezeEnemies",
                              "mb, bomb, screw, $canFreezeEnemies, ^$canSB",
-                             "mb, bomb, pb, $canFreezeEnemies, ^$canSB"]
+                             "mb, bomb, pb, $canFreezeEnemies, ^$canSB",
+                             "$canBombOrPowerBomb, screw, ^$canSee",
+                             "$canPowerBomb, ^$canSee"]
           }
         ],
         "map_locations": [
@@ -3883,7 +3887,7 @@
             "chest_opened_img": "images/items/pbomb_gray.png",
             "access_rules": ["$canPowerBomb, space", 
                              "$canPowerBomb, high, $canFreezeEnemies",
-                             "SimpleWalljumps, $canFreezeEnemies"]
+                             "$canPowerBomb, SimpleWalljumps, $canFreezeEnemies"]
           }
         ],
         "map_locations": [
@@ -4407,7 +4411,9 @@
             "inspectable_sequence_break": false,
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["high, space, speed, screw", "speed, screw, ^$canSee"]
+            "access_rules": ["high, space, speed, screw",
+                             "^$canSB, space, speed, screw",
+                             "speed, screw, ^$canSee"]
           }
         ],
         "map_locations": [
