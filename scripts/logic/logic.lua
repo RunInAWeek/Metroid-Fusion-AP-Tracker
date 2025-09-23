@@ -193,7 +193,7 @@ function canReachAnimals()
 end
 
 function canAccessArachnusZone()
-    return canDefeatSmallGeron() or (has("mb") and has("screw") and (has("space") or has(SimpleWalljumps)))
+    return (canDefeatSmallGeron() and (has("dm") or has("bc"))) or (has("mb") and has("screw") and (has("space") or has(SimpleWalljumps)))
 end
 
 function canAccessReactorZone()

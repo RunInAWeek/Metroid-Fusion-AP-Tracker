@@ -525,7 +525,7 @@
   },
   {
     "name": "Arachnus Zone Upper",
-    "access_rules":["@Main Deck Hub, $canAccessArachnusZone", "@Ventilation Zone, dm"],
+    "access_rules":["@Main Deck Hub, $canAccessArachnusZone", "@Ventilation Zone, dm", "@Ventilation Zone, bc"],
     "children":[
       {
         "name": "Arachnus Arena - Upper Item",
@@ -2135,7 +2135,7 @@
 
 {
     "name": "Tube from 3 to 5",
-    "access_rules":["@Sector 3 Hub/Fiery Storage - Lower Item, screw",
+    "access_rules":["@Sector 3 Hub/Fiery Storage - Lower Item/, screw",
                     "$hasnot|TubeRandom, @Tube from 5 to 3",
                     "TubeRandom, Tube3to5"],
     "children": [
@@ -2936,9 +2936,9 @@
             "chest_opened_img": "images/items/missile_gray.png",
             "access_rules": ["@Sector 4 Pump Control, ^$canAccessDrainPipe",
                              "$has|etank|2, ^$canSB, $canPowerBomb",
-                             "$has|etank|2, ^$canSB, gravity, screw",
-                             "$has|etank|2, ^$canSB, bw",
-                             "$has|etank|2, ^$canSB, dm, ms"]
+                             "$has|etank|2, ^$canSB, gravity, screw, mb",
+                             "$has|etank|2, ^$canSB, bw, mb",
+                             "$has|etank|2, ^$canSB, dm, ms, mb"]
           }
         ],
         "map_locations": [
@@ -3958,7 +3958,9 @@
     "name": "Sector 5 Nightmare Hub",
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
                      "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
-                     "@Sector 5 Before Nightmare Hub, $canJumpHigh, $canBeatToughEnemy",
+                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy",
+                     "@Sector 5 Before Nightmare Hub, gravity, screw",
+                     "@Sector 5 Before Nightmare Hub, $canPowerBomb",
                      "@Sector 5 Nightmare Zone Arena, gravity, speed, ^$canFightLategameBoss"],
     "children":[
       {
@@ -4035,7 +4037,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb"]
+            "access_rules": ["$canPowerBomb, $canJumpHigh"]
           }
         ],
         "map_locations": [
