@@ -58,17 +58,17 @@
               "item_size": "500, 40",
               "rows": [
 
-                [ "Missile_Data_Size" ],
-                [ "Missile_Tank_Size" ],
-                [ "PB_Data_Size" ],
-                [ "PB_Tank_Size" ],
-                [ "TrickyShinespark" ],
-                [ "SimpleWalljumps" ],
-                [ "GameMode" ],
-                [ "SHO" ],
-                [ "ElevatorRandom" ],
-                [ "ElevatorRandom2" ],
-                [ "TubeRandom" ]
+                [ "Missile_Data_Size", "" ],
+                [ "Missile_Tank_Size", ""  ],
+                [ "PB_Data_Size", ""  ],
+                [ "PB_Tank_Size", ""  ],
+                [ "TrickyShinespark", ""  ],
+                [ "TrickyWalljumps", "Walljumps" ],
+                [ "GameMode", ""  ],
+                [ "SHO", ""  ],
+                [ "ElevatorRandom", ""  ],
+                [ "ElevatorRandom2", ""  ],
+                [ "TubeRandom", ""  ]
 
 
               ]

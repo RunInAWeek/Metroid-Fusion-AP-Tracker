@@ -152,6 +152,16 @@ function canDefeatStabilizers()
     return has("screw") or has("dm") or has("bc")
 end
 
+function canWallJump(Diff)
+    Diff=tonumber(Diff)
+    local WalljumpOption=Tracker:FindObjectForCode("Walljumps").CurrentStage
+    if Diff>WalljumpOption then
+        return AccessibilityLevel.SequenceBreak
+    else
+        return true
+    end
+end
+
 function canFightBoss()
     if has("dm") then
         if has("etank", 2) and has("bc") then
@@ -193,7 +203,7 @@ function canReachAnimals()
 end
 
 function canAccessArachnusZone()
-    return (canDefeatSmallGeron() and (has("dm") or has("bc"))) or (has("mb") and has("screw") and (has("space") or has(SimpleWalljumps)))
+    return (canDefeatSmallGeron() and (has("dm") or has("bc"))) or (has("mb") and has("screw") and (canJumpHigh() or canWallJump(1)))
 end
 
 function canAccessReactorZone()

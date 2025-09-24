@@ -264,10 +264,21 @@
     "codes": "TrickyShinespark"
   },
   {
-    "name": "Simple Walljumps",
-    "type": "toggle",
+    "name": "TrickyWalljumps",
+    "type": "static",
     "img": "images/options/TrickyWalljumps.png",
-    "codes": "SimpleWalljumps"
+    "codes": "TrickyWalljumps"
+  },
+  {
+    "name": "Walljumps",
+    "type": "progressive",
+    "codes": "Walljumps",
+    "stages": [
+      {"disabled_img": "images/options/None.png",
+      "img": "images/options/Easy.png"},
+      {"img": "images/options/Hard.png"}
+      
+    ]
   },
   {
     "name": "Game Mode",

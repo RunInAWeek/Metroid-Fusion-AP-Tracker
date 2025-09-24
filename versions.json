@@ -1,7 +1,13 @@
 {
 	"versions": [
 		{
-			"package_version": "0.4.5",
+			"package_version": "0.4.7",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.7/Metroid.Fusion.Pack.zip",
+			"sha256": "ad94f5049b7918ab9b55c88425017875d5a9af8e0590f665a3766eeb53e835b2",
+			"changelog": ["Fixed a few logic points, added Walljump difficulties"]
+		},
+		{
+			"package_version": "0.4.6",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.6/Metroid.Fusion.Pack.zip",
 			"sha256": "8836ad95c19b17504345af86330cae8e7d4e37f85846cb9dc9e1de037b73974b",
 			"changelog": ["Fixed logic at Drain Pipe, below Nightmare Hub and Arachnus access"]
