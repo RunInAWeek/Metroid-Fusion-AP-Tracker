@@ -62,6 +62,7 @@
                 [ "Missile_Tank_Size", ""  ],
                 [ "PB_Data_Size", ""  ],
                 [ "PB_Tank_Size", ""  ],
+                [ "PoNR", ""  ],
                 [ "TrickyShinespark", ""  ],
                 [ "TrickyWalljumps", "Walljumps" ],
                 [ "GameMode", ""  ],

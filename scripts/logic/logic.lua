@@ -152,6 +152,18 @@ function canDefeatStabilizers()
     return has("screw") or has("dm") or has("bc")
 end
 
+function canDefeatThirdStabilizer()
+    if has("dm") or has("bc") then
+        return true
+    end
+    if has("screw") then
+        if has("high") then
+            return canWallJump(1)
+        else return canWallJump(2)
+        end
+    end
+end
+
 function canWallJump(Diff)
     Diff=tonumber(Diff)
     local WalljumpOption=Tracker:FindObjectForCode("Walljumps").CurrentStage
@@ -159,6 +171,17 @@ function canWallJump(Diff)
         return AccessibilityLevel.SequenceBreak
     else
         return true
+    end
+end
+
+function canPoNR(item)
+    if has("PoNR") then
+        return true
+    end
+    item=tostring(item)
+    if has(item) then
+        return true
+    else return AccessibilityLevel.SequenceBreak
     end
 end
 
@@ -249,15 +272,7 @@ function canFinish()
 end
 
 
-function canAccessLevel4SecurityRoom()
-    if (has("dm") and canBombOrPowerBomb) or has("k4") then
-        if has("space") then
-            return true
-        else return AccessibilityLevel.SequenceBreak
-        end
-    else return false
-    end
-end
+
 
 function canAccessReservoirVaultLowerItem()
     if canJumpHigh() then

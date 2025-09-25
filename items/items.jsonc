@@ -281,6 +281,14 @@
     ]
   },
   {
+    "name": "Point of No Return",
+    "type": "toggle",
+    "img": "images/options/PoNR.png",
+    "codes": "PoNR"
+  },
+
+
+  {
     "name": "Game Mode",
     "type": "static",
     "img": "images/options/GameMode.png",
