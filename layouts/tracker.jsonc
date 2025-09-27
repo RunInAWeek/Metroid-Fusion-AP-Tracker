@@ -65,6 +65,7 @@
                 [ "PoNR", ""  ],
                 [ "TrickyShinespark", "Shinesparks"  ],
                 [ "TrickyWalljumps", "Walljumps" ],
+                [ "CombatDifficulty", "Combat"],
                 [ "GameMode", ""  ],
                 [ "SHO", ""  ],
                 [ "ElevatorRandom", ""  ],
@@ -86,7 +87,9 @@
               "rows": [
 
                 ["Elevator ODT", "Elevator HDT", "Elevator RAT","Elevator S5T", "Elevator S3T", "Elevator S1T", "Elevator SHT", "Elevator S2T", "Elevator S4T", "Elevator S6T"],
-                ["Elevator ODB", "Elevator HDB", "Elevator RAB", "Elevator S5B", "Elevator S3B", "Elevator S1B", "Elevator SHB", "Elevator S2B", "Elevator S4B", "Elevator S6B"]
+                ["Elevator ODB", "Elevator HDB", "Elevator RAB", "Elevator S5B", "Elevator S3B", "Elevator S1B", "Elevator SHB", "Elevator S2B", "Elevator S4B", "Elevator S6B"],
+                ["Tube 1 Left", "Tube 1 Left Destination", "", "Tube 2 Left", "Tube 2 Left Destination", "", "Tube 3 Left", "Tube 3 Left Destination"],
+                ["Tube 4 Left", "Tube 4 Left Destination", "", "Tube 5 Left", "Tube 5 Left Destination", "", "Tube 6 Left", "Tube 6 Left Destination"]
 
 
               ]

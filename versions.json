@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4.10",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.10/Metroid.Fusion.Pack.zip",
+			"sha256": "f72ada71258136a55cd7063dfb0b5091361216a9241431664b1a7783caf9a506",
+			"changelog": ["Added tubes for notes and combat difficulty as an option"]
+		},
+		{
 			"package_version": "0.4.9",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.9/Metroid.Fusion.Pack.zip",
 			"sha256": "11157a65c09f86a5c3bdde3553d6a46b35160037f7cc027cc3e18c016e0a465d",

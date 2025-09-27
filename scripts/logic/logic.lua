@@ -199,8 +199,10 @@ function canPoNR(item)
 end
 
 function canFightBoss()
+    local Diff=Tracker:FindObjectForCode("Combat").CurrentStage
+
     if has("dm") then
-        if has("etank", 2) and has("bc") then
+        if (has("etank", 3) or Diff>1) and has("bc") then
             return true
         else return AccessibilityLevel.SequenceBreak
         end
@@ -209,7 +211,11 @@ function canFightBoss()
 end
 
 function canFightMidgameBoss()
-    if has("dm") and has("etank", 2) and has("bc") and has("ms") then
+    local Diff=Tracker:FindObjectForCode("Combat").CurrentStage
+    if Diff>0 then
+        return canFightBoss()
+    end
+    if has("dm") and has("etank", 5) and has("bc") and has("ms") then
         return true
     else if canFightBoss() then
         return AccessibilityLevel.SequenceBreak
@@ -218,7 +224,21 @@ function canFightMidgameBoss()
 end
 
 function canFightLategameBoss()
-    if has("bp") and has("space") and has("dm") and has("etank", 2) and has("bc") and has("ms") then
+    local Diff=Tracker:FindObjectForCode("Combat").CurrentStage
+    if Diff>1 then
+        return canFightBoss()
+    end
+
+    if Diff >0 then
+        if has("dm") and has("etank", 5) and has("bc") and has("ms") then
+            return true
+        else if canFightBoss() then
+            return AccessibilityLevel.SequenceBreak
+        end
+        end
+    end 
+
+    if has("bp") and has("space") and has("dm") and has("etank", 7) and has("bc") and has("ms") then
         return true
     else if canFightMidgameBoss() then
         return AccessibilityLevel.SequenceBreak
@@ -321,6 +341,13 @@ end
 
 function needEtanks(amount)
     amount=tonumber(amount)
+    local CombatDiff=Tracker:FindObjectForCode("Combat").CurrentStage
+    if CombatDiff>1 then
+        amount=amount/2
+    end
+    if has("ElevatorRandom") then
+        amount=amount/2
+    end
     local count=Tracker:ProviderCountForCode("etank")
     if amount > count then
         return AccessibilityLevel.SequenceBreak

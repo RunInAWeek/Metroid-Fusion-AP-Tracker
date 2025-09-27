@@ -293,6 +293,26 @@
       
     ]
   },
+   {
+    "name": "Combat Difficulty",
+    "type": "static",
+    "img": "images/options/CombatDifficulty.png",
+    "codes": "CombatDifficulty"
+  },
+  {
+    "name": "Combat",
+    "type": "progressive",
+    "codes": "Combat",
+    "allow_disabled": false,
+    "stages": [
+      {"img": "images/options/Easy.png"},
+      {"img": "images/options/Medium.png"},
+      {"img": "images/options/Hard.png"}
+      
+    ]
+  },
+
+
   {
     "name": "Point of No Return",
     "type": "toggle",
@@ -818,7 +838,141 @@
       {"img": "images/maps/Elevator Tubes/Elevator sector 6 bot.png"}
       
     ]
-  }
+  },
+
+
+  {
+    "name": "Tube 1 Left",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Tube1Left.png",
+    "codes": "Tube 1 Left"
+  },
+  {
+    "name": "Tube 2 Left",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Tube2Left.png",
+    "codes": "Tube 2 Left"
+  },
+  {
+    "name": "Tube 3 Left",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Tube3Left.png",
+    "codes": "Tube 3 Left"
+  },
+  {
+    "name": "Tube 4 Left",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Tube4Left.png",
+    "codes": "Tube 4 Left"
+  },
+  {
+    "name": "Tube 5 Left",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Tube5Left.png",
+    "codes": "Tube 5 Left"
+  },
+  {
+    "name": "Tube 6 Left",
+    "type": "static",
+    "img": "images/maps/Elevator Tubes/Tube6Left.png",
+    "codes": "Tube 6 Left"
+  },
+
+  {
+    "name": "Tube 1 Left Destination",
+    "codes": "Tube 1 Left Destination",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Tube1Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube2Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube3Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube4Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube5Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube6Right.png"}
+   
+    ]
+  }, 
+  
+  {
+    "name": "Tube 2 Left Destination",
+    "codes": "Tube 2 Left Destination",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Tube1Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube2Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube3Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube4Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube5Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube6Right.png"}
+   
+    ]
+  },  
+
+  {
+    "name": "Tube 3 Left Destination",
+    "codes": "Tube 3 Left Destination",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Tube1Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube2Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube3Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube4Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube5Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube6Right.png"}
+   
+    ]
+  },  
+
+  {
+    "name": "Tube 4 Left Destination",
+    "codes": "Tube 4 Left Destination",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Tube1Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube2Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube3Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube4Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube5Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube6Right.png"}
+   
+    ]
+  },  
+
+  {
+    "name": "Tube 5 Left Destination",
+    "codes": "Tube 5 Left Destination",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Tube1Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube2Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube3Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube4Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube5Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube6Right.png"}
+   
+    ]
+  },  
+
+  {
+    "name": "Tube 6 Left Destination",
+    "codes": "Tube 6 Left Destination",
+    "type": "progressive",
+    "stages": [
+      {"disabled_img": "images/maps/Elevator Tubes/Question_mark.png",
+      "img": "images/maps/Elevator Tubes/Tube1Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube2Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube3Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube4Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube5Right.png"},
+      {"img": "images/maps/Elevator Tubes/Tube6Right.png"}
+   
+    ]
+  } 
 
 
 ]
