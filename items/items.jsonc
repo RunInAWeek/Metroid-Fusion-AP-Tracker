@@ -259,10 +259,23 @@
   },
   {
     "name": "Tricky Shinespark",
-    "type": "toggle",
+    "type": "static",
     "img": "images/options/TrickyShinespark.png",
     "codes": "TrickyShinespark"
   },
+
+  {
+    "name": "Shinesparks",
+    "type": "progressive",
+    "codes": "Shinesparks",
+    "stages": [
+      {"disabled_img": "images/options/None.png",
+      "img": "images/options/Easy.png"},
+      {"img": "images/options/Hard.png"}
+      
+    ]
+  },
+
   {
     "name": "TrickyWalljumps",
     "type": "static",

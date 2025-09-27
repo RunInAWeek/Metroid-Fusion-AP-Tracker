@@ -63,7 +63,7 @@
                 [ "PB_Data_Size", ""  ],
                 [ "PB_Tank_Size", ""  ],
                 [ "PoNR", ""  ],
-                [ "TrickyShinespark", ""  ],
+                [ "TrickyShinespark", "Shinesparks"  ],
                 [ "TrickyWalljumps", "Walljumps" ],
                 [ "GameMode", ""  ],
                 [ "SHO", ""  ],

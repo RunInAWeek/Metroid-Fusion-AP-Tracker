@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4.9",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.9/Metroid.Fusion.Pack.zip",
+			"sha256": "11157a65c09f86a5c3bdde3553d6a46b35160037f7cc027cc3e18c016e0a465d",
+			"changelog": ["Fixed a few logic points, added Shinespark logic"]
+		},
+		{
 			"package_version": "0.4.8",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.4.8/Metroid.Fusion.Pack.zip",
 			"sha256": "56192b05975cbfe12da92be84feb09fd33b5bea2c03aa65f2e2b9592d603dd65",

@@ -99,7 +99,7 @@
 
     {
     "name": "Main Deck West Elevator",
-    "access_rules":["@Main Deck Hub, mb", "@Main Deck Hub, speed, TrickyShinespark",
+    "access_rules":["@Main Deck Hub, mb", "@Main Deck Hub, ^$canShinespark|2",
                     "ElevatorRandom, ElevatorRandom2, MainDeckElevatorfromMainHub",
                     "$hasnot|ElevatorRandom2, @Sector Hub"],
     "children": [
@@ -748,7 +748,6 @@
       {
         "name": "Lower Item",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
           "access_rules": ["$canReachAnimals", "bw", "^$canSee"]}],
@@ -882,7 +881,6 @@
       {
         "name": "Nexus Storage",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
           "access_rules": ["$canBallJumpAndBomb", "^$canSee"]}],
@@ -995,7 +993,7 @@
   "access_rules": ["@Sector 1 Entrance, $canDefeatSmallGeron",
                    "@Sector 1 Entrance, k1, k2, $canLavaDive",
                    "@Sector 1 After Charge Core Zone",
-                   "@Sector 1 Entrance, speed, TrickyShinespark",
+                   "@Sector 1 Entrance, ^$canShinespark|2",
                    "@Sector 1 Second Stabilizer Zone, $canDefeatStabilizers"],
   "children":[
     {
@@ -1023,8 +1021,7 @@
     },
     {
       "name": "Hornoad Hole",
-      "inspectable_sequence_break": false,
-      "access_rules": ["mb", "^$canSee"],
+            "access_rules": ["mb", "^$canSee"],
       "sections":[
         {
           "chest_unopened_img": "images/items/etank.png",
@@ -1195,7 +1192,7 @@
         {
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["space", "speed, ^$canSB", "speed, TrickyShinespark"]
+          "access_rules": ["space", "^$canShinespark|1"]
         }
       ],
       "map_locations": [
@@ -1238,29 +1235,6 @@
   "access_rules": ["@Sector 1 Second Stabilizer Zone"],
   "children":[
     {
-      "name": "Lava Lake - Lower Item",
-      "sections":[
-        {
-          "chest_unopened_img": "images/items/missile.png",
-          "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canLavaDive, mb",
-                           "$has|etank|4, mb ^$canSB"]
-        }
-      ],
-      "map_locations": [
-        {
-          "map": "s1",
-          "x": 1640,
-          "y": 760
-        },
-        {
-          "map": "s1-ingame",
-          "x": 60,
-          "y": 44
-        }
-      ]
-    },
-    {
       "name": "Stabilizer Storage",
       "sections":[{
         "chest_unopened_img": "images/items/missile.png",
@@ -1287,7 +1261,8 @@
 
 {
   "name": "Sector 1 Charge Core Zone",
-  "access_rules": ["@Sector 1 Third Stabilizer Zone, mb, ^$canDefeatThirdStabilizer, ^$canPoNR|dm"],
+  "access_rules": ["@Sector 1 Third Stabilizer Zone, mb, $canDefeatThirdStabilizer, ^$canPoNR|dm",
+                   "@Sector 1 After Charge Core Zone, $canDefeatStabilizers"],
   "children":[
     {
       "name": "Charge Core Arena - Core X",
@@ -1336,8 +1311,7 @@
     {
       "name": "Watering Hole",
       "sections":[{
-        "inspectable_sequence_break": true,
-        "chest_unopened_img": "images/items/pbomb.png",
+                "chest_unopened_img": "images/items/pbomb.png",
         "chest_opened_img": "images/items/pbomb_gray.png",
         "access_rules":["bc, gravity, speed, $canBallJump",
                         "bp, gravity, speed, $canBallJump",
@@ -1471,7 +1445,8 @@
         {
           "chest_unopened_img": "images/bosses/ridley.png",
           "chest_opened_img": "images/bosses/ridley_gray.png",
-          "access_rules": ["$canBombOrPowerBomb, ^$canFightLategameBoss"]
+          "access_rules": ["^$canFightLategameBoss, pb, mb",
+                           "^$canFightLategameBoss, bw, bc"]
         }
       ],
       "map_locations": [
@@ -1744,11 +1719,11 @@
       {
         "name": "Kago Room",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
           "access_rules":["$canJumpHigh", "screw", "^$canSee",
-                          "$canFreezeEnemies"]}],
+                          "$canFreezeEnemies",
+                          "^$canShinespark|1"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1866,7 +1841,6 @@
       {
         "name": "Oasis",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
           "access_rules":["$canJumpHigh", "^$canSee"]}],
@@ -1892,7 +1866,8 @@
                           "high, $canBombOrPowerBomb",
                           "gravity, mb, bomb, ^$canSB",
                           "gravity, screw, $canJumpHigh",
-                          "gravity, screw, $canActivatePillar, ^$canSB"]}],
+                          "gravity, screw, $canActivatePillar, ^$canSB",
+                          "$canActivatePillar, ^$canSee"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1909,7 +1884,6 @@
       {
         "name": "Ripper Tower - Upper Item",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
           "access_rules":["mb, $canFreezeEnemies", "^$canSee"]}],
@@ -1929,7 +1903,6 @@
       {
         "name": "Ripper Tower - Lower Item",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
           "access_rules":["mb, $canFreezeEnemies", "bw, ^$canSee", "$canPowerBomb, ^$canSee"]}],
@@ -2400,7 +2373,6 @@
         "name": "Security Access",
         "sections":[
           {
-            "inspectable_sequence_break": false,
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
             "access_rules": ["$canBeatToughEnemy, $canJumpHigh", "^$canSee"]
@@ -2433,7 +2405,6 @@
         "name": "Namihe's Lair",
         "sections":[
           {
-            "inspectable_sequence_break": false,
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
             "access_rules": ["$canPowerBomb, $canJumpHigh", "$canPowerBomb, ^$canSee"]
@@ -2567,7 +2538,7 @@
     "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, ^$needEtanks|5",
                      "@Sector 3 Main Shaft, k2, $canBallJumpAndBomb, ^$needEtanks|5",
                      "@Sector 3 Upper Attic, ^$canFightBoss",
-                     "@Sector 3 Bob Zone/Bob's Abode, $canBallJump"],
+                     "@Sector 3 Bob Zone/Bob's Abode, $canBallJump, k2"],
     "children":[
       {
         "name": "Data Room",
@@ -2658,7 +2629,11 @@
   {
     "name": "Sector 3 Lower Attic",
     "access_rules": ["@Sector 3 Hub, screw, space, mb",
-                     "@Sector 3 Upper Attic, $canBreakBombBlocks"],
+                     "@Sector 3 Upper Attic, space, $canBombOrPowerBomb",
+                     "@Sector 3 Upper Attic, high, ^$canWallJump|2, $canBombOrPowerBomb",
+                     "@Sector 3 Upper Attic, high, $canFreezeEnemies, $canBombOrPowerBomb",
+                     "@Sector 3 Upper Attic, $canFreezeEnemies, ^$canWallJump|1, $canBombOrPowerBomb",
+                     "@Sector 3 Upper Attic, screw, mb"],
     "children":[
       {
         "name": "Alcove - Lower Item",
@@ -2924,8 +2899,8 @@
         "name": "Tube from Sector 4 to Sector 6",
         "sections":[{
         "access_rules": ["@Sector 4 Data Zone, dm, md, $canBombOrPowerBomb",
-                         "@Sector 4 Right Water Zone, gravity, $canFreezeEnemies, dm",
-                         "@Sector 4 Right Water Zone, gravity, space, dm",  
+                         "@Sector 4 Right Water Zone, gravity, $canFreezeEnemies, dm, mb",
+                         "@Sector 4 Right Water Zone, gravity, space, dm, mb",  
                          "^$canSee"],
         "visibility_rules": ["TubeRandom"],
         "hosted_item": "Tube4to6"}],
@@ -3058,7 +3033,8 @@
 {
     "name": "Sector 4 Before Pump Control",
     "access_rules": ["@Sector 4 Upper Zone, $canBombOrPowerBomb",
-                     "@Sector 4 Upper Water Zone, @Sector 4 Pump Control, $canBallJump, gravity, k4",
+                     "@Sector 4 Upper Water Zone, $canJumpHigh, gravity, k4",
+                     "@Sector 4 Upper Water Zone, ^$canShinespark|1, gravity, k4",
                      "@Sector 4 Serris Zone, gravity, $canBombOrPowerBomb, space",
                      "@Sector 4 Serris Zone, gravity, $canBombOrPowerBomb, ^$canWallJump|1",
                      "@Sector 4 Pump Control, $canBallJump, $canBallJump"]
@@ -3150,7 +3126,6 @@
       {
         "name": "Reservoir Vault - Lower Item",
         "sections":[{
-          "inspectable_sequence_break": false,
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
           "access_rules":["@Sector 4 Upper Zone/Reservoir Vault - Upper Item/, dm", "space, ^$canSee", "^$canWallJump|1, ^$canSee"]}],
@@ -3252,10 +3227,10 @@
   {
     "name": "Sector 4 Upper Water Zone",
     "access_rules": ["@Sector 5 Nightmare Hub, $canSpeedBoostUnderWater",
-                     "@Sector 5 Nightmare Hub, screw, gravity, $canBallJump",
-                     "@Sector 4 Before Pump Control, @Sector 4 Pump Control, $canBallJump, gravity, k4",
+                     "@Sector 4 Before Pump Control, @Sector 4 Pump Control, $canBallJump, gravity, k4, screw",
+                     "@Sector 4 Before Pump Control, @Sector 4 Pump Control, speed, gravity, k4",
                      "@Sector 4 Security Zone, speed, gravity",
-                     "@Sector 4 Security Zone, screw, gravity"],
+                     "@Sector 4 Security Zone, screw, gravity, mb"],
     "children":[
       {
         "name": "Cargo Hold to Sector 5 (ARC)",
@@ -3804,8 +3779,7 @@
         "name": "Ripper Road",
         "sections":[
           {
-            "inspectable_sequence_break": false,
-            "chest_unopened_img": "images/items/pbomb.png",
+              "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
             "access_rules": ["mb, high, screw, bomb, $canFreezeEnemies",
                              "mb, high, pb, $canFreezeEnemies",
@@ -4008,9 +3982,8 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["k3, high, space, $canBallJump", 
-                             "k3, high, $canFreezeEnemies, $canBallJump", 
-                             "k3, space, $canBallJump, ^$canSB"]
+            "access_rules": ["k3, space, $canBallJump", 
+                             "k3, $canFreezeEnemies, $canBallJump"]
           }
         ],
         "map_locations": [
@@ -4035,9 +4008,9 @@
     "name": "Sector 5 Nightmare Hub",
     "access_rules": ["@Sector 4 Upper Water Zone, high, speed",
                      "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
-                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy",
-                     "@Sector 5 Before Nightmare Hub, gravity, screw",
-                     "@Sector 5 Before Nightmare Hub, $canPowerBomb",
+                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, high",
+                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, space",
+                     "@Sector 5 Before Nightmare Hub, gravity, screw, space",
                      "@Sector 5 Nightmare Zone Arena, gravity, speed, ^$canFightLategameBoss"],
     "children":[
       {
@@ -4139,6 +4112,7 @@
     "name": "Sector 5 Nightmare Zone Arena",
     "access_rules": ["@Sector 5 Nightmare Hub, gravity, speed",
                      "@Sector 5 Nightmare Zone Upper, PoNR",
+                     "@Sector 5 Nightmare Zone Upper, ^$canSB",
                      "@Sector 5 Nightmare Zone Upper, ^$canFightLateGameBoss, gravity, speed"],
     "children":[
       {
@@ -4181,7 +4155,7 @@
             "chest_opened_img": "images/items/etank_gray.png",
             "access_rules": ["$canBallJumpAndBomb, PoNR",
                              "$canBallJumpAndBomb, @Sector 5 Nightmare Zone Arena",
-                             "$canBombOrPowerBomb ^$canSB"]
+                             "$canBombOrPowerBomb, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -4353,7 +4327,8 @@
             "chest_opened_img": "images/items/missile_gray.png",
             "access_rules": ["$canBallJumpAndBomb",
                              "mb, high, screw",
-                             "mb, screw, ^$canSB"]
+                             "mb, screw, ^$canSB",
+                             "$canBallJump, ^$canShinespark|1"]
           }
         ],
         "map_locations": [
@@ -4377,6 +4352,7 @@
   {
     "name": "Sector 6 Crossroads",
     "access_rules": ["@Sector 6 Hub, $canDefeatMediumGeron",
+                     "@Sector 6 Hub, $canShinespark|1",
                      "@Sector 6 After Varia Core X Zone, mb",
                      "@Sector 6 Before Varia Core X Zone, mb, pb, space",
                      "@Sector 6 Before Varia Core X Zone, mb, pb, ^$canWallJump|2",
@@ -4389,7 +4365,7 @@
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
             "access_rules": ["speed, PoNR",
-                             "speed, ^$canSB",
+                             "speed, ^$canShinespark|2",
                              "k2, speed, bc, dm, varia, $canBombOrPowerBomb"]
           }
         ],
@@ -4493,8 +4469,7 @@
         "name": "Speedbooster Alley - Lower Item",
         "sections":[
           {
-            "inspectable_sequence_break": false,
-            "chest_unopened_img": "images/items/pbomb.png",
+              "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
             "access_rules": ["high, space, speed, screw",
                              "^$canSB, space, speed, screw",
@@ -4629,6 +4604,8 @@
     "name": "Sector 6 Before Varia Core X Zone",
     "access_rules": ["@Sector 6 Crossroads, speed, $canBombOrPowerBomb, PoNR",
                      "@Sector 6 Crossroads, speed, $canBombOrPowerBomb, ^$canSB",
+                     "@Sector 6 Crossroads, mb, pb, space, ^$canShinespark|2",
+                     "@Sector 6 Crossroads, mb, pb, ^$canWalljump|2, ^$canShinespark|2",
                      "@Sector 6 Crossroads, k2, speed, bc, dm, varia, $canBombOrPowerBomb",
                      "@Sector 6 Varia Core X Zone, k2, bc, ^$canFightBoss"],
     "children":[

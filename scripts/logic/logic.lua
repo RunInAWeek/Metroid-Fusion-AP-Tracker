@@ -174,6 +174,19 @@ function canWallJump(Diff)
     end
 end
 
+function canShinespark(Diff)
+    if hasnot("speed") then
+        return false
+    end
+    Diff=tonumber(Diff)
+    local ShinesparkOption=Tracker:FindObjectForCode("Shinesparks").CurrentStage
+    if Diff>ShinesparkOption then
+        return AccessibilityLevel.SequenceBreak
+    else
+        return true
+    end
+end
+
 function canPoNR(item)
     if has("PoNR") then
         return true
