@@ -99,9 +99,8 @@ end
     local Start = Tracker:FindObjectForCode("Starting Location").CurrentStage
     number = tonumber(number)
     if number == Start then
-        print ("OK")
         return true
-    else print ("Not Ok")
+    else 
         return false
     end
  end

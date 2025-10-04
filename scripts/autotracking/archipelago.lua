@@ -184,10 +184,20 @@ function onClear(slot_data)
     end
 	    
     if slot_data['GameMode'] then
-        local obj = Tracker:FindObjectForCode('SHO')
-		print(string.format("Game Mode %s", slot_data['Gamemode']))
-        if obj and slot_data['Gamemode'] == "SHO" then
-            obj.Active = true
+		local mode = slot_data['GameMode']
+		Tracker:FindObjectForCode('SHO').Active=false
+		Tracker:FindObjectForCode('Custom').Active=false
+		if mode == 1 then
+        	local obj = Tracker:FindObjectForCode('SHO')
+        	if obj then
+            	obj.Active = true
+			end
+		else if mode == 2 then
+			local obj = Tracker:FindObjectForCode('Custom')
+        	if obj then
+            	obj.Active = true
+			end
+		end
         end
     end
 
@@ -212,10 +222,53 @@ function onClear(slot_data)
         end
     end
 
-	if slot_data['UTOptions["SectorTubeShuffle"]'] then
+	if slot_data['ElevatorShuffle'] then
+		local mode = slot_data['ElevatorShuffle']
+		Tracker:FindObjectForCode('ElevatorRandom').Active=false
+		Tracker:FindObjectForCode('ElevatorRandom2').Active=false
+		if mode > 0 then
+        	local obj = Tracker:FindObjectForCode('ElevatorRandom')
+        	if obj then
+            	obj.Active = true
+			end
+		end
+		if mode > 1 then
+			local obj = Tracker:FindObjectForCode('ElevatorRandom2')
+        	if obj then
+            	obj.Active = true
+			end
+        end
+    end
+
+	if slot_data["SectorTubeShuffle"] then
         local obj = Tracker:FindObjectForCode('TubeRandom')
         if obj then
-            obj.Active = slot_data['UTOptions["SectorTubeShuffle"]']
+            obj.Active = slot_data["SectorTubeShuffle"]
+        end
+    end
+
+	if slot_data["PONRsInLogic"] then
+        local obj = Tracker:FindObjectForCode('PoNR')
+        if obj then
+            obj.Active = slot_data["PONRsInLogic"]
+        end
+    end
+
+	if slot_data['StartingLocation'] then
+		local mode = slot_data['ElevatorShuffle']
+		print ("starting location", mode)
+		if mode > 0 then
+        	local obj = Tracker:FindObjectForCode('Starting Location')
+        	if obj then
+            	obj.CurrentStage = mode
+			end
+		end
+    end
+
+	if slot_data["OpenSectorElevators"] then
+        local obj = Tracker:FindObjectForCode('Open Sector Elevators')
+        if obj then
+            obj.Active = slot_data["OpenSectorElevators"]
         end
     end
 
