@@ -352,6 +352,38 @@
     "codes":"TubeRandom"
   },
 
+  {
+    "name": "Custom",
+    "type": "toggle",
+    "img": "images/options/Custom.png",
+    "codes": "Custom"
+  },
+  {
+    "name": "Start",
+    "type": "static",
+    "img": "images/options/StartingLocation.png",
+    "codes": "SL"
+  },
+  {
+    "name": "Starting Location",
+    "type": "progressive",
+    "codes": "Starting Location",
+    "allow_disabled": false,
+    "stages": [
+      {"img": "images/options/DockingBay.png"},
+      {"img": "images/options/OperationsDeck.png"},
+      {"img": "images/options/SectorHub.png"},
+      {"img": "images/options/ConcourseSaveStation.png"}
+      
+    ]
+  },
+  {
+    "name": "Open Sector Elevators",
+    "type": "toggle",
+    "img": "images/options/OpenSectorElevators.png",
+    "codes": "Open Sector Elevators"
+  },
+
 
 
 
@@ -371,6 +403,12 @@
     "img": "images/items/go.png",
     "codes": "go"
   },
+
+
+
+
+
+
 
   {
     "name": "Operation Deck Elevator Top",

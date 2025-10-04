@@ -165,11 +165,13 @@ function onClear(slot_data)
 	
 	PLAYER_ID = Archipelago.PlayerNumber or -1
 	TEAM_NUMBER = Archipelago.TeamNumber or 0
+
+	DATA_STORAGE_ID = "fusion_current_sector_"..PLAYER_ID.."_"..TEAM_NUMBER
 	
 
 	if Archipelago.PlayerNumber>-1 then
-		print (string.format("Current slot data is", PLAYER_ID, TEAM_NUMBER))
-		EVENT_ID="current_sector"
+		print("Current slot data is", PLAYER_ID, TEAM_NUMBER)
+		EVENT_ID="fusion_current_sector_"..PLAYER_ID.."_"..TEAM_NUMBER
 		print(string.format("SET NOTIFY %s",EVENT_ID))
 		Archipelago:SetNotify({EVENT_ID})
 		Archipelago:Get({EVENT_ID})
@@ -183,15 +185,37 @@ function onClear(slot_data)
 	    
     if slot_data['GameMode'] then
         local obj = Tracker:FindObjectForCode('SHO')
-        if obj then
-            obj.Active = slot_data['GameMode']
+		print(string.format("Game Mode %s", slot_data['Gamemode']))
+        if obj and slot_data['Gamemode'] == "SHO" then
+            obj.Active = true
         end
     end
 
-    if slot_data['TrickyShinesparks'] then
-        local obj = Tracker:FindObjectForCode('TrickyShinespark')
+    if slot_data['ShinesparkDifficulty'] then
+        local obj = Tracker:FindObjectForCode('Shinesparks')
         if obj then
-            obj.Active = slot_data['TrickyShinesparks']
+            obj.CurrentStage = slot_data['ShinesparkDifficulty']
+        end
+    end
+
+	if slot_data['WallJumpDifficulty'] then
+        local obj = Tracker:FindObjectForCode('Walljumps')
+        if obj then
+            obj.CurrentStage = slot_data['WallJumpDifficulty']
+        end
+    end
+
+	if slot_data['CombatDifficulty'] then
+        local obj = Tracker:FindObjectForCode('Combat')
+        if obj then
+            obj.CurrentStage = slot_data['CombatDifficulty']
+        end
+    end
+
+	if slot_data['UTOptions["SectorTubeShuffle"]'] then
+        local obj = Tracker:FindObjectForCode('TubeRandom')
+        if obj then
+            obj.Active = slot_data['UTOptions["SectorTubeShuffle"]']
         end
     end
 
@@ -349,21 +373,27 @@ function onBounce(json)
 	-- your code goes here
 end
 
+
 function onNotify(key, value, old_value)
-	print(string.format("onNotify",key,value,old_value))
+	print(string.format("called onNotify: %s, %s, %s",key,value,old_value))
+	if key == HINTS_ID then
 	
-	updateTab(value)
+	else updateTab(value)
+	end
 end
 
 function onNotifyLaunch(key, value)
-	print(string.format("onNotifyLaunch",key,value,old_value))
+	print(string.format("called onNotifyLaunch: %s, %s",key,value))
 	
-	updateTab(value)
+	if key == HINTS_ID then
+	
+	else updateTab(value)
+	end
 end
 
 function updateTab(value)
 	if value ~= nil then
-	    print(string.format("updateTab %i",value))
+	    print("updateTab", value)
 		local tabswitch = Tracker:FindObjectForCode("tab_switch")
 		if tabswitch.Active then
 			if TAB_MAPPING[value] then

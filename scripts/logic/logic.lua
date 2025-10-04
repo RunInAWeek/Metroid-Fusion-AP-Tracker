@@ -94,7 +94,17 @@ function addDataPB()
     item.AcquiredCount = count
 end
 
- 
+ function isStartingLocation(number)
+    print(Tracker:FindObjectForCode("Starting Location").CurrentStage)
+    local Start = Tracker:FindObjectForCode("Starting Location").CurrentStage
+    number = tonumber(number)
+    if number == Start then
+        print ("OK")
+        return true
+    else print ("Not Ok")
+        return false
+    end
+ end
 
 function canBallJump()
     return has("mb") and (has("high") or has("bomb"))
@@ -269,6 +279,22 @@ function canAccessReactorZone()
         else return AccessibilityLevel.SequenceBreak
         end
     else return false
+    end
+end
+
+function canAccessWateringHole()
+    if has("gravity") and has("speed") and has("mb") and canBallJump() then
+        if has("bc") or has("bp") or has("screw") then
+            return true
+        else 
+            if has("dm") or has("bw") or has("bi") or has("pb") then
+                return canShinespark(1)
+            else 
+                return canShinespark(2) 
+            end
+        end
+    else
+        return false
     end
 end
 

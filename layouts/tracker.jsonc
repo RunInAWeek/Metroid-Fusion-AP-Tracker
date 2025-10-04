@@ -55,22 +55,20 @@
             {
               "type": "itemgrid",
               "item_h_alignment": "left",
-              "item_size": "500, 40",
+              "item_size": "300, 40",
               "rows": [
 
-                [ "Missile_Data_Size", "" ],
-                [ "Missile_Tank_Size", ""  ],
-                [ "PB_Data_Size", ""  ],
-                [ "PB_Tank_Size", ""  ],
-                [ "PoNR", ""  ],
-                [ "TrickyShinespark", "Shinesparks"  ],
-                [ "TrickyWalljumps", "Walljumps" ],
-                [ "CombatDifficulty", "Combat"],
-                [ "GameMode", ""  ],
-                [ "SHO", ""  ],
-                [ "ElevatorRandom", ""  ],
-                [ "ElevatorRandom2", ""  ],
-                [ "TubeRandom", ""  ]
+                [ "Missile_Data_Size", "", "", "" ],
+                [ "Missile_Tank_Size", "", "", ""  ],
+                [ "PB_Data_Size", "", "", ""  ],
+                [ "PB_Tank_Size", "", "", ""  ],
+                [ "PoNR", "", "GameMode", ""  ],
+                [ "TrickyShinespark", "Shinesparks", "SHO", ""  ],
+                [ "TrickyWalljumps", "Walljumps", "Custom", "" ],
+                [ "CombatDifficulty", "Combat", "SL", "Starting Location"],
+                [ "ElevatorRandom", "", "Open Sector Elevators", ""  ],
+                [ "ElevatorRandom2", "", "", ""  ],
+                [ "TubeRandom", "", "", ""  ]
 
 
               ]

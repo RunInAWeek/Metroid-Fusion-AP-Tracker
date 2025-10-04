@@ -1,8 +1,8 @@
 [
   {
     "name": "Main Deck Hub",
-    "access_rules":["$hasnot|SHO", 
-                    "$hasnot|ElevatorRandom2, SHO, mb", "$hasnot|ElevatorRandom2, SHO, speed",
+    "access_rules":["$hasnot|SHO, $hasnot|Custom", "Custom, $isStartingLocation|0", "Custom, $isStartingLocation|3", 
+                    "@Main Deck West Elevator, mb", "@Main Deck West Elevator, speed",
                     "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, mb", "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, speed",
                     "ElevatorRandom2, OperationDeckElevatorBot",
                     "ElevatorRandom2, HabitationDeckElevatorBot, k2"],
@@ -158,7 +158,12 @@
 
   {
     "name": "Sector Hub",
-    "access_rules":["SHO", "@Sector Hub - Sector 1", "@Sector Hub - Sector 2", "ElevatorRandom, ElevatorRandom2, SectorHubElevatorToMainDeck", "$hasnot|ElevatorRandom2, @Main Deck West Elevator"],
+    "access_rules":["SHO", 
+                    "Custom, $isStartingLocation|2",
+                    "@Sector Hub - Sector 1", 
+                    "@Sector Hub - Sector 2", 
+                    "ElevatorRandom, ElevatorRandom2, SectorHubElevatorToMainDeck", 
+                    "$hasnot|ElevatorRandom2, @Main Deck West Elevator"],
     "children": [
       {
       }
@@ -194,7 +199,11 @@
 
   {
     "name": "Sector Hub - Sector 1",
-    "access_rules":["@Sector Hub", "@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k1", "ElevatorRandom, SectorHubElevatorToSector1"],
+    "access_rules":["@Sector Hub", 
+                    "@Sector Hub - Sector 3, SHO",
+                    "@Sector Hub - Sector 3, Custom, Open Sector Elevators", 
+                    "@Sector Hub - Sector 3, k1", 
+                    "ElevatorRandom, SectorHubElevatorToSector1"],
     "children": [
       {
       }
@@ -207,7 +216,10 @@
       {
         "name": "Sector Hub Elevator to Sector 1",
         "sections":[{
-        "access_rules": ["@Sector Hub", "@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k1", "^$canSee"],
+        "access_rules": ["@Sector Hub", 
+                         "@Sector Hub - Sector 3, SHO",
+                         "@Sector Hub - Sector 3, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 3, k1", "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
         "hosted_item": "SectorHubElevatorToSector1"}],
         "map_locations": [
@@ -231,7 +243,11 @@
 
   {
     "name": "Sector Hub - Sector 2",
-    "access_rules":["@Sector Hub", "@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k1", "ElevatorRandom, SectorHubElevatorToSector2"],
+    "access_rules":["@Sector Hub", 
+                    "@Sector Hub - Sector 4, SHO",
+                    "@Sector Hub - Sector 4, Custom, Open Sector Elevators", 
+                    "@Sector Hub - Sector 4, k1", 
+                    "ElevatorRandom, SectorHubElevatorToSector2"],
     "children": [
       {
       }
@@ -244,7 +260,11 @@
       {
         "name": "Sector Hub Elevator to Sector 2",
         "sections":[{
-        "access_rules": ["@Sector Hub", "@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k1", "^$canSee"],
+        "access_rules": ["@Sector Hub", 
+                         "@Sector Hub - Sector 4, SHO",
+                         "@Sector Hub - Sector 4, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 4, k1",
+                         "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
         "hosted_item": "SectorHubElevatorToSector2"}],
         "map_locations": [
@@ -268,7 +288,13 @@
 
   {
     "name": "Sector Hub - Sector 3",
-    "access_rules":["@Sector Hub - Sector 1, SHO", "@Sector Hub - Sector 1, k1", "@Sector Hub - Sector 5, SHO", "@Sector Hub - Sector 5, k2", "ElevatorRandom, SectorHubElevatorToSector3"],
+    "access_rules":["@Sector Hub - Sector 1, SHO",
+                    "@Sector Hub - Sector 1, Custom, Open Sector Elevators",  
+                    "@Sector Hub - Sector 1, k1", 
+                    "@Sector Hub - Sector 5, SHO", 
+                    "@Sector Hub - Sector 5, Custom, Open Sector Elevators", 
+                    "@Sector Hub - Sector 5, k2", 
+                    "ElevatorRandom, SectorHubElevatorToSector3"],
     "children": [
       {
       }
@@ -281,7 +307,13 @@
       {
         "name": "Sector Hub Elevator to Sector 3",
         "sections":[{
-        "access_rules": ["@Sector Hub - Sector 1, SHO", "@Sector Hub - Sector 1, k1", "@Sector Hub - Sector 5, SHO", "@Sector Hub - Sector 5, k2", "^$canSee"],
+        "access_rules": ["@Sector Hub - Sector 1, SHO", 
+                         "@Sector Hub - Sector 1, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 1, k1", 
+                         "@Sector Hub - Sector 5, SHO", 
+                         "@Sector Hub - Sector 5, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 5, k2", 
+                         "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
         "hosted_item": "SectorHubElevatorToSector3"}],
         "map_locations": [
@@ -305,8 +337,12 @@
 
   {
     "name": "Sector Hub - Sector 4",
-    "access_rules":["@Sector Hub - Sector 2, SHO", "@Sector Hub - Sector 2, k1",
-                    "@Sector Hub - Sector 6, SHO", "@Sector Hub - Sector 6, k2",
+    "access_rules":["@Sector Hub - Sector 2, SHO", 
+                    "@Sector Hub - Sector 2, Custom, Open Sector Elevators",
+                    "@Sector Hub - Sector 2, k1",
+                    "@Sector Hub - Sector 6, SHO",
+                    "@Sector Hub - Sector 6, Custom, Open Sector Elevators",  
+                    "@Sector Hub - Sector 6, k2",
                     "ElevatorRandom, SectorHubElevatorToSector4"],
     "children": [
       {
@@ -320,8 +356,13 @@
       {
         "name": "Sector Hub Elevator to Sector 4",
         "sections":[{
-        "access_rules": ["@Sector Hub - Sector 2, SHO", "@Sector Hub - Sector 2, k1",
-                         "@Sector Hub - Sector 6, SHO", "@Sector Hub - Sector 6, k2", "^$canSee"],
+        "access_rules": ["@Sector Hub - Sector 2, SHO", 
+                         "@Sector Hub - Sector 2, k1",
+                         "@Sector Hub - Sector 2, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 6, SHO", 
+                         "@Sector Hub - Sector 6, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 6, k2", 
+                         "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
         "hosted_item": "SectorHubElevatorToSector4"}],
         "map_locations": [
@@ -345,7 +386,9 @@
 
   {
     "name": "Sector Hub - Sector 5",
-    "access_rules":["@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k2",
+    "access_rules":["@Sector Hub - Sector 3, SHO", 
+                    "@Sector Hub - Sector 3, Custom, Open Sector Elevators", 
+                    "@Sector Hub - Sector 3, k2",
                     "ElevatorRandom, SectorHubElevatorToSector5"],
     "children": [
       {
@@ -359,7 +402,10 @@
       {
         "name": "Sector Hub Elevator to Sector 5",
         "sections":[{
-        "access_rules": ["@Sector Hub - Sector 3, SHO", "@Sector Hub - Sector 3, k2", "^$canSee"],
+        "access_rules": ["@Sector Hub - Sector 3, SHO", 
+                         "@Sector Hub - Sector 3, Custom, Open Sector Elevators", 
+                         "@Sector Hub - Sector 3, k2", 
+                         "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
         "hosted_item": "SectorHubElevatorToSector5"}],
         "map_locations": [
@@ -383,7 +429,9 @@
 
   {
     "name": "Sector Hub - Sector 6",
-    "access_rules":["@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k2",
+    "access_rules":["@Sector Hub - Sector 4, SHO", 
+                    "@Sector Hub - Sector 4, k2",
+                    "@Sector Hub - Sector 4, Custom, Open Sector Elevators", 
                     "ElevatorRandom, SectorHubElevatorToSector6"],
     "children": [
       {
@@ -397,7 +445,10 @@
       {
         "name": "Sector Hub Elevator to Sector 6",
         "sections":[{
-        "access_rules": ["@Sector Hub - Sector 4, SHO", "@Sector Hub - Sector 4, k2", "^$canSee"],
+        "access_rules": ["@Sector Hub - Sector 4, SHO", 
+                         "@Sector Hub - Sector 4, k2", 
+                         "@Sector Hub - Sector 4, Custom, Open Sector Elevators", 
+                         "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
         "hosted_item": "SectorHubElevatorToSector6"}],
         "map_locations": [
@@ -462,7 +513,7 @@
 
 {
     "name": "Operation Deck Entrance",
-    "access_rules":["$hasnot|ElevatorRandom, @Main Deck Hub",
+    "access_rules":["$hasnot|ElevatorRandom2, @Main Deck Hub",
                     "ElevatorRandom2, OperationDeckElevatorTop"],
     "children": [
       {
@@ -500,7 +551,8 @@
 
   {
     "name": "Operation Deck",
-    "access_rules":["@Operation Deck Entrance"],
+    "access_rules":["@Operation Deck Entrance",
+                    "Custom, $isStartingLocation|1"],
     "children": [
       {
         "name": "Data Room",
@@ -1313,12 +1365,7 @@
       "sections":[{
                 "chest_unopened_img": "images/items/pbomb.png",
         "chest_opened_img": "images/items/pbomb_gray.png",
-        "access_rules":["bc, gravity, speed, $canBallJump",
-                        "bp, gravity, speed, $canBallJump",
-                        "dm, gravity, speed, $canBallJump", 
-                        "^$canSee, speed, $canPowerBomb",
-                        "^$canSee, speed, bw",
-                        "dm, gravity, speed, ^$canSee"]}],
+        "access_rules":["^$canAccessWateringHole"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -1467,7 +1514,8 @@
       "sections":[{
         "chest_unopened_img": "images/items/etank.png",
         "chest_opened_img": "images/items/etank_gray.png",
-        "access_rules":["dm, md"]}],
+        "access_rules":["dm, md, $canBallJump",
+                        "dm, ^$canSB"]}],
       "map_locations": [
         {
           "map": "s1",
@@ -4113,7 +4161,7 @@
     "access_rules": ["@Sector 5 Nightmare Hub, gravity, speed",
                      "@Sector 5 Nightmare Zone Upper, PoNR",
                      "@Sector 5 Nightmare Zone Upper, ^$canSB",
-                     "@Sector 5 Nightmare Zone Upper, ^$canFightLateGameBoss, gravity, speed"],
+                     "@Sector 5 Nightmare Zone Upper, ^$canFightLategameBoss, gravity, speed"],
     "children":[
       {
         "name": "Nightmare Arena",
@@ -4605,7 +4653,7 @@
     "access_rules": ["@Sector 6 Crossroads, speed, $canBombOrPowerBomb, PoNR",
                      "@Sector 6 Crossroads, speed, $canBombOrPowerBomb, ^$canSB",
                      "@Sector 6 Crossroads, mb, pb, space, ^$canShinespark|2",
-                     "@Sector 6 Crossroads, mb, pb, ^$canWalljump|2, ^$canShinespark|2",
+                     "@Sector 6 Crossroads, mb, pb, ^$canWallJump|2, ^$canShinespark|2",
                      "@Sector 6 Crossroads, k2, speed, bc, dm, varia, $canBombOrPowerBomb",
                      "@Sector 6 Varia Core X Zone, k2, bc, ^$canFightBoss"],
     "children":[
