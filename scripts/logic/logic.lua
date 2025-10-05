@@ -303,7 +303,7 @@ end
 
 
 function canAccessFieryStorageFromSector3()
-    return has("varia") and (canLavaDive() or canBeatToughEnemy())
+    return has("varia") and (canLavaDive() or canBeatToughEnemy() or canShinespark(1))
 end
 
 function canAccessSanctuaryCache()
