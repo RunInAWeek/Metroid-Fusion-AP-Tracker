@@ -429,18 +429,16 @@ end
 
 function onNotify(key, value, old_value)
 	print(string.format("called onNotify: %s, %s, %s",key,value,old_value))
-	if key == HINTS_ID then
-	
-	else updateTab(value)
+	if key == DATA_STORAGE_ID then
+		updateTab(value)
 	end
 end
 
 function onNotifyLaunch(key, value)
 	print(string.format("called onNotifyLaunch: %s, %s",key,value))
 	
-	if key == HINTS_ID then
-	
-	else updateTab(value)
+	if key == DATA_STORAGE_ID then
+		updateTab(value)
 	end
 end
 

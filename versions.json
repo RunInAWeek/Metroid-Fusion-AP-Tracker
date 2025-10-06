@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.2",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.2/Metroid.Fusion.Pack.zip",
+			"sha256": "5508f52eac7874e16bddcab751c64345ae089c2f2d809c84ab47552a4a58afbc",
+			"changelog": ["Fixed tab autoswitch"]
+		},
+		{
 			"package_version": "0.5.1",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.1/Metroid.Fusion.Pack.zip",
 			"sha256": "2d9be4ab4a1880f3a05dfd04ecef6c91c527f8a083d323668db37a035ff45764",

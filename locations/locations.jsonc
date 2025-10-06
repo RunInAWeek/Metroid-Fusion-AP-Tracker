@@ -935,7 +935,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": ["$canBallJumpAndBomb", "^$canSee"]}],
+          "access_rules": ["$canBallJumpAndBomb"]}],
         "map_locations": [
             {
               "map": "deck",
