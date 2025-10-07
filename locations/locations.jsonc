@@ -701,7 +701,7 @@
 
   {
     "name": "Main Deck Elevator to Habitation Deck",
-    "access_rules":["@Main Deck Hub, k2", "ElevatorRandom, HabitationDeckElevatorBot"],
+    "access_rules":["@Main Deck Hub, k2", "ElevatorRandom, ElevatorRandom2, HabitationDeckElevatorBot"],
     "children": [
       {
       }
@@ -737,8 +737,8 @@
 
   {
     "name": "Habitation Deck Entrance",
-    "access_rules":["$hasnot|ElevatorRandom, @Main Deck Hub, k2",
-                    "ElevatorRandom, HabitationDeckElevatorTop"],
+    "access_rules":["$hasnot|ElevatorRandom2, @Main Deck Hub, k2",
+                    "ElevatorRandom2, HabitationDeckElevatorTop"],
     "children": [
       {
       }
@@ -4400,7 +4400,7 @@
   {
     "name": "Sector 6 Crossroads",
     "access_rules": ["@Sector 6 Hub, $canDefeatMediumGeron",
-                     "@Sector 6 Hub, $canShinespark|1",
+                     "@Sector 6 Hub, ^$canShinespark|1",
                      "@Sector 6 After Varia Core X Zone, mb",
                      "@Sector 6 Before Varia Core X Zone, mb, pb, space",
                      "@Sector 6 Before Varia Core X Zone, mb, pb, ^$canWallJump|2",

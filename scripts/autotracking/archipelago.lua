@@ -255,7 +255,7 @@ function onClear(slot_data)
     end
 
 	if slot_data['StartingLocation'] then
-		local mode = slot_data['ElevatorShuffle']
+		local mode = slot_data['StartingLocation']
 		print ("starting location", mode)
 		if mode > 0 then
         	local obj = Tracker:FindObjectForCode('Starting Location')
