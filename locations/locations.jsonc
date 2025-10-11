@@ -1769,9 +1769,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canJumpHigh", "screw", "^$canSee",
-                          "$canFreezeEnemies",
-                          "^$canShinespark|1"]}],
+          "access_rules":["^$canGetKagoRoomItem"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1910,12 +1908,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["$canPowerBomb", 
-                          "high, $canBombOrPowerBomb",
-                          "gravity, mb, bomb, ^$canSB",
-                          "gravity, screw, $canJumpHigh",
-                          "gravity, screw, $canActivatePillar, ^$canSB",
-                          "$canActivatePillar, ^$canSee"]}],
+          "access_rules":["^$canGetOasisStorageItem"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1934,7 +1927,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules":["mb, $canFreezeEnemies", "^$canSee"]}],
+          "access_rules":["mb, $canFreezeEnemies", "$cannotFreezeEnemies, ^$canSee", "hasnot|mb, ^$canSee"]}],
         "map_locations": [
           {
             "map": "s2",
@@ -1953,7 +1946,11 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules":["mb, $canFreezeEnemies", "bw, ^$canSee", "$canPowerBomb, ^$canSee"]}],
+          "access_rules":["mb, $canFreezeEnemies", 
+                          "$cannotFreezeEnemies, bw, ^$canSee", 
+                          "$cannotFreezeEnemies, $canPowerBomb, ^$canSee",
+                          "hasnot|mb, bw, ^$canSee",
+                          "hasnot|mb, $canPowerBomb, ^$canSee"]}],
             "map_locations": [
               {
                 "map": "s2",
@@ -2217,7 +2214,7 @@
         "sections":[{
         "access_rules": ["@Sector 3 Fiery Storage Right, screw, ^$canPoNR|space",
                          "@Sector 3 Fiery Storage Right, screw, ^$canPoNR|high",
-                         "@Sector 3 Fiery Storage Right, screw, ^$canWalljump|1",  
+                         "@Sector 3 Fiery Storage Right, screw, ^$canWallJump|1",  
                          "^$canSee"],
         "visibility_rules": ["TubeRandom"],
         "hosted_item": "Tube3to5"}],
@@ -2423,7 +2420,7 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["$canBeatToughEnemy, $canJumpHigh", "^$canSee"]
+            "access_rules": ["^$canGetSector3SecurityAccessItem"]
           }
         ],
         "map_locations": [
@@ -2455,7 +2452,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, $canJumpHigh", "$canPowerBomb, ^$canSee"]
+            "access_rules": ["$canPowerBomb, $canJumpHigh", "$canPowerBomb, $cannotJumpHigh, ^$canSee"]
           }
         ],
         "map_locations": [
@@ -3176,7 +3173,11 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules":["@Sector 4 Upper Zone/Reservoir Vault - Upper Item/, dm", "space, ^$canSee", "^$canWallJump|1, ^$canSee"]}],
+          "access_rules":["@Sector 4 Upper Zone/Reservoir Vault - Upper Item/, dm", 
+                          "space, $cannotBombOrPowerBomb, ^$canSee",
+                          "space, $hasnot|dm, ^$canSee", 
+                          "^$canWallJump|1, $cannotBombOrPowerBomb, ^$canSee",
+                          "^$canWallJump|1, hasnot|dm, ^$canSee"]}],
         "map_locations": [
           {
             "map": "s4",
@@ -4519,9 +4520,7 @@
           {
               "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["high, space, speed, screw",
-                             "^$canSB, space, speed, screw",
-                             "speed, screw, ^$canSee"]
+            "access_rules": ["^$canGetSpeedboosterLowerItem"]
           }
         ],
         "map_locations": [

@@ -117,6 +117,13 @@ function canJumpHigh()
     return has("high") or has("space")
 end
 
+function cannotJumpHigh()
+    if canJumpHigh() then
+        return false
+    else return true
+    end
+end
+
 function canLavaDive()
     return has("varia") and has("gravity")
 end
@@ -140,6 +147,14 @@ end
 function canBombOrPowerBomb()
     return has("mb") and (has("bomb") or has("pb"))
 end
+
+function cannotBombOrPowerBomb()
+    if canBombOrPowerBomb() then
+        return false
+    else return true
+    end
+end
+
 
 function canBeatToughEnemy()
     return has("bc") or has("dm")
@@ -259,6 +274,13 @@ function canFreezeEnemies()
     return has("bi") or (has("dm") and (has("mi") or has("md")))
 end
 
+function cannotFreezeEnemies()
+    if canFreezeEnemies() then
+        return false
+    else return true
+    end
+end
+
 function canBreakBombBlocks()
     return has("screw") or canBombOrPowerBomb()
 end
@@ -363,6 +385,53 @@ end
 function canSB()
     return AccessibilityLevel.SequenceBreak
 end
+
+
+function canGetSpeedboosterLowerItem()
+    if has("speed") and has("screw") then
+        if has("space") then
+            if has("high") then
+                return true
+            else return AccessibilityLevel.SequenceBreak
+            end
+        else return AccessibilityLevel.Inspect
+        end
+    else return false
+    end
+end
+
+function canGetKagoRoomItem()
+    if has("screw") or canJumpHigh() or canFreezeEnemies() then
+        return true
+    end
+    if canShinespark(1) then
+        return canShinespark(1)
+    else
+        return AccessibilityLevel.Inspect
+    end
+end
+
+function canGetOasisStorageItem()
+    if canPowerBomb() or (canBombOrPowerBomb() and has("high")) or (canJumpHigh() and has("gravity") and has("screw")) then
+        return true
+    end
+    if (has("gravity") and has("mb") and has("bomb")) or (has("gravity") and has("screw") and canActivatePillar()) then
+        return AccessibilityLevel.SequenceBreak
+    end
+    if canActivatePillar() then
+        return AccessibilityLevel.Inspect
+    else return false
+    end
+end
+
+function canGetSector3SecurityAccessItem()
+    if canBeatToughEnemy() and canJumpHigh() then
+        return canBeatToughEnemy()
+    else
+        return AccessibilityLevel.Inspect
+    end
+end
+
 
 function needEtanks(amount)
     amount=tonumber(amount)

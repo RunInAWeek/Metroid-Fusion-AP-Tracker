@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.4",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.4/Metroid.Fusion.Pack.zip",
+			"sha256": "138c3ae1c0989c1aca90b01976a00979ff8f0681e602fdf34becf85fe5e705fc",
+			"changelog": ["Fixed starting location + habitation deck entrance"]
+		},
+		{
 			"package_version": "0.5.3",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.3/Metroid.Fusion.Pack.zip",
 			"sha256": "dc7934df54cb22485fc61a3a2efa6b5a75525cdff643c787bfd148329abb9db2",
