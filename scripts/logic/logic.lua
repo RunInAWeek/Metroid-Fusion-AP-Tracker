@@ -157,7 +157,7 @@ end
 
 
 function canBeatToughEnemy()
-    return has("bc") or has("dm")
+    return has("bc") or has("dm") or has("screw") or canPowerBomb()
 end
 
 function canDefeatSmallGeron()
@@ -173,11 +173,11 @@ function canDefeatLargeGeron()
 end
 
 function canDefeatStabilizers()
-    return has("screw") or has("dm") or has("bc")
+    return has("screw") or has("dm") or has("bc") or canPowerBomb()
 end
 
 function canDefeatThirdStabilizer()
-    if has("dm") or has("bc") then
+    if has("dm") or has("bc") or canPowerBomb() then
         return true
     end
     if has("screw") then
