@@ -2674,7 +2674,7 @@
   {
     "name": "Sector 3 Lower Attic",
     "access_rules": ["@Sector 3 Hub, screw, space, mb",
-                     "@Sector 3 Upper Attric, $canBallJumpAndBomb",
+                     "@Sector 3 Upper Attic, $canBallJumpAndBomb",
                      "@Sector 3 Upper Attic, space, $canBombOrPowerBomb",
                      "@Sector 3 Upper Attic, high, ^$canWallJump|2, $canBombOrPowerBomb",
                      "@Sector 3 Upper Attic, high, $canFreezeEnemies, $canBombOrPowerBomb",
