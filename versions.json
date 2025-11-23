@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.6",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.6/Metroid.Fusion.Pack.zip",
+			"sha256": "f129e767f5a5d201748b9772a7f1643f22b5dd54556c1d7fe83b80ff8a887a78",
+			"changelog": ["Fixed a typo"]
+		},
+		{
 			"package_version": "0.5.5",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.5/Metroid.Fusion.Pack.zip",
 			"sha256": "1c3e941ab76d6994659d04a805440da760e1c82f5838ee9a1bf42e53c13c959a",
