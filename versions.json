@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.7",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.7/Metroid.Fusion.Pack.zip",
+			"sha256": "a8c70ecf564618722102fa04c01257804847a43e45f102e1c4555aa81a53fa4d",
+			"changelog": ["Logic issues with Ripper Maze + Main Shaft"]
+		},
+		{
 			"package_version": "0.5.6",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.6/Metroid.Fusion.Pack.zip",
 			"sha256": "f129e767f5a5d201748b9772a7f1643f22b5dd54556c1d7fe83b80ff8a887a78",
