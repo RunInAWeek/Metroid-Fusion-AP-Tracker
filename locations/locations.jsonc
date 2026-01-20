@@ -935,7 +935,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
-          "access_rules": ["$canBallJumpAndBomb"]}],
+          "access_rules": ["$canBallJumpAndBomb", "mb, high, ^$canSB"]}],
         "map_locations": [
             {
               "map": "deck",
@@ -968,7 +968,7 @@
 
 {
   "name": "Sector 1 To Sector 2",
-  "access_rules": ["@Sector Hub, k2, space, screw",
+  "access_rules": ["@Sector 1 Entrance, k2, space, screw",
                    "@Tube from 1 to 2, $canBallJump"],
   "children":[
     {
@@ -1222,7 +1222,7 @@
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
           "access_rules": ["$canLavaDive, mb",
-                           "$has|etank|4, mb ^$canSB"]
+                           "$has|etank|4, mb, ^$canSB"]
         }
       ],
       "map_locations": [
@@ -2284,7 +2284,9 @@
     "name": "Sector 3 Hub",
     "access_rules": ["@Sector 3 Entrance",
                      "@Sector 3 Bob Zone/Bob's Abode",
-                     "@Sector 3 Lower Attic, $canBombOrPowerBomb"],
+                     "@Sector 3 Lower Attic, $canBombOrPowerBomb",
+                     "@Sector 3 Fiery Storage Right, $canAccessFieryStorageFromSector3",
+                     "@Sector 3 Fiery Storage Right, $has|etank|2, ^$canSB"],
     "children":[
       
     ]
@@ -3367,7 +3369,7 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["dm, $canBombOrPowerBomb"]
+            "access_rules": ["dm, $canBombOrPowerBomb", "dm, screw, gravity, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -3582,7 +3584,9 @@
         "sections":[{
         "access_rules": ["@Sector 5 Hub", "^$canSee"],
         "visibility_rules": ["ElevatorRandom"],
-        "hosted_item": "Sector5Elevator"}],
+        "hosted_item": "Sector5Elevator"
+          }
+        ],
         "map_locations": [
           {
             "map": "s5",
@@ -4060,6 +4064,8 @@
                      "@Sector 4 Upper Water Zone, gravity, space, speed, ^$canSB",
                      "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, high, PoNR",
                      "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, space, PoNR",
+                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, high, ^$canSB",
+                     "@Sector 5 Before Nightmare Hub, $canBeatToughEnemy, space, ^$canSB",
                      "@Sector 5 Before Nightmare Hub, gravity, screw, space",
                      "@Sector 5 Nightmare Zone Arena, gravity, speed, ^$canFightLategameBoss"],
     "children":[
@@ -4092,7 +4098,8 @@
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
             "access_rules": ["varia, gravity, mb, dm, space",
-                             "varia, gravity, mb, dm, $canFreezeEnemies"]
+                             "varia, gravity, mb, dm, $canFreezeEnemies",
+                             "Sector 5 Before Nightmare Hub, varia, dm, mb, ^$canSB"]
           }
         ],
         "map_locations": [

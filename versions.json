@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.8",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.8/Metroid.Fusion.Pack.zip",
+			"sha256": "069ecc59e8d1eace419f8a4c9d83c443aea30b27444abdae64b7c16ca3bdbc62",
+			"changelog": ["Logic issues sector 1 antechamber and sector 3 from fiery storage to hub"]
+		},
+		{
 			"package_version": "0.5.7",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.7/Metroid.Fusion.Pack.zip",
 			"sha256": "a8c70ecf564618722102fa04c01257804847a43e45f102e1c4555aa81a53fa4d",
