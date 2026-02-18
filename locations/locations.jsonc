@@ -899,7 +899,7 @@
 
   {
     "name": "Auxiliary Reactor",
-    "access_rules": ["@Reactor Zone, bw", "@Yakuza Zone, space"],
+    "access_rules": ["@Reactor Zone, bw", "@Yakuza Zone, space, dm", "@Yakuza Zone, space, bc"],
     "children":[
       {
         "name": "Auxiliary Power Station",
@@ -3245,7 +3245,8 @@
   {
     "name": "Sector 4 Serris Zone",
     "access_rules": ["@Sector 4 Before Pump Control, high, $canBombOrPowerBomb, ^$canPoNR|speed",
-                     "@Sector 4 Before Pump Control, $canBomb, gravity, ^$canPoNR|speed"],
+                     "@Sector 4 Before Pump Control, $canBomb, gravity, ^$canPoNR|speed",
+                     "@Sector 4 Before Pump Control, $canBombOrPowerBomb, gravity, ^$canSB"],
     "children":[
       {
         "name": "Serris Arena",
@@ -3946,7 +3947,7 @@
             "access_rules": ["k3, $canFreezeEnemies, mb, $canBreakBombBlocks, ^$canPoNR|high", 
                              "k3, $canFreezeEnemies, mb, $canBreakBombBlocks, ^$canPoNR|bomb", 
                              "k3, mb, space, $canBreakBombBlocks, ^$canPoNR|high",
-                             "k3, mb, space, $canBreakBombBlocks, ^$canPoNR|space"]
+                             "k3, mb, space, $canBreakBombBlocks, ^$canPoNR|bomb"]
           }
         ],
         "map_locations": [

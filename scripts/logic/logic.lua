@@ -74,10 +74,12 @@ end
 
 
 function addDataMissile()
-    local item = Tracker:FindObjectForCode("missile")
-    local count = Tracker:ProviderCountForCode("missile")
-    count = count + Tracker:ProviderCountForCode("Missile_Data_Size")
-    item.AcquiredCount = count
+    if has("dm") then
+        local item = Tracker:FindObjectForCode("missile")
+        local count = Tracker:ProviderCountForCode("missile")
+        count = count + Tracker:ProviderCountForCode("Missile_Data_Size")
+        item.AcquiredCount = count
+    end
 end
 
 function setSizePB()
@@ -88,10 +90,12 @@ end
 
 
 function addDataPB()
-    local item = Tracker:FindObjectForCode("pbomb")
-    local count = Tracker:ProviderCountForCode("pbomb")
-    count = count + Tracker:ProviderCountForCode("PB_Data_Size")
-    item.AcquiredCount = count
+    if has("pb") then
+        local item = Tracker:FindObjectForCode("pbomb")
+        local count = Tracker:ProviderCountForCode("pbomb")
+        count = count + Tracker:ProviderCountForCode("PB_Data_Size")
+        item.AcquiredCount = count
+    end
 end
 
  function isStartingLocation(number)
