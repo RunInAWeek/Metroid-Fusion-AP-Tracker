@@ -802,7 +802,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canReachAnimals", "bw", "^$canSee"]}],
+          "access_rules": ["$canReachAnimals", "bw", "space", "bi, high", "^$canSee"]}],
         "map_locations": [
           {
             "map": "deck",

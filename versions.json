@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.10",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.10/Metroid.Fusion.Pack.zip",
+			"sha256": "e07bd454b78d006ed06569c9fc6289edef7263c5d53a8ae7105314c6eee36c47",
+			"changelog": ["Logic hotfix for habitation deck lower item"]
+		},
+		{
 			"package_version": "0.5.9",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.5.9/Metroid.Fusion.pack.zip",
 			"sha256": "4ffdd4836665d9089f4ac3cc56b13dbefb4f5d772e9386a263367aac7fc17034",
