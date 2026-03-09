@@ -184,6 +184,9 @@ function canDefeatThirdStabilizer()
     if has("dm") or has("bc") or canPowerBomb() then
         return true
     end
+    if has("screw") and has("space") then
+        return true
+    end
     if has("screw") then
         if has("high") then
             return canWallJump(1)

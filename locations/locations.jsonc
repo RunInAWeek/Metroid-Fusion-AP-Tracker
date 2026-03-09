@@ -1468,9 +1468,9 @@
           "chest_unopened_img": "images/items/pbomb.png",
           "chest_opened_img": "images/items/pbomb_gray.png",
           "access_rules": ["bc, dm, ms, ^$canPoNR|space, bw",
-                           "bc, bw, screw, ^$canSB",
-                           "$canPowerBomb, dm, ms, ^$canSB",
-                           "$canPowerBomb, screw, ^$canSB"]
+                           "bc, bw, screw",
+                           "$canPowerBomb, dm, ms",
+                           "$canPowerBomb, screw"]
         }
       ],
       "map_locations": [
