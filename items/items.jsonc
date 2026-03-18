@@ -319,6 +319,12 @@
     "img": "images/options/PoNR.png",
     "codes": "PoNR"
   },
+  {
+    "name": "Nerf Geron Weaknesses",
+    "type": "toggle",
+    "img": "images/options/NerfGeron.png",
+    "codes": "Nerf Geron"
+  },
 
 
   {
@@ -364,6 +370,7 @@
     "img": "images/options/StartingLocation.png",
     "codes": "SL"
   },
+
   {
     "name": "Starting Location",
     "type": "progressive",

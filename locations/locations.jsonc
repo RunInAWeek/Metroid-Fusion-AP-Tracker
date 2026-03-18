@@ -2446,7 +2446,7 @@
   {
     "name": "Sector 3 Main Shaft",
     "access_rules": ["@Sector 3 Hub, speed",
-                     "@Sector 3 Bob Zone, $canBallJumpAndBomb"],
+                     "@Sector 3 Bob Zone, mb"],
     "children":[
       {
         "name": "Namihe's Lair",

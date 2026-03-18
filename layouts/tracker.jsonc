@@ -66,9 +66,9 @@
                 [ "TrickyShinespark", "Shinesparks", "SHO", ""  ],
                 [ "TrickyWalljumps", "Walljumps", "Custom", "" ],
                 [ "CombatDifficulty", "Combat", "SL", "Starting Location"],
-                [ "ElevatorRandom", "", "Open Sector Elevators", ""  ],
-                [ "ElevatorRandom2", "", "", ""  ],
-                [ "TubeRandom", "", "", ""  ]
+                [ "Nerf Geron", "", "Open Sector Elevators", ""  ],
+                [ "ElevatorRandom", "", "TubeRandom", ""  ],
+                [ "ElevatorRandom2", "", "", ""  ]
 
 
               ]

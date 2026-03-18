@@ -165,19 +165,19 @@ function canBeatToughEnemy()
 end
 
 function canDefeatSmallGeron()
-    return has("dm") or canPowerBomb() or has("screw")
+    return has("dm") or ((canPowerBomb() or has("screw")) and hasnot("Nerf Geron"))
 end
 
 function canDefeatMediumGeron()
-    return (has("dm") and has("ms")) or canPowerBomb() or has("screw")
+    return (has("dm") and has("ms")) or ((canPowerBomb() or has("screw")) and hasnot("Nerf Geron"))
 end
 
 function canDefeatLargeGeron()
-    return canPowerBomb() or has("screw")
+    return canPowerBomb() or (has("screw") and hasnot("Nerf Geron"))
 end
 
 function canDefeatStabilizers()
-    return has("screw") or has("dm") or has("bc") or canPowerBomb()
+    return has("dm") or has("bc") or ((canPowerBomb() or has("screw")) and hasnot("Nerf Geron"))
 end
 
 function canDefeatThirdStabilizer()
