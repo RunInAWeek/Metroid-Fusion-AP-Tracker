@@ -6,6 +6,7 @@
 -- if you run into issues when touching A LOT of items/locations here, see the comment about Tracker.AllowDeferredLogicUpdate in autotracking.lua
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
+ScriptHost:LoadScript("scripts/autotracking/room_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/tab_mapping.lua")
 -- used for hint tracking to quickly map hint status to a value from the Highlight enum
 HINT_STATUS_MAPPING = {}
@@ -254,6 +255,13 @@ function onClear(slot_data)
         end
     end
 
+	if slot_data["NerfGeronWeaknesses"] then
+        local obj = Tracker:FindObjectForCode('Nerf Geron')
+        if obj then
+            obj.Active = slot_data["NerfGeronWeaknesses"]
+        end
+    end
+
 	if slot_data['StartingLocation'] then
 		local mode = slot_data['StartingLocation']
 		print ("starting location", mode)
@@ -418,14 +426,6 @@ function onScout(location_id, location_name, item_id, item_name, item_player)
 	-- not implemented yet :(
 end
 
--- called when a bounce message is received
-function onBounce(json)
-	if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-		print(string.format("called onBounce: %s", dump_table(json)))
-	end
-	-- your code goes here
-end
-
 
 function onNotify(key, value, old_value)
 	print(string.format("called onNotify: %s, %s, %s",key,value,old_value))
@@ -461,6 +461,35 @@ function updateTab(value)
 		end
 	end
 end
+
+
+-- called when a bounce message is received 
+function OnBounce(json)
+	if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+		print(string.format("called onBounce: %s", dump(json)))
+	end
+	if not json["data"] then
+		return
+	end
+	
+	if json["data"]["Current Room"] then
+		local prevRoom = CurrentRoom
+		CurrentRoom = json["data"]["Current Room"]
+		if prevRoom == CurrentRoom or CurrentRoom == nil then
+			return
+		end
+
+		if (ROOMS[CurrentRoom]) then
+			Tracker:FindObjectForCode(ROOMS[CurrentRoom]).Active = true
+		end
+	end
+
+	
+end
+
+
+
+
 -- called whenever Archipelago:Get returns data from the data storage or
 -- whenever a subscribed to (via Archipelago:SetNotify) key in data storgae is updated
 -- oldValue might be nil (always nil for "_read" prefixed keys and via retrieved handler (from Archipelago:Get))
@@ -566,5 +595,27 @@ Archipelago:AddSetReplyHandler("notify handler", onNotify)
 Archipelago:AddRetrievedHandler("notify launch handler", onNotifyLaunch)
 Archipelago:AddRetrievedHandler("retrieved handler", onDataStorageUpdate)
 Archipelago:AddSetReplyHandler("set reply handler", onDataStorageUpdate)
+Archipelago:AddBouncedHandler("bounce handler", OnBounce)
 -- Archipelago:AddScoutHandler("scout handler", onScout)
--- Archipelago:AddBouncedHandler("bounce handler", onBounce)
+
+
+
+function dump(o, depth)
+    if depth == nil then
+        depth = 0
+    end
+    if type(o) == 'table' then
+        local tabs = ('\t'):rep(depth)
+        local tabs2 = ('\t'):rep(depth + 1)
+        local s = '{\n'
+        for k, v in pairs(o) do
+            if type(k) ~= 'number' then
+                k = '"' .. k .. '"'
+            end
+            s = s .. tabs2 .. '[' .. k .. '] = ' .. dump(v, depth + 1) .. ',\n'
+        end
+        return s .. tabs .. '}'
+    else
+        return tostring(o)
+    end
+end
