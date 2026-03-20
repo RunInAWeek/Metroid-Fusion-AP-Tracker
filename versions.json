@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.1",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.6.1/Metroid.Fusion.Pack.zip",
+			"sha256": "a2dded64fa9149359cf5425dd9ad45ebca5032874b0cdc6184d9a6ca5fce7c12",
+			"changelog": ["Added Nerf Geron Weakness"]
+		},
+		{
 			"package_version": "0.6.0",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.6/Metroid.Fusion.Pack.zip",
 			"sha256": "44c2df23d1fa551c2b79eef91cb30b2a06f4c159bbb7ce79ca272a1e92b4e7a5",
