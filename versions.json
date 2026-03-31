@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.3",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.6.3/Metroid.Fusion.pack.zip",
+			"sha256": "0e76235150ee9426cf33296ba18ea3976d78c2118b80ec16fa707b793481f870",
+			"changelog": ["fixed tracking errors between waterway and C-cache"]
+		},
+		{
 			"package_version": "0.6.2",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.6.2/Metroid.Fusion.Pack.zip",
 			"sha256": "b553e2707ab7e5d4e9d2a50af04a796ec0ac96eaacf6062fee9d66b0760b47ef",
