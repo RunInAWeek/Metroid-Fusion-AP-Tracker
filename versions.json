@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.4",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.6.4/Metroid.Fusion.Pack.zip",
+			"sha256": "6d402be6c3348ca6c710b7d0f5ff009c2fb73874011d89bbfb0a054705d33141",
+			"changelog": ["fixed logic to reach tube in sector 4 from data room"]
+		},
+		{
 			"package_version": "0.6.3",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v0.6.3/Metroid.Fusion.pack.zip",
 			"sha256": "0e76235150ee9426cf33296ba18ea3976d78c2118b80ec16fa707b793481f870",

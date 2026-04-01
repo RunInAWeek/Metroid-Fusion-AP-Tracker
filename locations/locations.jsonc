@@ -2929,7 +2929,7 @@
 
   {
     "name": "Tube from 4 to 6",
-    "access_rules":["@Sector 4 Data Zone, dm, md, $canBombOrPowerBomb, mb",
+    "access_rules":["@Sector 4 Data Zone, dm, md, $canBombOrPowerBomb, k4",
                     "@Sector 4 Right Water Zone, gravity, $canFreezeEnemies, dm, mb",
                     "@Sector 4 Right Water Zone, gravity, space, dm, mb",
                     "$hasnot|TubeRandom, @Tube from 6 to 4",
