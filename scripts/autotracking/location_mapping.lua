@@ -84,15 +84,15 @@ LOCATIONS = {
 	{"@Sector 4 Hub/Reservoir East/"},
 	{"@Sector 4 Upper Zone/Broken Bridge/"},
 	{"@Sector 4 Upper Zone/Waterway/"},
-	{"@Sector 4 Upper Zone/Reservoir Vault - Lower Item/"},
-	{"@Sector 4 Upper Zone/Reservoir Vault - Upper Item/"},
-	{"@Sector 4 Upper Zone/C-Cache/"},
+	{"@Sector 4 Reservoir Vault/Reservoir Vault - Lower Item/"},
+	{"@Sector 4 Reservoir Vault/Reservoir Vault - Upper Item/"},
+	{"@Sector 4 Before Pump Control/C-Cache/"},
 	{"@Sector 4 Serris Zone/Serris Arena/"},
 	{"@Sector 4 Pump Control/Pump Control Unit/"},
-	{"@Sector 4 Upper Water Zone/Cargo Hold to Sector 5 (ARC)/"},
-	{"@Sector 4 Upper Water Zone/Aquarium Pirate Tank/"},
+	{"@Sector 4 Cargo Hold/Cargo Hold to Sector 5 (ARC)/"},
+	{"@Sector 4 Upper Security Zone/Yard Firing Range/"},
 	{"@Sector 4 Security Zone/Cheddar Bay/"},
-	{"@Sector 4 Security Zone/Yard Firing Range/"},
+	{"@Sector 4 Upper Water Zone/Aquarium Pirate Tank/"},
 	{"@Sector 4 Lower Security Zone/Sanctuary Cache/"},
 	{"@Sector 4 Security Room/Level 4 Security Room/"},
 	{"@Sector 4 Right Water Zone/Aquarium Kago Storage - Left Item/"},
@@ -132,30 +132,3 @@ LOCATIONS = {
 	{"@Sector 6 After Varia Core X Zone/Twin Caverns West - Lower Item/"},
 	{"@Sector 6 After Varia Core X Zone/Twin Caverns West - Upper Item/"},
 }
-
-function dump_table(o, depth)
-    if depth == nil then
-        depth = 0
-    end
-    if type(o) == 'table' then
-        local tabs = ('\t'):rep(depth)
-        local tabs2 = ('\t'):rep(depth + 1)
-        local s = '{\n'
-        for k, v in pairs(o) do
-            if type(k) ~= 'number' then
-                k = '"' .. k .. '"'
-            end
-            s = s .. tabs2 .. '[' .. k .. '] = ' .. dump_table(v, depth + 1) .. ',\n'
-        end
-        return s .. tabs .. '}'
-    else
-        return tostring(o)
-    end
-end
-
-LOCATION_MAPPING = {
-}
-for n, item in ipairs(LOCATIONS) do
-    LOCATION_MAPPING[n] = {item}
-	print(n, dump_table(item))
-end

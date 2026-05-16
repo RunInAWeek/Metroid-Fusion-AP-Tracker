@@ -181,13 +181,13 @@ function canDefeatStabilizers()
 end
 
 function canDefeatThirdStabilizer()
-    if has("dm") or has("bc") or canPowerBomb() then
+    if has("dm") or has("bc") or (canPowerBomb() and hasnot("Nerf Geron")) then
         return true
     end
-    if has("screw") and has("space") then
+    if has("screw") and has("space") and hasnot("Nerf Geron") then
         return true
     end
-    if has("screw") then
+    if has("screw") and hasnot("Nerf Geron") then
         if has("high") then
             return canWallJump(1)
         else return canWallJump(2)
@@ -226,6 +226,18 @@ function canPoNR(item)
     if has(item) then
         return true
     else return AccessibilityLevel.SequenceBreak
+    end
+end
+
+function canFightEarlyGameBoss()
+    local Diff=Tracker:FindObjectForCode("Combat").CurrentStage
+
+    if has("dm") then
+        if has("bc") then
+            return true
+        else return AccessibilityLevel.SequenceBreak
+        end
+    else return false
     end
 end
 
@@ -292,6 +304,20 @@ function canBreakBombBlocks()
     return has("screw") or canBombOrPowerBomb()
 end
 
+function canDamageGadora()
+    return has("bc") or has("dm")
+end
+
+
+function checkCombatDifficulty(Diff)
+    local CombatDiff=Tracker:FindObjectForCode("Combat").CurrentStage
+    if CombatDiff>Diff then
+        return AccessibilityLevel.SequenceBreak
+    else return true
+    end
+end
+
+
 function canReachAnimals()
     return (has("speed") or has("bw")) and ((canFreezeEnemies() and has("high")) or has"space")
 end
@@ -321,23 +347,226 @@ function canAccessWateringHole()
                 return canShinespark(2) 
             end
         end
+    end
+
+    if has("speed") and has("bc") then
+        return AccessibilityLevel.SequenceBreak
     else
         return false
     end
 end
 
-function canAccessSec4LowerSecZoneWithoutK4()
-    return has("dm") and canBreakBombBlocks() and has("gravity") and has("mb")
+
+function canSector2FromLeftSideToHub()
+    if has("mb") and (has("bomb") or has("pb")) then
+        if has("space") and (("screw") or has("pb"))
+            then return true
+        end
+        if has("hi") then
+            return canWallJump(2)
+        end
+    end
+    return false
+end
+
+function canSector2FromZazabiToLeftSide()
+    if canBreakBombBlocks() then
+        if has("space") then
+            return true
+        end
+        if has("high") then
+            if canFreezeEnemies() then
+                return true
+            else return canWallJump(1)
+            end
+        end
+        return canWallJump(2)
+    end
+    return false
+end
+
+function canAccessFieryStorageFromSector3Hub()
+    if ((canLavaDive() and canJumpHigh()) or 
+        (has("varia") and canBeatToughEnemy()) or 
+        (canShinespark(1) and (canBreakBombBlocks() or has("PoNR")))) then
+        return true
+    end
+    if canShinespark(1) then
+        return AccessibilityLevel.SequenceBreak
+    end
+    return false
 end
 
 
+function canClimbAtticAlcove()
+    if canBreakBombBlocks() then
+        if ((has("high") and canWallJump(2)) or has("space") or canActivatePillar()) or (canFreezeEnemies() and (canWallJump(1) and ((canBomb() and has("high")) or has("screw")))) then
+            return true
+        end
+    end
+    return false
+end
+
 function canAccessFieryStorageFromSector3()
-    return has("varia") and (canLavaDive() or canBeatToughEnemy() or canShinespark(1))
+    return ((canLavaDive() and canJumpHigh()) or (has("varia") and canBeatToughEnemy()) or (canShinespark(1) and canBreakBombBlocks()))
+end
+
+
+function canEnterSerrisZone()
+    if canBeatToughEnemy() and canBombOrPowerBomb() then
+        if has("gravity") or has("high") or has("space") then
+            if has("gravity") and (has("space") or (canWallJump(1) and has("high"))) or has("speed")  then
+                return true
+            end
+            if has("PoNR") then
+                    return true
+                else return AccessibilityLevel.SequenceBreak
+            end
+        end
+    end
+    return false
+end
+
+function canClimbBackToBeforePumpControlFromUpperWater()
+    if has("gravity") or has("high") or canFreezeEnemies() then
+        return true
+    end
+    if has("PoNR") then return true
+    else return AccessibilityLevel.SequenceBreak
+    end
+    return false
+end
+
+function canDoShinesparkInSecurityZone()
+    if has("k4") and has("gravity") and has("speed") and has("morph") and (has("missile") and (has("screw") or has("pb") or (has("bomb") and has("high"))) or (canJumpHigh() and (has("screw") or has("pb")))) then
+        return canWallJump(2)
+    end
+    return false
+end
+
+function canClimbFromSecurityZoneToRightWaterZoneSave()
+    if has("mb") and has("k4") and has("gravity") and (has("screw") or canFightMidgameBoss()) then
+        if has("space") then
+            return true
+        end
+        if canFreezeEnemies() and (canWallJump(1) or has("high")) then
+            return true
+        end
+        return canWallJump(2)
+    end
+    return false
+
+end
+
+
+function canAccessSec4LowerSecZoneWithoutK4()
+    if has("dm") and has("mb") then
+        return canPowerBomb() or (has("high") and canBomb()) or (has("gravity") and has("screw"))
+    end
+    return false
 end
 
 function canAccessSanctuaryCache()
     return (has("bw") and has("bc")) or (has("bw") and has("dm") and has("mb")) or (has("pb") and has("dm") and has("mb")), (has("pb") and has("bc") and has("mb"))
 end
+
+function canCrossSector4DrainPipeTunnel()
+    return has("morph") and (  (has("dm") and has("md"))  or  (has("bi") and has("bw"))  )
+end
+
+function canReachCheddarBay()
+    if has("dm") and has("mb") then
+        if canBreakBombBlocks() or canPowerBomb() or (canBomb() and has("high")) then
+            return true
+        end
+    end
+    if has("k4") and has("mb") then
+        if (canPowerBomb() or (has("gravity") and has("screw")))  and  (has("gravity") and canJumpHigh()) then
+            return true
+        end
+    end
+    return false
+end
+
+function canEscapeAquariumPirateTank()
+    if canFreezeEnemies() and has("high") then
+        return true
+    end
+    if has("gravity") and has("space") and has("screw") then
+        return true
+    end
+    return false
+
+end
+
+
+
+function canReachNightmareZoneUpper()
+    local CombatDiff=Tracker:FindObjectForCode("Combat").CurrentStage
+    if canBeatToughEnemy() or (has("gravity") and has("screw")) or CombatDiff>1 then
+        if canJumpHigh() then
+            return true
+        end
+        if has("gravity") and has("speed") then
+            return canShinespark(1)
+        end
+    end
+    return false
+end
+
+function canGetRipperRoad()
+    if canDefeatLargeGeron() and canBombOrPowerBomb() then
+        if canBallJump() and canFreezeEnemies() then
+            return true
+        else return AccessibilityLevel.Inspect
+        end
+    end
+    return false
+end
+
+function canGetCrowsNest()
+    local CombatDiff=Tracker:FindObjectForCode("Combat").CurrentStage
+    if has("mb") then
+        if (canBeatToughEnemy() or CombatDiff>1) and (canPowerBomb() or has("screw")) then
+                if has("space") then
+                    return true
+                else if has("high") then 
+                    return canWallJump(2) 
+                    end
+                end
+
+        end
+        if (canBeatToughEnemy() or CombatDiff>1) and canShinespark(1) then
+            if has("space") and (canBreakBombBlocks() or has("PoNR")) then
+                return canShinespark(1)
+            end
+            if canJumpHigh() then
+                return AccessibilityLevel.SequenceBreak 
+            end
+            
+        end
+    end
+    return false
+end
+
+
+
+function canReturnToCrossroadsFromBeforeBOXZone()
+    if canPowerBomb() and has("varia") and has("k4") then
+        if has("space") or canFreezeEnemies() then
+            return canWallJump(1)
+        end
+    end
+    return false
+end
+
+
+
+
+
+
+
+
 
 function canActivatePillar()
     return has("bw") or canBombOrPowerBomb()
@@ -375,13 +604,8 @@ function canAccessDrainPipe()
     if hasnot("mb") then
         return false
     end
-    if (has("speed") and has("k1") and canBallJump()) and (has("bw") or canPowerBomb() or (has("dm") and has("ms")) or has("screw")) then
-        return true
-    end
-    if has("etank", 2) and (has("bw") or canPowerBomb() or (has("dm") and has("ms")) or (has("screw") and has("gravity"))) then
-        return AccessibilityLevel.SequenceBreak
-    end
-    return false
+
+    return canDefeatMediumGeron() or has("bw")
 end
 
 
@@ -397,10 +621,6 @@ end
 function canGetSpeedboosterLowerItem()
     if has("speed") and has("screw") then
         if has("space") then
-            if has("high") then
-                return true
-            else return AccessibilityLevel.SequenceBreak
-            end
         else return AccessibilityLevel.Inspect
         end
     else return false
@@ -419,11 +639,13 @@ function canGetKagoRoomItem()
 end
 
 function canGetOasisStorageItem()
-    if canPowerBomb() or (canBombOrPowerBomb() and has("high")) or (canJumpHigh() and has("gravity") and has("screw")) then
-        return true
+    if hasnot("mb") then
+        return false
     end
-    if (has("gravity") and has("mb") and has("bomb")) or (has("gravity") and has("screw") and canActivatePillar()) then
-        return AccessibilityLevel.SequenceBreak
+    if canPowerBomb() or (canBombOrPowerBomb() and has("high")) or 
+        has("gravity") and (canBomb() or (has("bw") and has("screw"))) or
+        (canJumpHigh() and has("gravity") and has("screw"))         
+        then return true
     end
     if canActivatePillar() then
         return AccessibilityLevel.Inspect
@@ -432,11 +654,12 @@ function canGetOasisStorageItem()
 end
 
 function canGetSector3SecurityAccessItem()
-    if canBeatToughEnemy() and canJumpHigh() then
-        return canBeatToughEnemy()
-    else
-        return AccessibilityLevel.Inspect
+    if canBeatToughEnemy() then
+        if canJumpHigh() then return true end
+        if canWallJump(1) then return true end
+        if canShinespark(2) then return true end   
     end
+    return AccessibilityLevel.Inspect
 end
 
 
