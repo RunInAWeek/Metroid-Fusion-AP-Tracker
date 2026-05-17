@@ -3417,7 +3417,6 @@
                      "@Sector 4 Right Water Zone Save, ^$canClimbFromSecurityZoneToRightWaterZoneSave",
                      "@Sector 4 Lower Security Zone, k4, dm, $canBombOrPowerBomb"],
     "children":[
-      
       {
         "name": "Cheddar Bay",
         "sections":[
