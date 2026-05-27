@@ -1052,7 +1052,7 @@
   "children":[
     {
       "name": "Atmospheric Stabilizer Northeast",
-      "access_rules": ["^$canShinespark|2, $canDefeatStabilizers, $has|PoNR, ^$canSB"],
+      "access_rules": ["^$canShinespark|2", "$canDefeatStabilizers", "PoNR", "^$canSB"],
       "sections":[
         {
           "chest_unopened_img": "images/events/vent.png",
@@ -1346,7 +1346,7 @@
         {
           "chest_unopened_img": "images/items/etank.png",
           "chest_opened_img": "images/items/etank_gray.png",
-          "access_rules": ["dm, speed", "^$canPoNR|speed"]
+          "access_rules": ["dm, speed", "speed, PoNR", "speed, ^$canSB"]
         }
       ],
       "map_locations": [
