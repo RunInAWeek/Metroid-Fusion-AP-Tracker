@@ -2690,7 +2690,7 @@
   {
     "name": "Sector 3 Lower Attic",
     "access_rules": ["@Sector 3 Hub, screw, space, mb",
-                     "@Sector 3 Hub, ^$canShinespark|1, mb",
+                     "@Sector 3 Hub, screw, ^$canShinespark|1, mb",
                      "@Sector 3 Upper Attic, space, $canBombOrPowerBomb",
                      "@Sector 3 Upper Attic, $canBombOrPowerBomb, high, ^$canWallJump|2",
                      "@Sector 3 Upper Attic, $canBomb, ^$canWallJump|2",

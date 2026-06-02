@@ -3,7 +3,7 @@
 		{
 			"package_version": "1.0.3",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v1.0.3/Metroid.Fusion.Pack.zip",
-			"sha256": "815fccd891e16deedb655c6b9bf6bc1a1d3675dde2cacfd3834e3bd7c06abdd6",
+			"sha256": "b26e7298443d17d061bcb50475dceecba9179091d0094783aa103d8cd198a126",
 			"changelog": ["Fixed logic for Stabilizer Northeast"]
 		},
 		{
