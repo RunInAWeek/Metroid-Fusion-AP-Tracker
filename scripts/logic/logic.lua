@@ -311,6 +311,7 @@ end
 
 function checkCombatDifficulty(Diff)
     local CombatDiff=Tracker:FindObjectForCode("Combat").CurrentStage
+    Diff = tonumber(Diff)
     if CombatDiff>Diff then
         return AccessibilityLevel.SequenceBreak
     else return true
@@ -471,7 +472,7 @@ function canAccessSanctuaryCache()
 end
 
 function canCrossSector4DrainPipeTunnel()
-    return has("morph") and (  (has("dm") and has("md"))  or  (has("bi") and has("bw"))  )
+    return has("mb") and (  (has("dm") and has("md"))  or  (has("bi") and has("bw"))  )
 end
 
 function canReachCheddarBay()
@@ -619,11 +620,9 @@ end
 
 
 function canGetSpeedboosterLowerItem()
-    if has("speed") and has("screw") then
-        if has("space") then
-        else return AccessibilityLevel.Inspect
-        end
-    else return false
+    if has("space") then
+        return true
+    else return AccessibilityLevel.Inspect
     end
 end
 

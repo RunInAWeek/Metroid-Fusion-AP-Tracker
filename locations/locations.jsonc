@@ -3472,9 +3472,9 @@
     "access_rules": ["@Sector 4 Security Zone, k4, ^$canPoNR|space, ^$canPoNR|gravity",
                      "@Sector 4 Security Zone, k4, ^$canWallJump(1), ^$canPoNR|gravity",
                      "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canPoNR|space, ^$canPoNR|gravity",
-                     "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canWallJump(1), ^$canPoNR|gravity",
+                     "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canWallJump|1, ^$canPoNR|gravity",
                      "@Sector 4 Security Room, k4, space, gravity",
-                     "@Sector 4 Security Room, k4, ^$canWallJump(1), gravity"],
+                     "@Sector 4 Security Room, k4, ^$canWallJump|1, gravity"],
     "children":[
       {
         "name": "Sanctuary Cache",
@@ -4659,7 +4659,7 @@
           {
               "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["^$canGetSpeedboosterLowerItem, $canPowerBomb, screw, k4, speed"]
+            "access_rules": ["^$canGetSpeedboosterLowerItem, @Sector 6 Before BOX Zone/Speedbooster Alley - Upper Item"]
           }
         ],
         "map_locations": [
