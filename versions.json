@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "1.0.5",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v1.0.5/Metroid.Fusion.pack.zip",
+			"sha256": "85eee45d0600db24d326c488d96daad3b1e367c2fa43c4143de431046302931d",
+			"changelog": ["Fixed logic in sector 6"]
+		},
+		{
 			"package_version": "1.0.4",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v1.0.4/Metroid.Fusion.pack.zip",
 			"sha256": "5134272e6e37b05794604316fcee40447c3b141a4ec374fcfeba2ef89ef123f7",

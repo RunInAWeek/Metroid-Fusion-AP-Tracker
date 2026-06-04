@@ -3470,7 +3470,7 @@
   {
     "name": "Sector 4 Lower Security Zone",
     "access_rules": ["@Sector 4 Security Zone, k4, ^$canPoNR|space, ^$canPoNR|gravity",
-                     "@Sector 4 Security Zone, k4, ^$canWallJump(1), ^$canPoNR|gravity",
+                     "@Sector 4 Security Zone, k4, ^$canWallJump|1, ^$canPoNR|gravity",
                      "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canPoNR|space, ^$canPoNR|gravity",
                      "@Sector 4 Security Zone, $canAccessSec4LowerSecZoneWithoutK4, ^$canWallJump|1, ^$canPoNR|gravity",
                      "@Sector 4 Security Room, k4, space, gravity",
@@ -4659,7 +4659,7 @@
           {
               "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["^$canGetSpeedboosterLowerItem, @Sector 6 Before BOX Zone/Speedbooster Alley - Upper Item"]
+            "access_rules": ["^$canGetSpeedboosterLowerItem, @Sector 6 Before BOX Zone/Speedbooster Alley - Upper Item/"]
           }
         ],
         "map_locations": [
@@ -4948,7 +4948,7 @@
 
   {
     "name": "Sector 6 Restricted Zone",
-    "access_rules": ["@Sector 6 XBOX Save, bw, screw, space, k4, ^$canPoNR|speed"],
+    "access_rules": ["@Sector 6 XBOX Save, bw, ^$canPoNR|screw, ^$canPoNR|space, k4, ^$canPoNR|speed"],
     "children": [
       {
         "name": "Restricted Airlock",

@@ -555,7 +555,8 @@ end
 function canReturnToCrossroadsFromBeforeBOXZone()
     if canPowerBomb() and has("varia") and has("k4") then
         if has("space") or canFreezeEnemies() then
-            return canWallJump(1)
+            return true
+        else return canWallJump(1)
         end
     end
     return false
