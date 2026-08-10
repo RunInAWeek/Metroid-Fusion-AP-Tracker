@@ -348,6 +348,7 @@ function canAccessWateringHole()
                 return canShinespark(2) 
             end
         end
+    else return false
     end
 
     if has("speed") and has("bc") then

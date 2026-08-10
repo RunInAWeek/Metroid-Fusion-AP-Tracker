@@ -4,7 +4,8 @@
     "access_rules":["$hasnot|SHO, $hasnot|Custom", "Custom, $isStartingLocation|0", "Custom, $isStartingLocation|3", 
                     "@Main Deck West Elevator, mb", "@Main Deck West Elevator, speed",
                     "$hasnot|ElevatorRandom2, @Operation Deck",
-                    "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, mb", "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, speed",
+                    "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, mb", 
+                    "ElevatorRandom2, MainDeckElevatorfromMainHub, SHO, speed",
                     "ElevatorRandom2, OperationDeckElevatorBot",
                     "ElevatorRandom2, HabitationDeckElevatorBot, k2"],
     "children": [
@@ -1489,7 +1490,7 @@
       ]
     },
     {
-      "name": "Ridley Arena",
+      "name": "Neo-Ridley Arena",
       "sections":[
         {
           "chest_unopened_img": "images/bosses/ridley.png",
@@ -1837,7 +1838,7 @@
                      "@Sector 2 Zazabi Zone, $canSector2FromZazabiToLeftSide"],
     "children":[
       {
-        "name": "Zoro Zig-Zag",
+        "name": "Zig-Zag-Zone",
         "sections": [{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
@@ -2370,7 +2371,7 @@
     "access_rules": ["@Tube from 3 to 5"],
     "children":[
       {
-        "name": "Glass Tube to Sector 5 (ARC)",
+        "name": "Westbound Glass Tube",
         "sections":[
           {
             "chest_unopened_img": "images/items/pbomb.png",
@@ -2652,9 +2653,9 @@
   /////////////////////////////////////////////////////////////////////////////////////
 {
     "name": "Sector 3 Bob Zone",
-    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2, PoNR",
-                     "@Sector 3 Hub, $canDefeatMediumGeron, k2, $canBreakBombBlocks",
-                     "@Sector 3 Hub, $canDefeatMediumGeron, k2, high",
+    "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, mb, k2, PoNR",
+                     "@Sector 3 Hub, $canDefeatMediumGeron, mb, k2, $canBreakBombBlocks",
+                     "@Sector 3 Hub, $canDefeatMediumGeron, mb, k2, high",
                      "@Sector 3 Main Shaft, mb, $canBreakBombBlocks",
                      "@Sector 3 BOX Zone, mb, k2"],
     "children":[
@@ -3326,7 +3327,7 @@
                      "@Sector 4 Upper Security Zone, mb, ^$canPoNR|high"],
     "children":[
       {
-        "name": "Cargo Hold to Sector 5 (ARC)",
+        "name": "Cargo Hold",
         "sections":[
           {
             "chest_unopened_img": "images/items/pbomb.png",
@@ -4186,7 +4187,7 @@
                      "@Sector 5 Nightmare Zone Arena/Nightmare Arena, gravity, speed"],
     "children":[
       {
-        "name": "Flooded Airlock to Sector 4 (AQU)",
+        "name": "Flooded Airlock",
         "sections":[
           {
             "chest_unopened_img": "images/items/pbomb.png",
@@ -4771,8 +4772,8 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canJumpHigh, $canBallJump, $canBombOrPowerBomb, dm, md",
-                             "$canJumpHigh, $canBallJump, $canBombOrPowerBomb, bi, bw"]
+            "access_rules": ["$canJumpHigh, $canBallJump, $canBombOrPowerBomb, dm, md, screw",
+                             "$canJumpHigh, $canBallJump, $canBombOrPowerBomb, bi, bw, screw"]
           }
         ],
         "map_locations": [

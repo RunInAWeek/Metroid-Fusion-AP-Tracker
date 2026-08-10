@@ -99,8 +99,8 @@
             "name": "Animorphs Cache"
           },
           {
-            "ref": "Sector 1 Tourian Hub/Ridley Arena/",
-            "name": "Ridley Arena"
+            "ref": "Sector 1 Tourian Hub/Neo-Ridley Arena/",
+            "name": "Neo-Ridley Arena"
           },
           {
             "ref": "Sector 1 Tourian Hub/Ripper Maze/",
@@ -155,8 +155,8 @@
             "name": "Lobby Cache"
           },
           {
-            "ref": "Sector 2 Left Side/Zoro Zig-Zag/",
-            "name": "Zoro Zig-Zag"
+            "ref": "Sector 2 Left Side/Zig-Zag-Zone/",
+            "name": "Zig-Zag-Zone"
           }
         ],
         "map_locations": [
@@ -281,8 +281,8 @@
             "name": "Fiery Storage - Upper Item"
           },
           {
-            "ref": "Sector 3 to Sector 5/Glass Tube to Sector 5 (ARC)/",
-            "name": "Glass Tube to Sector 5 (ARC)"
+            "ref": "Sector 3 to Sector 5/Westbound Glass Tube/",
+            "name": "Westbound Glass Tube"
           },
           {
             "ref": "Sector 3 Security Zone/Level 2 Security Room/",
@@ -498,8 +498,8 @@
         "name": "Sector 4 Underwater Area",
 		"sections":[
           {
-            "ref": "Sector 4 Upper Water Zone/Cargo Hold to Sector 5 (ARC)/",
-            "name": "Cargo Hold to Sector 5 (ARC)"
+            "ref": "Sector 4 Upper Water Zone/Cargo Hold/",
+            "name": "Cargo Hold"
           },
           {
             "ref": "Sector 4 Upper Water Zone/Aquarium Pirate Tank/",
@@ -641,8 +641,8 @@
         "name": "Sector 5 Nightmare Area",
 		"sections":[
           {
-            "ref": "Sector 5 Nightmare Hub/Flooded Airlock to Sector 4 (AQU)/",
-            "name": "Flooded Airlock to Sector 4 (AQU)"
+            "ref": "Sector 5 Nightmare Hub/Flooded Airlock/",
+            "name": "Flooded Airlock"
           },
           {
             "ref": "Sector 5 Nightmare Hub/Mini-Fridge/",
