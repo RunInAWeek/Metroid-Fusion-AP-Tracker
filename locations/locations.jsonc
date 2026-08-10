@@ -3506,8 +3506,9 @@
 
   {
     "name": "Sector 4 Security Room",
-    "access_rules": ["@Sector 4 Lower Security Zone, k4, $canBombOrPowerBomb",
-                     "@Sector 4 Lower Security Zone, k4, screw, gravity"],
+    "access_rules": ["@Sector 4 Lower Security Zone, ^$canPoNR|k4, $canBombOrPowerBomb, ^$climbFromS4SecurityRoomInLogic",
+                     "@Sector 4 Lower Security Zone, ^$canPoNR|k4, screw, gravity, mb, ^$climbFromS4SecurityRoomInLogic",
+                     "@Sector 4 Lower Security Zone, k4, ^$climbFromS4SecurityRoomInLogic"],
     "children":[
       {
         "name": "Level 4 Security Room",

@@ -472,6 +472,21 @@ function canAccessSanctuaryCache()
     return (has("bw") and has("bc")) or (has("bw") and has("dm") and has("mb")) or (has("pb") and has("dm") and has("mb")), (has("pb") and has("bc") and has("mb"))
 end
 
+function climbFromS4SecurityRoomInLogic()
+    if has("PoNR") then
+        return true
+    end
+    if has("k4") and has("gravity") then
+        if has("space") then
+            return true
+        else
+            return canWallJump(1)
+        end
+    else
+        return AccessibilityLevel.SequenceBreak 
+    end
+end
+
 function canCrossSector4DrainPipeTunnel()
     return has("mb") and (  (has("dm") and has("md"))  or  (has("bi") and has("bw"))  )
 end
