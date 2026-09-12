@@ -670,12 +670,16 @@ function canGetOasisStorageItem()
 end
 
 function canGetSector3SecurityAccessItem()
+    local CombatDiff=Tracker:FindObjectForCode("Combat").CurrentStage
     if canBeatToughEnemy() then
         if canJumpHigh() then return true end
-        if canWallJump(1) then return true end
-        if canShinespark(2) then return true end   
+        if canWallJump(1) then return canWallJump(1) end
     end
-    return AccessibilityLevel.Inspect
+    if canShinespark(2) then 
+        if CombatDiff>1 then return canShinespark(2) end
+        if canFreezeEnemies() then return canShinespark(2) end
+    end
+    return AccessibilityLevel.SequenceBreak
 end
 
 

@@ -2597,7 +2597,8 @@
     "name": "Sector 3 BOX Zone",
     "access_rules": ["@Sector 3 Hub, $canDefeatMediumGeron, k2",
                      "@Sector 3 Main Shaft, k2, $canBallJumpAndBomb",
-                     "@Sector 3 Upper Attic, ^$canFightBoss",
+                     "@Sector 3 Upper Attic, bc",
+                     "@Sector 3 Upper Attic, dm",
                      "@Sector 3 Bob Zone/Bob's Abode, $canBallJump, k2, bomb",
                      "@Sector 3 Bob Zone/Bob's Abode, $canBallJump, k2, bw",
                      "@Sector 3 Bob Zone/Bob's Abode, $canBallJump, k2, dm, md",
@@ -2609,7 +2610,8 @@
           {
             "chest_unopened_img": "images/items/datastation.png",
             "chest_opened_img": "images/items/datastation_gray.png",
-            "access_rules": ["^$canFightBoss, k2"]
+            "access_rules": ["bc, k2",
+                             "dm, k2"]
           }
         ],
         "map_locations": [
@@ -4282,7 +4284,7 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJumpAndBomb, @Sector 5 Nightmare Zone Arena/Nightmare Arena",
+            "access_rules": ["$canBallJumpAndBomb, @Sector 5 Nightmare Zone Arena/Nightmare Arena/",
                              "$canBombOrPowerBomb, ^$canSB"]
           }
         ],
