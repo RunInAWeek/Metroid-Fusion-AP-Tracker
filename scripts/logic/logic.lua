@@ -172,6 +172,10 @@ function canDefeatMediumGeron()
     return (has("dm") and has("ms")) or ((canPowerBomb() or has("screw")) and hasnot("Nerf Geron"))
 end
 
+function canDefeatMediumGeronUnderWater()
+    return (has("dm") and has("ms")) or ((canPowerBomb() or (has("gravity") and has("screw"))) and hasnot("Nerf Geron"))
+end
+
 function canDefeatLargeGeron()
     return canPowerBomb() or (has("screw") and hasnot("Nerf Geron"))
 end
@@ -391,7 +395,9 @@ function canAccessFieryStorageFromSector3Hub()
     if ((canLavaDive() and canJumpHigh()) or 
         (has("varia") and canBeatToughEnemy()) or 
         (canShinespark(1) and (canBreakBombBlocks() or has("PoNR")))) then
-        return true
+        if has("varia") then return true
+        else return AccessibilityLevel.SequenceBreak
+        end
     end
     if canShinespark(1) then
         return AccessibilityLevel.SequenceBreak
@@ -412,6 +418,11 @@ end
 function canAccessFieryStorageFromSector3()
     return ((canLavaDive() and canJumpHigh()) or (has("varia") and canBeatToughEnemy()) or (canShinespark(1) and canBreakBombBlocks()))
 end
+
+function canLoopThroughGarbageChute()
+    return (canLavaDive() and has("screw") and has("speed") and has("mb"))
+end
+
 
 
 function canEnterSerrisZone()
@@ -618,7 +629,15 @@ function canAccessReservoirVaultLowerItem()
     end
 end
 
-function canAccessDrainPipe()
+function canAccessDrainPipeWithWater()
+    if hasnot("mb") then
+        return false
+    end
+
+    return canDefeatMediumGeronUnderWater() or has("bw")
+end
+
+function canAccessDrainPipeWithoutWater()
     if hasnot("mb") then
         return false
     end

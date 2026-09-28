@@ -2452,10 +2452,14 @@
 
   {
     "name": "Sector 3 Main Shaft",
-    "access_rules": ["@Sector 3 Hub, speed",
+    "access_rules": ["@Sector 3 Hub, speed, PoNR",
+                     "@Sector 3 Hub, speed, ^$canSB",
+                     "@Sector 3 Hub, speed, mb, $canBreakBombBlocks",
+                     "@Sector 3 Hub, speed, $canLoopThroughGarbageChute",
                      "@Sector 3 Bob Zone, mb, PoNR",
                      "@Sector 3 Bob Zone, mb, ^$canSB",
-                     "@Sector 3 Bob Zone, mb, $canBreakBombBlocks"],
+                     "@Sector 3 Bob Zone, mb, $canBreakBombBlocks",
+                     "@Sector 3 Bob Zone, speed, $canLoopThroughGarbageChute"],
     "children":[
       {
         "name": "Namihe's Lair",
@@ -2463,7 +2467,12 @@
           {
             "chest_unopened_img": "images/items/pbomb.png",
             "chest_opened_img": "images/items/pbomb_gray.png",
-            "access_rules": ["$canPowerBomb, $canJumpHigh", "$canPowerBomb, $canFreezeEnemies", "$canPowerBomb, ^$canSee"]
+            "access_rules": ["$canPowerBomb, $canJumpHigh", 
+                             "$canPowerBomb, $canFreezeEnemies, PoNR",
+                             "$canPowerBomb, $canFreezeEnemies, ^$canSB", 
+                             "$canPowerBomb, ^$canSee", 
+                             "$canPowerBomb, ^$canShinespark|2, PoNR",
+                             "$canPowerBomb, ^$canShinespark|2, ^$canSB"]
           }
         ],
         "map_locations": [
@@ -3053,9 +3062,9 @@
           {
             "chest_unopened_img": "images/items/missile.png",
             "chest_opened_img": "images/items/missile_gray.png",
-            "access_rules": ["@Sector 4 Pump Control, ^$canAccessDrainPipe",
-                             "gravity, ^$needEtanks|2, ^$canAccessDrainPipe",
-                             "varia, ^$needEtanks|2, ^$canAccessDrainPipe"
+            "access_rules": ["@Sector 4 Pump Control, ^$canAccessDrainPipeWithoutWater",
+                             "gravity, ^$needEtanks|2, ^$canAccessDrainPipeWithWater",
+                             "varia, ^$needEtanks|2, ^$canAccessDrainPipeWithWater"
                              ]
           }
         ],
@@ -4813,7 +4822,7 @@
 
   {
     "name": "Sector 6 Before Varia Core X Zone",
-    "access_rules": ["@Sector 6 Catacombs, $canBombOrPowerBomb, k2, varia, PoNR",
+    "access_rules": ["@Sector 6 Catacombs, $canBombOrPowerBomb, varia, ^$canPoNR|k2",
                      "@Sector 6 Catacombs, $canBombOrPowerBomb, k2, varia, ^$canSB",
                      "@Sector 6 Catacombs, $canPowerBomb, k2, varia, space",
                      "@Sector 6 Catacombs, $canPowerBomb, k2, varia, ^$canWallJump|1, high",
