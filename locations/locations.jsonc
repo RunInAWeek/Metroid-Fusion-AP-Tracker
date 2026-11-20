@@ -1315,8 +1315,9 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
 {
-  "name": "Sector 1 Charge Core Zone",
-  "access_rules": ["@Sector 1 Third Stabilizer Zone, mb, $canDefeatThirdStabilizer, ^$canPoNR|dm",
+  "name": "Sector 1 Charge Core Room",
+  "access_rules": ["@Sector 1 Charge Core Zone, bc",
+                   "@Sector 1 Charge Core Zone, dm",
                    "@Sector 1 After Charge Core Zone, $canDefeatStabilizers"],
   "children":[
     {
@@ -1362,7 +1363,15 @@
           "y": 44
         }
       ]
-    },
+    }
+  ]
+},
+
+{
+  "name": "Sector 1 Charge Core Zone",
+  "access_rules": ["@Sector 1 Third Stabilizer Zone, mb, $canDefeatThirdStabilizer, ^$canPoNR|dm",
+                   "@Sector 1 Charge Core Room, dm"],
+  "children":[
     {
       "name": "Watering Hole",
       "sections":[{
@@ -1389,7 +1398,7 @@
 
 {
   "name": "Sector 1 After Charge Core Zone",
-  "access_rules": ["@Sector 1 First Stabilizer Zone, bw", "@Sector 1 Charge Core Zone, dm"],
+  "access_rules": ["@Sector 1 First Stabilizer Zone, bw", "@Sector 1 Charge Core Room, dm"],
   "children":[
     {
       "name": "Crab Rave",
