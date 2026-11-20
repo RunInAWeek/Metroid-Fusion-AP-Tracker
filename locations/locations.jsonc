@@ -4302,8 +4302,12 @@
           {
             "chest_unopened_img": "images/items/etank.png",
             "chest_opened_img": "images/items/etank_gray.png",
-            "access_rules": ["$canBallJumpAndBomb, @Sector 5 Nightmare Zone Arena/Nightmare Arena/",
-                             "$canBombOrPowerBomb, ^$canSB"]
+            "access_rules": ["$canBallJump, $canBombOrPowerBomb, bc, PoNR",
+                             "$canBallJump, $canBombOrPowerBomb, dm, PoNR",
+                             "$canBallJump, $canBombOrPowerBomb, bc, ^$canSB",
+                             "$canBallJump, $canBombOrPowerBomb, dm, ^$canSB",
+                             "$canBallJump, $canBombOrPowerBomb, bc, @Sector 5 Nightmare Zone Arena/Nightmare Arena/",
+                             "$canBallJump, $canBombOrPowerBomb, dm, @Sector 5 Nightmare Zone Arena/Nightmare Arena/"]
           }
         ],
         "map_locations": [
