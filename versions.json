@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "1.0.11",
+			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v1.0.11/Metroid.Fusion.Pack.zip",
+			"sha256": "cebddcdc0d5e1f6ed304f1220bc3fed76d40979c65a7f4a7e47177e2b48d83fa",
+			"changelog": ["fixed logic issues with animals"]
+		},
+		{
 			"package_version": "1.0.10",
 			"download_url": "https://github.com/RunInAWeek/Metroid-Fusion-AP-Tracker/releases/download/v1.0.10/Metroid.Fusion.pack.zip",
 			"sha256": "ebfd1ffe34da732cbf086c5b3e4f4571679475983bb1abb8d04c6c16a95036f3",

@@ -324,7 +324,29 @@ end
 
 
 function canReachAnimals()
-    return (has("speed") or has("bw")) and ((canFreezeEnemies() and has("high")) or has"space")
+    if (has("bw") or has("space") or (canFreezeEnemies() and (has("high") or (Tracker:FindObjectForCode("Walljumps").CurrentStage>1))))
+        and (has("bw") or has("speed"))
+        and (has("space") or canFreezeEnemies())
+        then return true
+    end
+    if (has("bw") or has("space") or canFreezeEnemies())
+        and (has("bw") or has("speed"))
+        and (has("space") or canFreezeEnemies())
+    then return AccessibilityLevel.SequenceBreak
+    end
+    return false
+end
+
+function canReachAnimalsLower()
+    if (has("bw") or has("space") or (canFreezeEnemies() and (has("high") or (Tracker:FindObjectForCode("Walljumps").CurrentStage>1))))
+        and (has("bw") or has("speed"))
+        then return true
+    end
+    if (has("bw") or has("space") or canFreezeEnemies())
+        and (has("bw") or has("speed"))
+    then return AccessibilityLevel.SequenceBreak
+    end
+    return false
 end
 
 function canAccessArachnusZone()

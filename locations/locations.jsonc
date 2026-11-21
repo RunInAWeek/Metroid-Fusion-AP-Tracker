@@ -786,7 +786,7 @@
         "sections":[{
           "chest_unopened_img": "images/events/animals.png",
           "chest_opened_img": "images/events/animals_gray.png",
-          "access_rules": ["$canReachAnimals"]}],
+          "access_rules": ["^$canReachAnimals"]}],
         "map_locations": [
           {
             "map": "deck",
@@ -805,7 +805,7 @@
         "sections":[{
           "chest_unopened_img": "images/items/missile.png",
           "chest_opened_img": "images/items/missile_gray.png",
-          "access_rules": ["$canReachAnimals", "bw", "space", "bi, high", "^$canSee"]}],
+          "access_rules": ["^$canReachAnimalsLower", "^$canSee"]}],
         "map_locations": [
           {
             "map": "deck",
