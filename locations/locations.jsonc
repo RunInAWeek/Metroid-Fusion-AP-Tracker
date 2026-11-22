@@ -1047,7 +1047,7 @@
   "name": "Sector 1 First Stabilizer Zone",
   "access_rules": ["@Sector 1 Entrance, $canDefeatSmallGeron",
                    "@Sector 1 Entrance, k1, k2, $canLavaDive",
-                   "@Sector 1 After Charge Core Zone",
+                   "@Sector 1 After Charge Core Zone, ^$canDefeatFourthStabilizer",
                    "@Sector 1 Entrance, ^$canShinespark|2",
                    "@Sector 1 Second Stabilizer Zone, $canDefeatStabilizers"],
   "children":[
@@ -1398,7 +1398,7 @@
 
 {
   "name": "Sector 1 After Charge Core Zone",
-  "access_rules": ["@Sector 1 First Stabilizer Zone, bw", "@Sector 1 Charge Core Room, dm"],
+  "access_rules": ["@Sector 1 First Stabilizer Zone, bw, ^$canDefeatFourthStabilizer", "@Sector 1 Charge Core Room, dm"],
   "children":[
     {
       "name": "Crab Rave",

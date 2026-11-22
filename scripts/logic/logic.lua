@@ -199,6 +199,16 @@ function canDefeatThirdStabilizer()
     end
 end
 
+function canDefeatFourthStabilizer()
+    if ((has("dm") or has("bc")) and has("mb")) or ((canPowerBomb() or has("screw")) and hasnot("Nerf Geron"))
+    then return true
+    end
+    
+    if has("dm") or has("bc") then return AccessibilityLevel.SequenceBreak
+    else return false
+    end
+end
+
 function canWallJump(Diff)
     Diff=tonumber(Diff)
     local WalljumpOption=Tracker:FindObjectForCode("Walljumps").CurrentStage
